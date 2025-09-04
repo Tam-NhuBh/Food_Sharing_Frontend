@@ -5,7 +5,9 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes/index.tsx';
 //import { AuthProvider } from './stores/auth/index.tsx';
+import { makeServer } from './mirage/index.ts';
 
+makeServer();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
