@@ -1,0 +1,488 @@
+{
+  "enums": {
+    "IngredientUnit": {
+      "GRAM": "g",
+      "KILOGRAM": "kg",
+      "LITER": "l",
+      "MILLILITER": "ml",
+      "PIECE": "pcs",
+      "CUP": "cup"
+    },
+    "CategoryType": {
+      "BEVERAGES": "Beverages",
+      "APPETIZERS": "Appetizers",
+      "BREAKFAST_FOODS": "Breakfast Foods",
+      "MAIN_COURSE": "Main Course",
+      "SIDE_DISHES": "Side Dishes",
+      "DESSERTS": "Desserts",
+      "SNACKS": "Snacks"
+    }
+  },
+  
+  "categories": [
+    {
+      "id": 1,
+      "name": "Beverages",
+      "type": "BEVERAGES",
+      "icon": "coffee-icon"
+    },
+    {
+      "id": 2,
+      "name": "Appetizers",
+      "type": "APPETIZERS",
+      "icon": "appetizer-icon"
+    },
+    {
+      "id": 3,
+      "name": "Breakfast Foods",
+      "type": "BREAKFAST_FOODS",
+      "icon": "breakfast-icon"
+    },
+    {
+      "id": 4,
+      "name": "Main Course",
+      "type": "MAIN_COURSE",
+      "icon": "main-dish-icon"
+    },
+    {
+      "id": 5,
+      "name": "Side Dishes",
+      "type": "SIDE_DISHES",
+      "icon": "side-dish-icon"
+    },
+    {
+      "id": 6,
+      "name": "Desserts",
+      "type": "DESSERTS",
+      "icon": "dessert-icon"
+    },
+    {
+      "id": 7,
+      "name": "Snacks",
+      "type": "SNACKS",
+      "icon": "snack-icon"
+    }
+  ],
+  
+  "users": [
+    {
+      "id": 1,
+      "username": "khanh_nguyen",
+      "email": "khanh@recipehub.com",
+      "password": "$2b$10$xxxxxxxxxxx",
+      "fullName": "Khanh Nguyen",
+      "avatar": "/avatars/khanh_nguyen.svg",
+      "favourites": [2, 3, 4],
+      "following": [2, 3, 4],
+      "followers": [2, 3, 4, 5, 6],
+      "recipesCreated": [1, 5]
+    },
+    {
+      "id": 2,
+      "username": "tran_le",
+      "email": "tran@recipehub.com",
+      "password": "$2b$10$xxxxxxxxxxx",
+      "fullName": "Tran Le",
+      "avatar": "/avatars/tran_le.svg",
+      "favourites": [1, 3, 5],
+      "following": [1, 3, 4],
+      "followers": [1, 3, 4],
+      "recipesCreated": [2]
+    },
+    {
+      "id": 3,
+      "username": "nhung_vo",
+      "email": "nhung@recipehub.com",
+      "password": "$2b$10$xxxxxxxxxxx",
+      "fullName": "Nhung Vo",
+      "avatar": "/avatars/nhung_vo.svg",
+      "favourites": [1, 2, 4, 5],
+      "following": [1, 2, 4],
+      "followers": [1, 2, 4, 5],
+      "recipesCreated": [3]
+    },
+    {
+      "id": 4,
+      "username": "nhu_tang",
+      "email": "nhu@recipehub.com",
+      "password": "$2b$10$xxxxxxxxxxx",
+      "fullName": "Nhu Tang",
+      "avatar": "/avatars/nhu_tang.svg",
+      "favourites": [1, 2, 3, 5],
+      "following": [1, 2, 3],
+      "followers": [1, 2, 3],
+      "recipesCreated": [4]
+    },
+    {
+      "id": 5,
+      "username": "guest_user",
+      "email": "guest@recipehub.com",
+      "password": "$2b$10$xxxxxxxxxxx",
+      "fullName": "Guest User",
+      "avatar": "/avatars/guest_user.svg",
+      "favourites": [1, 3],
+      "following": [1, 3, 4],
+      "followers": [1],
+      "recipesCreated": []
+    },
+    {
+      "id": 6,
+      "username": "admin_user",
+      "email": "admin@recipehub.com",
+      "password": "$2b$10$xxxxxxxxxxx",
+      "fullName": "Admin User",
+      "avatar": "/avatars/admin_user.svg",
+      "favourites": [],
+      "following": [1],
+      "followers": [1],
+      "recipesCreated": []
+    }
+  ],
+  
+  "recipes": [
+    {
+      "id": 1,
+      "categoryId": 4,
+      "categoryType": "MAIN_COURSE",
+      "image": "/images/recipes/pho-bo.jpg",
+      "title": "Phở Bò",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Traditional Vietnamese beef noodle soup",
+      "longDescription": "Traditional Vietnamese beef noodle soup with aromatic herbs and spices, simmered for hours to create a rich, clear broth.",
+      "cookingTime": 180,
+      "servings": 4,
+      "category": "Main Course",
+      "ingredients": [
+        {"name": "beef bones", "amount": 500, "unit": "GRAM"},
+        {"name": "beef brisket", "amount": 300, "unit": "GRAM"},
+        {"name": "rice noodles", "amount": 200, "unit": "GRAM"},
+        {"name": "onion", "amount": 1, "unit": "PIECE"},
+        {"name": "star anise", "amount": 3, "unit": "PIECE"},
+        {"name": "fish sauce", "amount": 30, "unit": "MILLILITER"},
+        {"name": "bean sprouts", "amount": 1, "unit": "CUP"},
+        {"name": "fresh herbs", "amount": 1, "unit": "CUP"}
+      ],
+      "steps": [
+        "Char onion and ginger over open flame",
+        "Boil bones for 30 minutes, then drain and rinse",
+        "Simmer broth with spices for 2-3 hours",
+        "Cook rice noodles separately",
+        "Slice beef brisket thinly",
+        "Assemble bowls and pour hot broth",
+        "Serve with fresh herbs and lime"
+      ],
+      "nutrition": {
+        "calories": 380,
+        "protein": 28,
+        "carbs": 42,
+        "fat": 10
+      },
+      "tags": ["vietnamese", "soup", "beef", "traditional"],
+      "rating": 5,
+      "totalRatings": 3,
+      "viewCount": 256,
+      "createdAt": "2025-01-15T10:30:00Z",
+      "updatedAt": "2025-01-15T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "categoryId": 4,
+      "categoryType": "MAIN_COURSE",
+      "image": "/images/recipes/banh-mi-thit-nuong.jpg",
+      "title": "Bánh Mì Thịt Nướng",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Vietnamese grilled pork sandwich",
+      "longDescription": "Vietnamese grilled pork sandwich with pickled vegetables, fresh herbs, and homemade pâté in a crispy baguette.",
+      "cookingTime": 45,
+      "servings": 2,
+      "category": "Main Course",
+      "ingredients": [
+        {"name": "Vietnamese baguettes", "amount": 2, "unit": "PIECE"},
+        {"name": "pork shoulder", "amount": 300, "unit": "GRAM"},
+        {"name": "lemongrass", "amount": 2, "unit": "PIECE"},
+        {"name": "fish sauce", "amount": 50, "unit": "MILLILITER"},
+        {"name": "pickled vegetables", "amount": 200, "unit": "GRAM"},
+        {"name": "cilantro", "amount": 1, "unit": "CUP"},
+        {"name": "mayonnaise", "amount": 30, "unit": "MILLILITER"}
+      ],
+      "steps": [
+        "Marinate pork with lemongrass and fish sauce for 30 minutes",
+        "Grill pork until charred and cooked through",
+        "Prepare pickled carrots and daikon",
+        "Split and toast baguettes lightly",
+        "Spread mayo and pâté on bread",
+        "Layer with pork, pickled vegetables, and herbs",
+        "Serve immediately while warm"
+      ],
+      "nutrition": {
+        "calories": 420,
+        "protein": 24,
+        "carbs": 48,
+        "fat": 14
+      },
+      "tags": ["vietnamese", "sandwich", "grilled", "street-food"],
+      "rating": 4,
+      "totalRatings": 2,
+      "viewCount": 189,
+      "createdAt": "2025-02-20T14:15:00Z",
+      "updatedAt": "2025-02-20T14:15:00Z"
+    },
+    {
+      "id": 3,
+      "categoryId": 4,
+      "categoryType": "MAIN_COURSE",
+      "image": "/images/recipes/spaghetti-carbonara.jpg",
+      "title": "Spaghetti Carbonara",
+      "author": "Nhung Vo",
+      "authorId": 3,
+      "description": "Classic Italian pasta with eggs and cheese",
+      "longDescription": "Classic Roman pasta dish with eggs, cheese, and crispy pancetta, creating a silky, creamy sauce without cream.",
+      "cookingTime": 20,
+      "servings": 4,
+      "category": "Main Course",
+      "ingredients": [
+        {"name": "spaghetti", "amount": 400, "unit": "GRAM"},
+        {"name": "pancetta", "amount": 150, "unit": "GRAM"},
+        {"name": "eggs", "amount": 3, "unit": "PIECE"},
+        {"name": "Pecorino Romano", "amount": 100, "unit": "GRAM"},
+        {"name": "Parmesan", "amount": 50, "unit": "GRAM"},
+        {"name": "black pepper", "amount": 10, "unit": "GRAM"},
+        {"name": "pasta water", "amount": 1, "unit": "CUP"}
+      ],
+      "steps": [
+        "Cook spaghetti in salted water until al dente",
+        "Dice and crisp pancetta in a large pan",
+        "Whisk eggs with grated cheeses and pepper",
+        "Reserve pasta water before draining",
+        "Toss hot pasta with pancetta off heat",
+        "Quickly mix in egg mixture with pasta water",
+        "Serve immediately with extra cheese"
+      ],
+      "nutrition": {
+        "calories": 480,
+        "protein": 22,
+        "carbs": 52,
+        "fat": 20
+      },
+      "tags": ["italian", "pasta", "classic", "roman"],
+      "rating": 5,
+      "totalRatings": 2,
+      "viewCount": 342,
+      "createdAt": "2025-01-08T12:20:00Z",
+      "updatedAt": "2025-01-08T12:20:00Z"
+    },
+    {
+      "id": 4,
+      "categoryId": 4,
+      "categoryType": "MAIN_COURSE",
+      "image": "/images/recipes/pad-thai.jpg",
+      "title": "Pad Thai",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Thai stir-fried noodles",
+      "longDescription": "Thailand's signature stir-fried noodle dish with tamarind sauce, creating perfect balance of sweet, sour, and savory.",
+      "cookingTime": 30,
+      "servings": 2,
+      "category": "Main Course",
+      "ingredients": [
+        {"name": "rice noodles", "amount": 200, "unit": "GRAM"},
+        {"name": "shrimp", "amount": 200, "unit": "GRAM"},
+        {"name": "eggs", "amount": 2, "unit": "PIECE"},
+        {"name": "tamarind paste", "amount": 50, "unit": "MILLILITER"},
+        {"name": "fish sauce", "amount": 30, "unit": "MILLILITER"},
+        {"name": "bean sprouts", "amount": 1, "unit": "CUP"},
+        {"name": "peanuts", "amount": 50, "unit": "GRAM"}
+      ],
+      "steps": [
+        "Soak rice noodles in warm water until soft",
+        "Mix tamarind, fish sauce, and sugar for sauce",
+        "Scramble eggs and set aside",
+        "Stir-fry shrimp until pink",
+        "Add noodles and sauce, toss well",
+        "Add bean sprouts and scrambled eggs",
+        "Garnish with peanuts and lime"
+      ],
+      "nutrition": {
+        "calories": 390,
+        "protein": 26,
+        "carbs": 48,
+        "fat": 10
+      },
+      "tags": ["thai", "noodles", "stir-fry", "street-food"],
+      "rating": 3.5,
+      "totalRatings": 2,
+      "viewCount": 234,
+      "createdAt": "2025-02-25T13:45:00Z",
+      "updatedAt": "2025-02-25T13:45:00Z"
+    },
+    {
+      "id": 5,
+      "categoryId": 4,
+      "categoryType": "MAIN_COURSE",
+      "image": "/images/recipes/fish-tacos.jpg",
+      "title": "Fish Tacos",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Fresh white fish tacos with slaw",
+      "longDescription": "Baja-style fish tacos with flaky seasoned fish, tangy cabbage slaw, and zesty lime crema.",
+      "cookingTime": 25,
+      "servings": 4,
+      "category": "Main Course",
+      "ingredients": [
+        {"name": "white fish fillets", "amount": 500, "unit": "GRAM"},
+        {"name": "corn tortillas", "amount": 8, "unit": "PIECE"},
+        {"name": "cabbage", "amount": 2, "unit": "CUP"},
+        {"name": "sour cream", "amount": 100, "unit": "MILLILITER"},
+        {"name": "limes", "amount": 2, "unit": "PIECE"},
+        {"name": "cilantro", "amount": 1, "unit": "CUP"},
+        {"name": "chili powder", "amount": 10, "unit": "GRAM"}
+      ],
+      "steps": [
+        "Season fish with spices",
+        "Pan-fry fish until flaky",
+        "Shred cabbage for slaw",
+        "Mix sour cream with lime juice",
+        "Warm tortillas on griddle",
+        "Assemble tacos with all components",
+        "Serve with lime wedges"
+      ],
+      "nutrition": {
+        "calories": 320,
+        "protein": 28,
+        "carbs": 32,
+        "fat": 10
+      },
+      "tags": ["mexican", "seafood", "fresh", "tacos"],
+      "rating": 4.5,
+      "totalRatings": 2,
+      "viewCount": 156,
+      "createdAt": "2025-02-18T15:10:00Z",
+      "updatedAt": "2025-02-18T15:10:00Z"
+    }
+  ],
+  
+  "ratings": [
+    {
+      "id": 1,
+      "recipeId": 1,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Tuyệt vời! Nước dùng rất đậm đà, giống như ở quán phở ngoài hàng.",
+      "rating": 5,
+      "createdAt": "2025-01-16T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "recipeId": 1,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Amazing broth! Took me 4 hours but totally worth it.",
+      "rating": 5,
+      "createdAt": "2025-01-16T14:45:00Z"
+    },
+    {
+      "id": 3,
+      "recipeId": 1,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Authentic Vietnamese flavor, will make again!",
+      "rating": 5,
+      "createdAt": "2025-01-17T09:00:00Z"
+    },
+    {
+      "id": 4,
+      "recipeId": 2,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Perfect balance of flavors! The pickled vegetables make it authentic.",
+      "rating": 4,
+      "createdAt": "2025-02-21T10:20:00Z"
+    },
+    {
+      "id": 5,
+      "recipeId": 2,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Bánh mì ngon tuyệt! Thịt nướng mềm và thơm.",
+      "rating": 4,
+      "createdAt": "2025-02-21T15:00:00Z"
+    },
+    {
+      "id": 6,
+      "recipeId": 3,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "The sauce was so creamy! Best carbonara recipe I've tried.",
+      "rating": 5,
+      "createdAt": "2025-01-09T16:30:00Z"
+    },
+    {
+      "id": 7,
+      "recipeId": 3,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Classic recipe! The key is to work quickly with the eggs.",
+      "rating": 5,
+      "createdAt": "2025-01-09T18:45:00Z"
+    },
+    {
+      "id": 8,
+      "recipeId": 4,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Authentic flavors! Just like the street vendors in Bangkok.",
+      "rating": 4,
+      "createdAt": "2025-02-26T09:15:00Z"
+    },
+    {
+      "id": 9,
+      "recipeId": 4,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Good recipe but needs more tamarind for authentic taste.",
+      "rating": 3,
+      "createdAt": "2025-02-26T12:00:00Z"
+    },
+    {
+      "id": 10,
+      "recipeId": 5,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Fresh and light! The lime crema makes it special.",
+      "rating": 4,
+      "createdAt": "2025-02-19T11:30:00Z"
+    },
+    {
+      "id": 11,
+      "recipeId": 5,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Love these fish tacos! So fresh and flavorful.",
+      "rating": 5,
+      "createdAt": "2025-02-19T14:20:00Z"
+    }
+  ],
+  
+  "tags": [
+    {"id": 1, "name": "vietnamese", "slug": "vietnamese", "count": 2},
+    {"id": 2, "name": "italian", "slug": "italian", "count": 1},
+    {"id": 3, "name": "thai", "slug": "thai", "count": 1},
+    {"id": 4, "name": "mexican", "slug": "mexican", "count": 1},
+    {"id": 5, "name": "soup", "slug": "soup", "count": 1},
+    {"id": 6, "name": "sandwich", "slug": "sandwich", "count": 1},
+    {"id": 7, "name": "pasta", "slug": "pasta", "count": 1},
+    {"id": 8, "name": "noodles", "slug": "noodles", "count": 2},
+    {"id": 9, "name": "seafood", "slug": "seafood", "count": 2},
+    {"id": 10, "name": "street-food", "slug": "street-food", "count": 2},
+    {"id": 11, "name": "grilled", "slug": "grilled", "count": 1},
+    {"id": 12, "name": "stir-fry", "slug": "stir-fry", "count": 1},
+    {"id": 13, "name": "tacos", "slug": "tacos", "count": 1},
+    {"id": 14, "name": "traditional", "slug": "traditional", "count": 1},
+    {"id": 15, "name": "classic", "slug": "classic", "count": 1},
+    {"id": 16, "name": "beef", "slug": "beef", "count": 1},
+    {"id": 17, "name": "roman", "slug": "roman", "count": 1},
+    {"id": 18, "name": "fresh", "slug": "fresh", "count": 1}
+  ]
+}
