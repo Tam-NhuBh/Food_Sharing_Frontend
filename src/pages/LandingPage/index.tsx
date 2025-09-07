@@ -28,7 +28,7 @@ export default function LandingPage() {
         />
       </picture>
       <section className="px-6 md:px-20 xl:px-32">
-        <h2 className="text-[2.5rem] font-bold font-playfair mb-5">
+        <h2 className="md:text-[2.5rem] text-[1.7rem] font-bold font-playfair mb-5">
           Most Picked <span className="text-primary">Dishes</span>
         </h2>
         {recipes && (
@@ -47,25 +47,28 @@ export default function LandingPage() {
           ></RecipeCardList>
         )}
       </section>
-      <section className="flex flex-col items-center py-9 bg-cream gap-4">
-        <p className="font-extrabold text-primary text-4xl">
+      <section className="flex flex-col items-center py-9 bg-cream gap-4 text-center">
+        <p className="font-extrabold text-primary md:text-4xl text-2xl">
           Share Your Story, Share Your Dish
         </p>
-        <p className="font-medium text-[1.25rem]">
+        <p className="font-medium md:text-[1.25rem] text-[1rem] px-3">
           Every dish has a story - what's yours? Share your favorite recipes
           with our community of home cooks and inspire others.
         </p>
-        <Button variant="primary" className="cursor-pointer">
+        <Button
+          variant="primary"
+          className="cursor-pointer text-[.8rem] md:text-[1rem]"
+        >
           SHARE YOUR RECIPE
         </Button>
       </section>
       <section className="px-6 md:px-20 xl:px-32">
-        <div className="flex justify-between items-center">
-          <h2 className="text-[2.5rem] font-bold font-playfair mb-5">
+        <div className="flex justify-between items-center mb-5">
+          <h2 className="md:text-[2.5rem] text-[1.7rem] font-bold font-playfair">
             Random <span className="text-primary">Dishes</span>
           </h2>
-          <button className="bg-cream py-2 px-4 cursor-pointer font-medium flex gap-2 items-center">
-            <img src={refreshIcon} alt="refresh-icon" width={24}/>
+          <button className="bg-cream py-2 px-4 cursor-pointer font-medium flex gap-2 items-center md:text-[1rem] text-[.9rem]">
+            <img src={refreshIcon} alt="refresh-icon" className="md:w-[1.5rem] w-[1rem]" />
             Refresh
           </button>
         </div>
