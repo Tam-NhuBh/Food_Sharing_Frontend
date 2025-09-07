@@ -5,9 +5,12 @@ import RecipeCardList from "../../components/CardList";
 import type { RecipeCardProps } from "../../components/Recipe/RecipeCard";
 import type { Recipe } from "../../types";
 import { useEffect, useState } from "react";
+import useRandomRecipes from "../../hooks/useRandomRecipe";
 
 export default function LandingPage() {
   const [recipes, setRecipes] = useState<Recipe[]>();
+  const { randomRecipes, getRandomRecipes } = useRandomRecipes(recipes, 3);
+
   useEffect(() => {
     fetch("/api/recipes")
       .then((res) => res.json())
@@ -54,6 +57,7 @@ export default function LandingPage() {
             recipes={
               recipes.map((recipe) => {
                 return {
+                  id: recipe.id,
                   image: recipe.image,
                   title: recipe.title,
                   description: recipe.description,
@@ -91,29 +95,35 @@ export default function LandingPage() {
           <h2 className="md:text-2xl text-lg font-bold font-playfair">
             Random <span className="text-primary">Dishes</span>
           </h2>
-          <button className="bg-cream py-2 px-4 cursor-pointer font-medium flex gap-2 items-center md:text-[1rem] text-[.9rem]">
+          <button
+            onClick={getRandomRecipes}
+            className="bg-cream py-2 px-4 cursor-pointer font-medium flex gap-2 items-center 
+             md:text-[1rem] text-[.9rem] 
+             transition-colors duration-300 
+             hover:bg-primary hover:text-white 
+             active:scale-95"
+          >
             <img
               src={refreshIcon}
               alt="refresh-icon"
-              className="md:w-[1.5rem] w-[1rem]"
+              className="md:w-[1.5rem] w-[1rem] transition-transform duration-500 hover:rotate-180"
             />
-            Refresh
+            Random
           </button>
         </div>
-        {recipes && (
+        {randomRecipes.length > 0 && (
           <RecipeCardList
             recipes={
-              recipes.map((recipe) => {
-                return {
-                  image: recipe.image,
-                  title: recipe.title,
-                  description: recipe.description,
-                  category: recipe.category,
-                  actions: "Read Recipe",
-                };
-              }) as RecipeCardProps[]
+              randomRecipes.map((recipe) => ({
+                id: recipe.id,
+                image: recipe.image,
+                title: recipe.title,
+                description: recipe.description,
+                category: recipe.category,
+                actions: "Read Recipe",
+              })) as RecipeCardProps[]
             }
-          ></RecipeCardList>
+          />
         )}
       </section>
     </div>

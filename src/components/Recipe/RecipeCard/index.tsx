@@ -1,15 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export interface RecipeCardProps {
+  id: number;
   image?: string;
   title: string;
   description?: string;
   category?: string[];
   actions?: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 const RecipeCard: React.FC<RecipeCardProps> = ({
+  id,
   image,
   category,
   title,
@@ -17,9 +21,20 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
   actions,
   className = "",
 }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!id) {
+      console.error("RecipeCard: Missing 'id' prop.");
+      return;
+    }
+    navigate(`/recipes/${id}`);
+  };
+
   return (
     <div
       className={`bg-white border border-gray-300 overflow-hidden flex flex-col ${className} cursor-pointer`}
+      onClick={handleClick}
     >
       {image && (
         <img src={image} alt={title} className="w-full h-62 object-cover" />
