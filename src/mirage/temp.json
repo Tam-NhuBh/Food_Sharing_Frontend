@@ -150,7 +150,7 @@
       "authorId": 1,
       "description": "Traditional Vietnamese beef noodle soup",
       "longDescription": "Traditional Vietnamese beef noodle soup with aromatic herbs and spices, simmered for hours to create a rich, clear broth.",
-      "cookingTime": 180,
+      "cookingTime": "180 minutes",
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
@@ -195,7 +195,7 @@
       "authorId": 2,
       "description": "Vietnamese grilled pork sandwich",
       "longDescription": "Vietnamese grilled pork sandwich with pickled vegetables, fresh herbs, and homemade pâté in a crispy baguette.",
-      "cookingTime": 45,
+      "cookingTime": "45 minutes",
       "servings": 2,
       "category": "Main Course",
       "ingredients": [
@@ -239,7 +239,7 @@
       "authorId": 3,
       "description": "Classic Italian pasta with eggs and cheese",
       "longDescription": "Classic Roman pasta dish with eggs, cheese, and crispy pancetta, creating a silky, creamy sauce without cream.",
-      "cookingTime": 20,
+      "cookingTime": "20 minutes",
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
@@ -283,7 +283,7 @@
       "authorId": 4,
       "description": "Thai stir-fried noodles",
       "longDescription": "Thailand's signature stir-fried noodle dish with tamarind sauce, creating perfect balance of sweet, sour, and savory.",
-      "cookingTime": 30,
+      "cookingTime": "30 minutes",
       "servings": 2,
       "category": "Main Course",
       "ingredients": [
@@ -327,7 +327,7 @@
       "authorId": 1,
       "description": "Fresh white fish tacos with slaw",
       "longDescription": "Baja-style fish tacos with flaky seasoned fish, tangy cabbage slaw, and zesty lime crema.",
-      "cookingTime": 25,
+      "cookingTime": "25 minutes",
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
