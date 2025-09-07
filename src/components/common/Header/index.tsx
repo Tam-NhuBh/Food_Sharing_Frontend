@@ -6,7 +6,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300shadow relative">
+    <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300 shadow relative">
       {/* Logo */}
       <Link to="/">
         <h1 className="font-lobster text-primary text-lg sm:text-xl md:text-3xl">Nom Nom</h1>
