@@ -4,7 +4,7 @@ export interface RecipeCardProps {
   image?: string;
   title: string;
   description?: string;
-  category?: string;
+  category?: string[];
   actions?: React.ReactNode;
   className?: string;
 }
@@ -19,7 +19,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-white border border-black overflow-hidden flex flex-col ${className}`}
+      className={`bg-white border border-black overflow-hidden flex flex-col ${className} cursor-pointer`}
     >
       {image && (
         <img src={image} alt={title} className="w-full h-48 object-cover" />
