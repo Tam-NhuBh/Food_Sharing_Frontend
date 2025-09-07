@@ -19,12 +19,12 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-white border border-black overflow-hidden flex flex-col ${className} cursor-pointer`}
+      className={`bg-white border border-gray-300 overflow-hidden flex flex-col ${className} cursor-pointer`}
     >
       {image && (
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <img src={image} alt={title} className="w-full h-62 object-cover" />
       )}
-      <div className="p-4 flex-1 flex flex-col">
+      <div className="p-4 flex-1 flex flex-col border-t border-gray-300">
         {category && (
           <span className="font-playfair font-bold text-sm text-black mb-2">
             {category}
