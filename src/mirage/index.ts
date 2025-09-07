@@ -1,9 +1,10 @@
 import { createServer, Model } from "miragejs";
-import recipesData from "./recipes.json";
+// import recipesData from "./recipes.json";
+import data from './temp.json';
 import type { Recipe } from "../types";
 
-const recipes: Recipe[] = recipesData as Recipe[];
-
+// const recipes: Recipe[] = recipesData as Recipe[];
+const recipes: Recipe[] = data.recipes as Recipe[];
 export function makeServer({ environment = "development" } = {}) {
   const server = createServer({
     environment,

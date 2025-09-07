@@ -9,9 +9,9 @@ export interface Recipe {
   category: string[],
   ingredients: string[],
   steps: string[],
-  isFavourite: boolean,
+  isFavourite?: boolean,
   rating: number,
-  comments: Comment[]
+  comments?: Comment[]
   createdAt: string
 }
 
