@@ -12,6 +12,8 @@ const NotFound = lazy(() => import('../pages/NotFound'));
 import { useRoutes, type RouteObject } from 'react-router-dom';
 //import ProtectedRoute from './protected-route';
 import App from '../App';
+import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 
 const routes: RouteObject[] = [
@@ -45,6 +47,10 @@ const routes: RouteObject[] = [
           },
         ]
       },
+      {
+        path: 'sign-up',
+        element: <SignUp/>
+      },
       // {
       //   path: 'stories',
       //   element: <StoriesLayout />,
@@ -67,10 +73,10 @@ const routes: RouteObject[] = [
       //     </ProtectedRoute>
       //   ),
       // },
-      // {
-      //   path: 'login',
-      //   element: <Login />,
-      // },
+      {
+        path: 'login',
+        element: <Login />,
+      },
       {
         path: '*',
         element: <NotFound />,

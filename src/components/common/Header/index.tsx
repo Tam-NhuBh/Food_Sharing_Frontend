@@ -46,7 +46,7 @@ export default function Header() {
           <Link to="/about" className="font-worksans hover:underline" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/login" className="font-worksans" onClick={() => setIsOpen(false)}>Login</Link>
           <Link
-            to="/signup"
+            to="/sign-up"
             className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
             onClick={() => setIsOpen(false)}
           >
