@@ -23,7 +23,7 @@ export default function Header() {
       <div className="hidden md:flex items-center space-x-4 text-md lg:text-lg">
         <Link to="/login" className="font-worksans">Login</Link>
         <Link
-          to="/signup"
+          to="/sign-up"
           className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
         >
           Sign up
