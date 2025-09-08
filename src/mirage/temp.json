@@ -6,7 +6,13 @@
       "LITER": "l",
       "MILLILITER": "ml",
       "PIECE": "pcs",
-      "CUP": "cup"
+      "CUP": "cup",
+      "TEASPOON": "tsp",
+      "TABLESPOON": "tbsp",
+      "PINCH": "pinch",
+      "LEAF": "leaf",
+      "HEAD": "head",
+      "CLOVE": "clove"
     },
     "CategoryType": {
       "BEVERAGES": "Beverages",
@@ -18,7 +24,7 @@
       "SNACKS": "Snacks"
     }
   },
-  
+
   "categories": [
     {
       "id": 1,
@@ -63,7 +69,7 @@
       "icon": "snack-icon"
     }
   ],
-  
+
   "users": [
     {
       "id": 1,
@@ -138,13 +144,13 @@
       "recipesCreated": []
     }
   ],
-  
+
   "recipes": [
     {
       "id": 1,
       "categoryId": 4,
       "categoryType": "MAIN_COURSE",
-      "image": "/images/recipes/pho-bo.jpg",
+      "image": "/pho-bo.jpg",
       "title": "Phở Bò",
       "author": "Khanh Nguyen",
       "authorId": 1,
@@ -154,14 +160,14 @@
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
-        {"name": "beef bones", "amount": 500, "unit": "GRAM"},
-        {"name": "beef brisket", "amount": 300, "unit": "GRAM"},
-        {"name": "rice noodles", "amount": 200, "unit": "GRAM"},
-        {"name": "onion", "amount": 1, "unit": "PIECE"},
-        {"name": "star anise", "amount": 3, "unit": "PIECE"},
-        {"name": "fish sauce", "amount": 30, "unit": "MILLILITER"},
-        {"name": "bean sprouts", "amount": 1, "unit": "CUP"},
-        {"name": "fresh herbs", "amount": 1, "unit": "CUP"}
+        { "name": "beef bones", "amount": 500, "unit": "GRAM" },
+        { "name": "beef brisket", "amount": 300, "unit": "GRAM" },
+        { "name": "rice noodles", "amount": 200, "unit": "GRAM" },
+        { "name": "onion", "amount": 1, "unit": "PIECE" },
+        { "name": "star anise", "amount": 3, "unit": "PIECE" },
+        { "name": "fish sauce", "amount": 30, "unit": "MILLILITER" },
+        { "name": "bean sprouts", "amount": 1, "unit": "CUP" },
+        { "name": "fresh herbs", "amount": 1, "unit": "CUP" }
       ],
       "steps": [
         "Char onion and ginger over open flame",
@@ -189,7 +195,7 @@
       "id": 2,
       "categoryId": 4,
       "categoryType": "MAIN_COURSE",
-      "image": "/images/recipes/banh-mi-thit-nuong.jpg",
+      "image": "/banh-mi-thit-nuong.jpg",
       "title": "Bánh Mì Thịt Nướng",
       "author": "Tran Le",
       "authorId": 2,
@@ -199,13 +205,13 @@
       "servings": 2,
       "category": "Main Course",
       "ingredients": [
-        {"name": "Vietnamese baguettes", "amount": 2, "unit": "PIECE"},
-        {"name": "pork shoulder", "amount": 300, "unit": "GRAM"},
-        {"name": "lemongrass", "amount": 2, "unit": "PIECE"},
-        {"name": "fish sauce", "amount": 50, "unit": "MILLILITER"},
-        {"name": "pickled vegetables", "amount": 200, "unit": "GRAM"},
-        {"name": "cilantro", "amount": 1, "unit": "CUP"},
-        {"name": "mayonnaise", "amount": 30, "unit": "MILLILITER"}
+        { "name": "Vietnamese baguettes", "amount": 2, "unit": "PIECE" },
+        { "name": "pork shoulder", "amount": 300, "unit": "GRAM" },
+        { "name": "lemongrass", "amount": 2, "unit": "PIECE" },
+        { "name": "fish sauce", "amount": 50, "unit": "MILLILITER" },
+        { "name": "pickled vegetables", "amount": 200, "unit": "GRAM" },
+        { "name": "cilantro", "amount": 1, "unit": "CUP" },
+        { "name": "mayonnaise", "amount": 30, "unit": "MILLILITER" }
       ],
       "steps": [
         "Marinate pork with lemongrass and fish sauce for 30 minutes",
@@ -233,7 +239,7 @@
       "id": 3,
       "categoryId": 4,
       "categoryType": "MAIN_COURSE",
-      "image": "/images/recipes/spaghetti-carbonara.jpg",
+      "image": "/spaghetti-carbonara.jpg",
       "title": "Spaghetti Carbonara",
       "author": "Nhung Vo",
       "authorId": 3,
@@ -243,13 +249,13 @@
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
-        {"name": "spaghetti", "amount": 400, "unit": "GRAM"},
-        {"name": "pancetta", "amount": 150, "unit": "GRAM"},
-        {"name": "eggs", "amount": 3, "unit": "PIECE"},
-        {"name": "Pecorino Romano", "amount": 100, "unit": "GRAM"},
-        {"name": "Parmesan", "amount": 50, "unit": "GRAM"},
-        {"name": "black pepper", "amount": 10, "unit": "GRAM"},
-        {"name": "pasta water", "amount": 1, "unit": "CUP"}
+        { "name": "spaghetti", "amount": 400, "unit": "GRAM" },
+        { "name": "pancetta", "amount": 150, "unit": "GRAM" },
+        { "name": "eggs", "amount": 3, "unit": "PIECE" },
+        { "name": "Pecorino Romano", "amount": 100, "unit": "GRAM" },
+        { "name": "Parmesan", "amount": 50, "unit": "GRAM" },
+        { "name": "black pepper", "amount": 10, "unit": "GRAM" },
+        { "name": "pasta water", "amount": 1, "unit": "CUP" }
       ],
       "steps": [
         "Cook spaghetti in salted water until al dente",
@@ -277,7 +283,7 @@
       "id": 4,
       "categoryId": 4,
       "categoryType": "MAIN_COURSE",
-      "image": "/images/recipes/pad-thai.jpg",
+      "image": "/pad-thai.jpg",
       "title": "Pad Thai",
       "author": "Nhu Tang",
       "authorId": 4,
@@ -287,13 +293,13 @@
       "servings": 2,
       "category": "Main Course",
       "ingredients": [
-        {"name": "rice noodles", "amount": 200, "unit": "GRAM"},
-        {"name": "shrimp", "amount": 200, "unit": "GRAM"},
-        {"name": "eggs", "amount": 2, "unit": "PIECE"},
-        {"name": "tamarind paste", "amount": 50, "unit": "MILLILITER"},
-        {"name": "fish sauce", "amount": 30, "unit": "MILLILITER"},
-        {"name": "bean sprouts", "amount": 1, "unit": "CUP"},
-        {"name": "peanuts", "amount": 50, "unit": "GRAM"}
+        { "name": "rice noodles", "amount": 200, "unit": "GRAM" },
+        { "name": "shrimp", "amount": 200, "unit": "GRAM" },
+        { "name": "eggs", "amount": 2, "unit": "PIECE" },
+        { "name": "tamarind paste", "amount": 50, "unit": "MILLILITER" },
+        { "name": "fish sauce", "amount": 30, "unit": "MILLILITER" },
+        { "name": "bean sprouts", "amount": 1, "unit": "CUP" },
+        { "name": "peanuts", "amount": 50, "unit": "GRAM" }
       ],
       "steps": [
         "Soak rice noodles in warm water until soft",
@@ -321,7 +327,7 @@
       "id": 5,
       "categoryId": 4,
       "categoryType": "MAIN_COURSE",
-      "image": "/images/recipes/fish-tacos.jpg",
+      "image": "/fish-tacos.jpg",
       "title": "Fish Tacos",
       "author": "Khanh Nguyen",
       "authorId": 1,
@@ -331,13 +337,13 @@
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
-        {"name": "white fish fillets", "amount": 500, "unit": "GRAM"},
-        {"name": "corn tortillas", "amount": 8, "unit": "PIECE"},
-        {"name": "cabbage", "amount": 2, "unit": "CUP"},
-        {"name": "sour cream", "amount": 100, "unit": "MILLILITER"},
-        {"name": "limes", "amount": 2, "unit": "PIECE"},
-        {"name": "cilantro", "amount": 1, "unit": "CUP"},
-        {"name": "chili powder", "amount": 10, "unit": "GRAM"}
+        { "name": "white fish fillets", "amount": 500, "unit": "GRAM" },
+        { "name": "corn tortillas", "amount": 8, "unit": "PIECE" },
+        { "name": "cabbage", "amount": 2, "unit": "CUP" },
+        { "name": "sour cream", "amount": 100, "unit": "MILLILITER" },
+        { "name": "limes", "amount": 2, "unit": "PIECE" },
+        { "name": "cilantro", "amount": 1, "unit": "CUP" },
+        { "name": "chili powder", "amount": 10, "unit": "GRAM" }
       ],
       "steps": [
         "Season fish with spices",
@@ -360,9 +366,1025 @@
       "viewCount": 156,
       "createdAt": "2025-02-18T15:10:00Z",
       "updatedAt": "2025-02-18T15:10:00Z"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "categoryType": "BEVERAGES",
+      "image": "/ca-phe-sua-da.jpg",
+      "title": "Vietnamese Iced Coffee",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Strong Vietnamese coffee with condensed milk served over ice.",
+      "longDescription": "A bold and sweet drink made from strong drip-brewed Vietnamese coffee combined with creamy condensed milk, poured over ice.",
+      "cookingTime": "10 minutes",
+      "servings": 1,
+      "category": "Beverages",
+      "ingredients": [
+        { "name": "Vietnamese coffee grounds", "amount": 25, "unit": "GRAM" },
+        { "name": "condensed milk", "amount": 40, "unit": "MILLILITER" },
+        { "name": "ice cubes", "amount": 5, "unit": "PIECE" },
+        { "name": "hot water", "amount": 120, "unit": "MILLILITER" }
+      ],
+      "steps": [
+        "Brew coffee using a Vietnamese drip filter (phin).",
+        "Add condensed milk to a glass.",
+        "Pour brewed coffee into the glass and stir.",
+        "Add ice cubes and serve."
+      ],
+      "nutrition": { "calories": 180, "protein": 3, "carbs": 25, "fat": 6 },
+      "tags": ["vietnamese", "coffee", "iced"],
+      "rating": 5,
+      "totalRatings": 12,
+      "viewCount": 450,
+      "createdAt": "2025-01-20T09:00:00Z",
+      "updatedAt": "2025-01-20T09:00:00Z"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "categoryType": "BEVERAGES",
+      "image": "iced-tea.jpg",
+      "title": "Vietnamese Iced Tea",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Refreshing iced green tea, a common drink in Vietnam.",
+      "longDescription": "Vietnamese iced tea (Trà đá) is a simple and refreshing drink made with green tea leaves and served over ice, often enjoyed at street-side eateries.",
+      "cookingTime": "15 minutes",
+      "servings": 2,
+      "category": "Beverages",
+      "ingredients": [
+        { "name": "green tea leaves", "amount": 10, "unit": "GRAM" },
+        { "name": "hot water", "amount": 500, "unit": "MILLILITER" },
+        { "name": "ice cubes", "amount": 10, "unit": "PIECE" }
+      ],
+      "steps": [
+        "Steep green tea leaves in hot water for 5 minutes.",
+        "Strain the tea into a jug.",
+        "Add ice cubes and serve chilled."
+      ],
+      "nutrition": { "calories": 0, "protein": 0, "carbs": 0, "fat": 0 },
+      "tags": ["vietnamese", "tea", "iced", "refreshing"],
+      "rating": 4,
+      "totalRatings": 8,
+      "viewCount": 300,
+      "createdAt": "2025-01-20T09:15:00Z",
+      "updatedAt": "2025-01-20T09:15:00Z"
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "categoryType": "BEVERAGES",
+      "image": "/sugarcane-juice.jpg",
+      "title": "Sugarcane Juice",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Sweet and refreshing juice extracted from sugarcane.",
+      "longDescription": "Nước mía is a popular Vietnamese street drink made by pressing sugarcane stalks to extract their naturally sweet juice, often served with ice.",
+      "cookingTime": "5 minutes",
+      "servings": 1,
+      "category": "Beverages",
+      "ingredients": [
+        { "name": "sugarcane stalks", "amount": 300, "unit": "GRAM" },
+        { "name": "ice cubes", "amount": 5, "unit": "PIECE" }
+      ],
+      "steps": [
+        "Press sugarcane stalks through a juicer.",
+        "Pour juice into a glass.",
+        "Add ice cubes and serve immediately."
+      ],
+      "nutrition": { "calories": 120, "protein": 0, "carbs": 30, "fat": 0 },
+      "tags": ["vietnamese", "juice", "sweet", "street-food"],
+      "rating": 5,
+      "totalRatings": 20,
+      "viewCount": 600,
+      "createdAt": "2025-01-20T09:30:00Z",
+      "updatedAt": "2025-01-20T09:30:00Z"
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "categoryType": "BEVERAGES",
+      "image": "/che-ba-mau.jpg",
+      "title": "Three-Color Dessert Drink",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Colorful Vietnamese sweet drink with beans, jelly, and coconut milk.",
+      "longDescription": "Chè Ba Màu (Three-Color Dessert Drink) is a refreshing Vietnamese drink made of mung beans, red beans, pandan jelly, and coconut milk, topped with crushed ice.",
+      "cookingTime": "25 minutes",
+      "servings": 2,
+      "category": "Beverages",
+      "ingredients": [
+        { "name": "mung beans", "amount": 50, "unit": "GRAM" },
+        { "name": "red beans", "amount": 50, "unit": "GRAM" },
+        { "name": "pandan jelly", "amount": 50, "unit": "GRAM" },
+        { "name": "coconut milk", "amount": 100, "unit": "MILLILITER" },
+        { "name": "sugar", "amount": 30, "unit": "GRAM" },
+        { "name": "ice cubes", "amount": 10, "unit": "PIECE" }
+      ],
+      "steps": [
+        "Cook mung beans and red beans until soft.",
+        "Prepare pandan jelly and cut into strips.",
+        "Layer beans and jelly into a glass.",
+        "Pour coconut milk and sugar syrup.",
+        "Top with crushed ice and serve."
+      ],
+      "nutrition": { "calories": 280, "protein": 6, "carbs": 50, "fat": 8 },
+      "tags": ["vietnamese", "dessert", "sweet", "colorful"],
+      "rating": 5,
+      "totalRatings": 15,
+      "viewCount": 520,
+      "createdAt": "2025-01-20T09:45:00Z",
+      "updatedAt": "2025-01-20T09:45:00Z"
+    },
+    {
+      "id": 10,
+      "categoryId": 1,
+      "categoryType": "BEVERAGES",
+      "image": "mango-smoothie.jpg",
+      "title": "Mango Smoothie",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Creamy and tropical Vietnamese mango smoothie.",
+      "longDescription": "Sinh tố xoài is a tropical Vietnamese fruit smoothie made with ripe mango, milk, and ice, blended until smooth and creamy.",
+      "cookingTime": "10 minutes",
+      "servings": 2,
+      "category": "Beverages",
+      "ingredients": [
+        { "name": "ripe mango", "amount": 2, "unit": "PIECE" },
+        { "name": "condensed milk", "amount": 40, "unit": "MILLILITER" },
+        { "name": "fresh milk", "amount": 100, "unit": "MILLILITER" },
+        { "name": "ice cubes", "amount": 10, "unit": "PIECE" }
+      ],
+      "steps": [
+        "Peel and cut mango into chunks.",
+        "Add mango, condensed milk, fresh milk, and ice to a blender.",
+        "Blend until smooth and creamy.",
+        "Pour into glasses and serve cold."
+      ],
+      "nutrition": { "calories": 210, "protein": 4, "carbs": 45, "fat": 3 },
+      "tags": ["vietnamese", "smoothie", "fruit", "mango"],
+      "rating": 5,
+      "totalRatings": 10,
+      "viewCount": 400,
+      "createdAt": "2025-01-20T10:00:00Z",
+      "updatedAt": "2025-01-20T10:00:00Z"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "categoryType": "APPETIZERS",
+      "image": "/goi-cuon.jpg",
+      "title": "Gỏi Cuốn",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Fresh Vietnamese spring rolls with shrimp, pork, and herbs.",
+      "longDescription": "Gỏi cuốn is a light and healthy Vietnamese appetizer made with rice paper rolls filled with shrimp, pork, vermicelli noodles, and fresh herbs, served with peanut dipping sauce.",
+      "cookingTime": "25 minutes",
+      "servings": 4,
+      "category": "Appetizers",
+      "ingredients": [
+        { "name": "rice paper", "amount": 8, "unit": "PIECE" },
+        { "name": "shrimp", "amount": 200, "unit": "GRAM" },
+        { "name": "pork belly", "amount": 150, "unit": "GRAM" },
+        { "name": "vermicelli noodles", "amount": 100, "unit": "GRAM" },
+        { "name": "fresh herbs", "amount": 1, "unit": "CUP" }
+      ],
+      "steps": [
+        "Boil shrimp and pork, then slice thinly.",
+        "Dip rice paper in warm water until soft.",
+        "Layer noodles, herbs, shrimp, and pork.",
+        "Roll tightly and serve with dipping sauce."
+      ],
+      "nutrition": { "calories": 180, "protein": 12, "carbs": 22, "fat": 5 },
+      "tags": ["vietnamese", "fresh", "appetizer", "healthy"],
+      "rating": 5,
+      "totalRatings": 8,
+      "viewCount": 300,
+      "createdAt": "2025-01-21T09:00:00Z",
+      "updatedAt": "2025-01-21T09:00:00Z"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "categoryType": "APPETIZERS",
+      "image": "/cha-gio.jpg",
+      "title": "Chả Giò",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Vietnamese crispy fried spring rolls filled with pork and vegetables.",
+      "longDescription": "Chả giò is a popular Vietnamese appetizer made with rice paper wrappers filled with minced pork, shrimp, taro, carrots, and glass noodles, then deep fried until golden and crispy.",
+      "cookingTime": "40 minutes",
+      "servings": 4,
+      "category": "Appetizers",
+      "ingredients": [
+        { "name": "rice paper", "amount": 12, "unit": "PIECE" },
+        { "name": "ground pork", "amount": 200, "unit": "GRAM" },
+        { "name": "shrimp", "amount": 100, "unit": "GRAM" },
+        { "name": "carrot", "amount": 1, "unit": "PIECE" },
+        { "name": "glass noodles", "amount": 50, "unit": "GRAM" }
+      ],
+      "steps": [
+        "Mix pork, shrimp, and vegetables together.",
+        "Wrap filling in rice paper rolls.",
+        "Deep fry until golden brown.",
+        "Serve with fish sauce dip."
+      ],
+      "nutrition": { "calories": 250, "protein": 15, "carbs": 20, "fat": 12 },
+      "tags": ["vietnamese", "fried", "appetizer", "crispy"],
+      "rating": 4,
+      "totalRatings": 12,
+      "viewCount": 450,
+      "createdAt": "2025-01-21T10:30:00Z",
+      "updatedAt": "2025-01-21T10:30:00Z"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "categoryType": "APPETIZERS",
+      "image": "/banh-khot.jpg",
+      "title": "Bánh Khọt",
+      "author": "Nhung Vo",
+      "authorId": 3,
+      "description": "Mini savory Vietnamese pancakes with shrimp.",
+      "longDescription": "Bánh khọt are bite-sized savory pancakes made with rice flour batter, topped with shrimp, fried until crispy, and served with fresh vegetables and dipping sauce.",
+      "cookingTime": "30 minutes",
+      "servings": 3,
+      "category": "Appetizers",
+      "ingredients": [
+        { "name": "rice flour", "amount": 150, "unit": "GRAM" },
+        { "name": "coconut milk", "amount": 200, "unit": "MILLILITER" },
+        { "name": "shrimp", "amount": 150, "unit": "GRAM" },
+        { "name": "green onion", "amount": 2, "unit": "PIECE" }
+      ],
+      "steps": [
+        "Mix rice flour batter with coconut milk.",
+        "Pour batter into small molds.",
+        "Top with shrimp and cook until crispy.",
+        "Serve with vegetables and dipping sauce."
+      ],
+      "nutrition": { "calories": 220, "protein": 10, "carbs": 28, "fat": 8 },
+      "tags": ["vietnamese", "street-food", "appetizer"],
+      "rating": 5,
+      "totalRatings": 6,
+      "viewCount": 280,
+      "createdAt": "2025-01-21T11:00:00Z",
+      "updatedAt": "2025-01-21T11:00:00Z"
+    },
+    {
+      "id": 14,
+      "categoryId": 2,
+      "categoryType": "APPETIZERS",
+      "image": "/banh-beo.jpg",
+      "title": "Bánh Bèo",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Steamed rice cakes topped with dried shrimp and scallions.",
+      "longDescription": "Bánh bèo is a traditional Vietnamese appetizer from Hue, consisting of steamed rice cakes topped with dried shrimp, scallion oil, and crispy pork skin.",
+      "cookingTime": "35 minutes",
+      "servings": 4,
+      "category": "Appetizers",
+      "ingredients": [
+        { "name": "rice flour", "amount": 200, "unit": "GRAM" },
+        { "name": "tapioca flour", "amount": 50, "unit": "GRAM" },
+        { "name": "dried shrimp", "amount": 50, "unit": "GRAM" },
+        { "name": "scallions", "amount": 2, "unit": "PIECE" }
+      ],
+      "steps": [
+        "Mix rice flour and tapioca flour with water.",
+        "Steam batter in small cups.",
+        "Top with dried shrimp and scallion oil.",
+        "Serve with fish sauce dip."
+      ],
+      "nutrition": { "calories": 190, "protein": 6, "carbs": 34, "fat": 3 },
+      "tags": ["vietnamese", "traditional", "appetizer"],
+      "rating": 4,
+      "totalRatings": 5,
+      "viewCount": 210,
+      "createdAt": "2025-01-21T12:00:00Z",
+      "updatedAt": "2025-01-21T12:00:00Z"
+    },
+    {
+      "id": 15,
+      "categoryId": 2,
+      "categoryType": "APPETIZERS",
+      "image": "/nom-du-du.jpg",
+      "title": "Nộm Đu Đủ",
+      "author": "Guest User",
+      "authorId": 5,
+      "description": "Vietnamese green papaya salad with herbs and peanuts.",
+      "longDescription": "Nộm đu đủ is a refreshing salad made with shredded green papaya, herbs, and roasted peanuts, tossed with a tangy fish sauce dressing.",
+      "cookingTime": "20 minutes",
+      "servings": 3,
+      "category": "Appetizers",
+      "ingredients": [
+        { "name": "green papaya", "amount": 1, "unit": "PIECE" },
+        { "name": "carrot", "amount": 1, "unit": "PIECE" },
+        { "name": "fresh herbs", "amount": 1, "unit": "CUP" },
+        { "name": "roasted peanuts", "amount": 50, "unit": "GRAM" }
+      ],
+      "steps": [
+        "Shred green papaya and carrot.",
+        "Mix with herbs and peanuts.",
+        "Toss with fish sauce dressing.",
+        "Serve chilled."
+      ],
+      "nutrition": { "calories": 160, "protein": 5, "carbs": 20, "fat": 6 },
+      "tags": ["vietnamese", "salad", "appetizer", "fresh"],
+      "rating": 5,
+      "totalRatings": 7,
+      "viewCount": 260,
+      "createdAt": "2025-01-21T13:00:00Z",
+      "updatedAt": "2025-01-21T13:00:00Z"
+    },
+    {
+      "id": 16,
+      "categoryId": 3,
+      "categoryType": "BREAKFAST_FOODS",
+      "image": "/pancakes.jpg",
+      "title": "Pancakes",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Fluffy American-style pancakes served with maple syrup.",
+      "longDescription": "Pancakes are a classic American breakfast dish made from a simple batter of flour, eggs, milk, and baking powder, cooked until fluffy and golden brown, and often served with butter and maple syrup.",
+      "cookingTime": "20 minutes",
+      "servings": 2,
+      "category": "Breakfast Foods",
+      "ingredients": [
+        { "name": "all-purpose flour", "amount": 150, "unit": "GRAM" },
+        { "name": "milk", "amount": 200, "unit": "MILLILITER" },
+        { "name": "egg", "amount": 1, "unit": "PIECE" },
+        { "name": "baking powder", "amount": 1, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Mix flour, baking powder, egg, and milk into a smooth batter.",
+        "Heat a pan and pour batter to form pancakes.",
+        "Cook until golden on both sides.",
+        "Serve with butter and maple syrup."
+      ],
+      "nutrition": { "calories": 310, "protein": 9, "carbs": 52, "fat": 8 },
+      "tags": ["american", "breakfast", "classic", "sweet"],
+      "rating": 5,
+      "totalRatings": 20,
+      "viewCount": 600,
+      "createdAt": "2025-01-22T08:00:00Z",
+      "updatedAt": "2025-01-22T08:00:00Z"
+    },
+    {
+      "id": 17,
+      "categoryId": 3,
+      "categoryType": "BREAKFAST_FOODS",
+      "image": "/chao-long.jpg",
+      "title": "Cháo Lòng",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Vietnamese rice porridge with pork innards.",
+      "longDescription": "Cháo lòng is a traditional Vietnamese rice porridge served with pork innards, blood pudding, and fresh herbs. It's a popular breakfast dish across Vietnam.",
+      "cookingTime": "60 minutes",
+      "servings": 4,
+      "category": "Breakfast Foods",
+      "ingredients": [
+        { "name": "rice", "amount": 200, "unit": "GRAM" },
+        { "name": "pork innards", "amount": 300, "unit": "GRAM" },
+        { "name": "pork blood pudding", "amount": 100, "unit": "GRAM" },
+        { "name": "fish sauce", "amount": 30, "unit": "MILLILITER" }
+      ],
+      "steps": [
+        "Cook rice with water until porridge consistency.",
+        "Boil and clean pork innards.",
+        "Slice innards and add to porridge.",
+        "Season with fish sauce and serve with herbs."
+      ],
+      "nutrition": { "calories": 250, "protein": 18, "carbs": 35, "fat": 5 },
+      "tags": ["vietnamese", "porridge", "savory", "traditional"],
+      "rating": 4,
+      "totalRatings": 8,
+      "viewCount": 320,
+      "createdAt": "2025-01-22T08:30:00Z",
+      "updatedAt": "2025-01-22T08:30:00Z"
+    },
+    {
+      "id": 18,
+      "categoryId": 3,
+      "categoryType": "BREAKFAST_FOODS",
+      "image": "/croissants.jpg",
+      "title": "Croissant with Butter & Jam",
+      "author": "Nhung Vo",
+      "authorId": 3,
+      "description": "Classic French croissant served with butter and fruit jam.",
+      "longDescription": "The croissant is a buttery, flaky pastry of French origin, enjoyed at breakfast with butter and fruit jam. Its light texture and rich flavor make it a beloved European breakfast staple.",
+      "cookingTime": "15 minutes",
+      "servings": 2,
+      "category": "Breakfast Foods",
+      "ingredients": [
+        { "name": "croissant", "amount": 2, "unit": "PIECE" },
+        { "name": "unsalted butter", "amount": 20, "unit": "GRAM" },
+        { "name": "fruit jam", "amount": 30, "unit": "GRAM" }
+      ],
+      "steps": [
+        "Warm croissants in the oven for a few minutes.",
+        "Spread butter on each croissant half.",
+        "Add a layer of fruit jam.",
+        "Serve warm with coffee or tea."
+      ],
+      "nutrition": { "calories": 280, "protein": 5, "carbs": 32, "fat": 15 },
+      "tags": ["french", "pastry", "breakfast", "classic"],
+      "rating": 4,
+      "totalRatings": 12,
+      "viewCount": 480,
+      "createdAt": "2025-01-22T10:00:00Z",
+      "updatedAt": "2025-01-22T10:00:00Z"
+    },
+    {
+      "id": 19,
+      "categoryId": 3,
+      "categoryType": "BREAKFAST_FOODS",
+      "image": "/xoi-man.jpg",
+      "title": "Xôi Mặn",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Vietnamese savory sticky rice with toppings.",
+      "longDescription": "Xôi mặn is a popular Vietnamese breakfast made from sticky rice, Chinese sausage, shredded pork, quail eggs, and scallions. It's a filling and flavorful morning dish.",
+      "cookingTime": "45 minutes",
+      "servings": 3,
+      "category": "Breakfast Foods",
+      "ingredients": [
+        { "name": "sticky rice", "amount": 200, "unit": "GRAM" },
+        { "name": "chinese sausage", "amount": 2, "unit": "PIECE" },
+        { "name": "quail eggs", "amount": 6, "unit": "PIECE" },
+        { "name": "scallions", "amount": 20, "unit": "GRAM" }
+      ],
+      "steps": [
+        "Soak sticky rice overnight and steam until cooked.",
+        "Fry Chinese sausage and slice thinly.",
+        "Boil quail eggs and peel.",
+        "Assemble with shredded pork and scallion oil."
+      ],
+      "nutrition": { "calories": 420, "protein": 12, "carbs": 80, "fat": 8 },
+      "tags": ["vietnamese", "sticky-rice", "savory", "street-food"],
+      "rating": 5,
+      "totalRatings": 9,
+      "viewCount": 300,
+      "createdAt": "2025-01-22T09:00:00Z",
+      "updatedAt": "2025-01-22T09:00:00Z"
+    },
+    {
+      "id": 20,
+      "categoryId": 3,
+      "categoryType": "BREAKFAST_FOODS",
+      "image": "/banh-cuon.jpg",
+      "title": "Bánh Cuốn",
+      "author": "Guest User",
+      "authorId": 5,
+      "description": "Vietnamese steamed rice rolls filled with pork and mushrooms.",
+      "longDescription": "Bánh cuốn are delicate steamed rice rolls filled with minced pork, mushrooms, and shallots, served with fish sauce dipping sauce and herbs. A light yet satisfying breakfast.",
+      "cookingTime": "40 minutes",
+      "servings": 3,
+      "category": "Breakfast Foods",
+      "ingredients": [
+        { "name": "rice flour", "amount": 150, "unit": "GRAM" },
+        { "name": "minced pork", "amount": 200, "unit": "GRAM" },
+        { "name": "wood ear mushrooms", "amount": 50, "unit": "GRAM" },
+        { "name": "fish sauce", "amount": 20, "unit": "MILLILITER" }
+      ],
+      "steps": [
+        "Mix rice flour with water to create batter.",
+        "Steam thin rice sheets.",
+        "Fill with minced pork and mushrooms.",
+        "Roll and serve with dipping sauce."
+      ],
+      "nutrition": { "calories": 280, "protein": 12, "carbs": 40, "fat": 8 },
+      "tags": ["vietnamese", "steamed", "savory", "traditional"],
+      "rating": 4,
+      "totalRatings": 6,
+      "viewCount": 210,
+      "createdAt": "2025-01-22T09:30:00Z",
+      "updatedAt": "2025-01-22T09:30:00Z"
+    },
+    {
+      "id": 22,
+      "categoryId": 5,
+      "categoryType": "SIDE_DISHES",
+      "image": "/honey-roasted-carrots.jpg",
+      "title": "Honey Roasted Carrots",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Sweet and tender carrots roasted with honey and a touch of thyme.",
+      "longDescription": "Honey Roasted Carrots are a simple and delicious side dish perfect for any meal. Carrots are tossed with honey, olive oil, and fresh thyme, then roasted until caramelized and tender, bringing out their natural sweetness.",
+      "cookingTime": "25 minutes",
+      "servings": 4,
+      "category": "Side Dishes",
+      "ingredients": [
+        { "name": "carrots", "amount": 500, "unit": "GRAM" },
+        { "name": "olive oil", "amount": 2, "unit": "TABLESPOON" },
+        { "name": "honey", "amount": 1.5, "unit": "TABLESPOON" },
+        { "name": "fresh thyme", "amount": 1, "unit": "TEASPOON" },
+        { "name": "salt", "amount": 0.5, "unit": "TEASPOON" },
+        { "name": "black pepper", "amount": 0.25, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Preheat oven to 200°C (400°F).",
+        "Peel and cut the carrots into evenly sized sticks.",
+        "In a bowl, toss carrots with olive oil, honey, thyme, salt, and pepper.",
+        "Spread carrots on a baking sheet in a single layer.",
+        "Roast for 20–25 minutes, stirring halfway through, until tender and caramelized.",
+        "Serve warm as a sweet and savory side dish."
+      ],
+      "nutrition": { "calories": 150, "protein": 2, "carbs": 22, "fat": 6 },
+      "tags": ["side-dish", "vegetable", "honey", "roasted", "quick"],
+      "rating": 5,
+      "totalRatings": 5,
+      "viewCount": 150,
+      "createdAt": "2025-09-08T18:00:00Z",
+      "updatedAt": "2025-09-08T18:00:00Z"
+    },
+    {
+      "id": 22,
+      "categoryId": 5,
+      "categoryType": "SIDE_DISHES",
+      "image": "creamy-mashed-potatoes.jpg",
+      "title": "Creamy Mashed Potatoes",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Classic creamy mashed potatoes with butter and cream.",
+      "longDescription": "Smooth and fluffy mashed potatoes, enriched with butter and cream, a perfect comfort food side dish.",
+      "cookingTime": "25 minutes",
+      "servings": 4,
+      "category": "Side Dishes",
+      "ingredients": [
+        { "name": "potatoes", "amount": 500, "unit": "GRAM" },
+        { "name": "butter", "amount": 50, "unit": "GRAM" },
+        { "name": "heavy cream", "amount": 100, "unit": "MILLILITER" },
+        { "name": "salt", "amount": 1, "unit": "TEASPOON" },
+        { "name": "pepper", "amount": 0.25, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Boil potatoes until tender.",
+        "Mash potatoes until smooth.",
+        "Stir in butter and cream.",
+        "Season with salt and pepper, then serve warm."
+      ],
+      "nutrition": { "calories": 220, "protein": 4, "carbs": 35, "fat": 8 },
+      "tags": ["classic", "comfort-food", "side-dish"],
+      "rating": 4,
+      "totalRatings": 5,
+      "viewCount": 185,
+      "createdAt": "2025-01-25T10:05:00Z",
+      "updatedAt": "2025-01-25T10:05:00Z"
+    },
+    {
+      "id": 23,
+      "categoryId": 5,
+      "categoryType": "SIDE_DISHES",
+      "image": "/korean-kimchi.jpg",
+      "title": "Korean Kimchi",
+      "author": "Nhung Vo",
+      "authorId": 3,
+      "description": "Spicy fermented napa cabbage with chili paste.",
+      "longDescription": "Traditional Korean side dish made from napa cabbage fermented with garlic, ginger, and Korean chili paste.",
+      "cookingTime": "1440 minutes",
+      "servings": 6,
+      "category": "Side Dishes",
+      "ingredients": [
+        { "name": "napa cabbage", "amount": 1, "unit": "HEAD" },
+        { "name": "Korean chili flakes", "amount": 3, "unit": "TABLESPOON" },
+        { "name": "garlic", "amount": 4, "unit": "CLOVE" },
+        { "name": "ginger", "amount": 20, "unit": "GRAM" },
+        { "name": "salt", "amount": 2, "unit": "TABLESPOON" }
+      ],
+      "steps": [
+        "Salt cabbage and let sit for 2 hours.",
+        "Rinse and squeeze excess water.",
+        "Mix chili paste with garlic and ginger.",
+        "Coat cabbage with paste and ferment overnight or longer.",
+        "Serve as a spicy side dish."
+      ],
+      "nutrition": { "calories": 40, "protein": 2, "carbs": 6, "fat": 0 },
+      "tags": ["korean", "fermented", "spicy", "side-dish"],
+      "rating": 5,
+      "totalRatings": 6,
+      "viewCount": 330,
+      "createdAt": "2025-01-25T10:10:00Z",
+      "updatedAt": "2025-01-25T10:10:00Z"
+    },
+    {
+      "id": 24,
+      "categoryId": 5,
+      "categoryType": "SIDE_DISHES",
+      "image": "/garlic-butter-green-beans.jpg",
+      "title": "Garlic Butter Green Beans",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Simple and flavorful green beans sautéed with garlic and butter.",
+      "longDescription": "Garlic Butter Green Beans are a quick and easy side dish that pairs well with almost any main course. Fresh green beans are blanched, then sautéed in a rich garlic butter sauce until tender-crisp and infused with flavor.",
+      "cookingTime": "15 minutes",
+      "servings": 4,
+      "category": "Side Dishes",
+      "ingredients": [
+        { "name": "fresh green beans", "amount": 400, "unit": "GRAM" },
+        { "name": "butter", "amount": 2, "unit": "TABLESPOON" },
+        { "name": "garlic cloves", "amount": 3, "unit": "PIECE" },
+        { "name": "salt", "amount": 1, "unit": "TEASPOON" },
+        { "name": "black pepper", "amount": 0.5, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Trim the ends of the green beans.",
+        "Blanch beans in boiling salted water for 2–3 minutes, then drain.",
+        "Melt butter in a large skillet over medium heat.",
+        "Add minced garlic and sauté until fragrant.",
+        "Add green beans, season with salt and pepper, and stir-fry for 2–3 minutes.",
+        "Serve warm as a side dish."
+      ],
+      "nutrition": { "calories": 120, "protein": 3, "carbs": 10, "fat": 8 },
+      "tags": ["side-dish", "vegetable", "garlic", "butter", "quick"],
+      "rating": 5,
+      "totalRatings": 8,
+      "viewCount": 275,
+      "createdAt": "2025-01-30T09:30:00Z",
+      "updatedAt": "2025-01-30T09:30:00Z"
+    },
+    {
+      "id": 25,
+      "categoryId": 5,
+      "categoryType": "SIDE_DISHES",
+      "image": "/caprese-salad.jpg",
+      "title": "Caprese Salad",
+      "author": "Guest User",
+      "authorId": 5,
+      "description": "Italian tomato, mozzarella, and basil salad.",
+      "longDescription": "A refreshing Italian side dish with ripe tomatoes, fresh mozzarella, basil leaves, olive oil, and balsamic glaze.",
+      "cookingTime": "10 minutes",
+      "servings": 2,
+      "category": "Side Dishes",
+      "ingredients": [
+        { "name": "tomatoes", "amount": 2, "unit": "PIECE" },
+        { "name": "fresh mozzarella", "amount": 150, "unit": "GRAM" },
+        { "name": "basil leaves", "amount": 10, "unit": "LEAF" },
+        { "name": "olive oil", "amount": 1, "unit": "TABLESPOON" },
+        { "name": "balsamic glaze", "amount": 1, "unit": "TABLESPOON" }
+      ],
+      "steps": [
+        "Slice tomatoes and mozzarella.",
+        "Layer with basil leaves.",
+        "Drizzle with olive oil and balsamic glaze.",
+        "Serve fresh as a light side dish."
+      ],
+      "nutrition": { "calories": 180, "protein": 8, "carbs": 6, "fat": 14 },
+      "tags": ["italian", "fresh", "vegetarian", "side-dish"],
+      "rating": 5,
+      "totalRatings": 4,
+      "viewCount": 260,
+      "createdAt": "2025-01-25T10:20:00Z",
+      "updatedAt": "2025-01-25T10:20:00Z"
+    },
+    {
+      "id": 26,
+      "categoryId": 6,
+      "categoryType": "DESSERTS",
+      "image": "/chocolate-lava-cake.jpg",
+      "title": "Chocolate Lava Cake",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Rich and gooey chocolate cake with a molten center.",
+      "longDescription": "Chocolate Lava Cake is a decadent dessert with a soft, spongy exterior and a warm, gooey chocolate center. Perfect for chocolate lovers, it’s easy to prepare and makes an impressive treat for any occasion.",
+      "cookingTime": "20 minutes",
+      "servings": 4,
+      "category": "Desserts",
+      "ingredients": [
+        { "name": "dark chocolate", "amount": 120, "unit": "GRAM" },
+        { "name": "unsalted butter", "amount": 100, "unit": "GRAM" },
+        { "name": "granulated sugar", "amount": 100, "unit": "GRAM" },
+        { "name": "eggs", "amount": 2, "unit": "PIECE" },
+        { "name": "egg yolks", "amount": 2, "unit": "PIECE" },
+        { "name": "all-purpose flour", "amount": 50, "unit": "GRAM" },
+        { "name": "vanilla extract", "amount": 1, "unit": "TEASPOON" },
+        { "name": "pinch of salt", "amount": 1, "unit": "PINCH" }
+      ],
+      "steps": [
+        "Preheat oven to 200°C (400°F) and grease 4 ramekins with butter.",
+        "Melt dark chocolate and butter together in a heatproof bowl over simmering water, stirring until smooth.",
+        "In a separate bowl, whisk eggs, egg yolks, sugar, and vanilla until pale and thick.",
+        "Gently fold melted chocolate mixture into the egg mixture.",
+        "Sift in flour and a pinch of salt, folding until just combined.",
+        "Divide batter evenly among ramekins.",
+        "Bake for 10–12 minutes, until the edges are set but the center is soft.",
+        "Let cool for 2 minutes, then invert onto plates and serve immediately."
+      ],
+      "nutrition": { "calories": 320, "protein": 6, "carbs": 30, "fat": 20 },
+      "tags": ["dessert", "chocolate", "cake", "molten", "quick"],
+      "rating": 5,
+      "totalRatings": 12,
+      "viewCount": 400,
+      "createdAt": "2025-09-08T18:15:00Z",
+      "updatedAt": "2025-09-08T18:15:00Z"
+    },
+    {
+      "id": 27,
+      "categoryId": 6,
+      "categoryType": "DESSERTS",
+      "image": "/classic-tiramisu.jpg",
+      "title": "Classic Tiramisu",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Italian coffee-flavored layered dessert.",
+      "longDescription": "A classic Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cream, and dusted with cocoa powder.",
+      "cookingTime": "30 minutes",
+      "servings": 6,
+      "category": "Desserts",
+      "ingredients": [
+        { "name": "ladyfingers", "amount": 200, "unit": "GRAM" },
+        { "name": "espresso", "amount": 150, "unit": "MILLILITER" },
+        { "name": "mascarpone cheese", "amount": 250, "unit": "GRAM" },
+        { "name": "eggs", "amount": 2, "unit": "PIECE" },
+        { "name": "cocoa powder", "amount": 2, "unit": "TABLESPOON" }
+      ],
+      "steps": [
+        "Dip ladyfingers in espresso.",
+        "Layer them in a dish with mascarpone mixture.",
+        "Repeat layers and dust with cocoa powder.",
+        "Chill for at least 2 hours before serving."
+      ],
+      "nutrition": { "calories": 320, "protein": 7, "carbs": 35, "fat": 16 },
+      "tags": ["italian", "dessert", "coffee", "classic"],
+      "rating": 5,
+      "totalRatings": 12,
+      "viewCount": 500,
+      "createdAt": "2025-01-26T09:10:00Z",
+      "updatedAt": "2025-01-26T09:10:00Z"
+    },
+    {
+      "id": 28,
+      "categoryId": 6,
+      "categoryType": "DESSERTS",
+      "image": "/mango-sticky-rice.jpg",
+      "title": "Mango Sticky Rice",
+      "author": "Nhung Vo",
+      "authorId": 3,
+      "description": "Thai dessert with sweet mango and coconut sticky rice.",
+      "longDescription": "A traditional Thai dessert combining glutinous rice cooked in coconut milk, served with ripe mango slices and a drizzle of coconut sauce.",
+      "cookingTime": "45 minutes",
+      "servings": 3,
+      "category": "Desserts",
+      "ingredients": [
+        { "name": "sticky rice", "amount": 200, "unit": "GRAM" },
+        { "name": "coconut milk", "amount": 200, "unit": "MILLILITER" },
+        { "name": "sugar", "amount": 40, "unit": "GRAM" },
+        { "name": "ripe mango", "amount": 2, "unit": "PIECE" },
+        { "name": "salt", "amount": 0.25, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Cook sticky rice until soft.",
+        "Mix with sweetened coconut milk.",
+        "Slice ripe mango and serve alongside rice.",
+        "Drizzle with coconut sauce before serving."
+      ],
+      "nutrition": { "calories": 300, "protein": 5, "carbs": 60, "fat": 6 },
+      "tags": ["thai", "dessert", "fruit", "coconut"],
+      "rating": 5,
+      "totalRatings": 10,
+      "viewCount": 350,
+      "createdAt": "2025-01-26T09:20:00Z",
+      "updatedAt": "2025-01-26T09:20:00Z"
+    },
+    {
+      "id": 29,
+      "categoryId": 6,
+      "categoryType": "DESSERTS",
+      "image": "/chocolate-brownie.jpg",
+      "title": "Chocolate Brownies",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Rich and fudgy chocolate brownies.",
+      "longDescription": "Moist and fudgy brownies made with dark chocolate, cocoa powder, and butter, perfect as a sweet snack or dessert.",
+      "cookingTime": "35 minutes",
+      "servings": 8,
+      "category": "Desserts",
+      "ingredients": [
+        { "name": "dark chocolate", "amount": 200, "unit": "GRAM" },
+        { "name": "butter", "amount": 100, "unit": "GRAM" },
+        { "name": "sugar", "amount": 150, "unit": "GRAM" },
+        { "name": "eggs", "amount": 2, "unit": "PIECE" },
+        { "name": "flour", "amount": 100, "unit": "GRAM" }
+      ],
+      "steps": [
+        "Melt chocolate and butter together.",
+        "Whisk in sugar and eggs.",
+        "Stir in flour and mix until combined.",
+        "Bake until set and fudgy in the center."
+      ],
+      "nutrition": { "calories": 280, "protein": 4, "carbs": 35, "fat": 15 },
+      "tags": ["chocolate", "dessert", "baked", "sweet"],
+      "rating": 5,
+      "totalRatings": 14,
+      "viewCount": 470,
+      "createdAt": "2025-01-26T09:30:00Z",
+      "updatedAt": "2025-01-26T09:30:00Z"
+    },
+    {
+      "id": 30,
+      "categoryId": 6,
+      "categoryType": "DESSERTS",
+      "image": "/creme-brulee.jpg",
+      "title": "Crème Brûlée",
+      "author": "Guest User",
+      "authorId": 5,
+      "description": "French custard dessert with caramelized sugar top.",
+      "longDescription": "A creamy French dessert made with rich vanilla custard, topped with a layer of caramelized sugar that cracks when tapped.",
+      "cookingTime": "50 minutes",
+      "servings": 4,
+      "category": "Desserts",
+      "ingredients": [
+        { "name": "heavy cream", "amount": 250, "unit": "MILLILITER" },
+        { "name": "egg yolks", "amount": 4, "unit": "PIECE" },
+        { "name": "sugar", "amount": 60, "unit": "GRAM" },
+        { "name": "vanilla extract", "amount": 1, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Heat cream with vanilla.",
+        "Whisk yolks with sugar and slowly temper with cream.",
+        "Bake custard in ramekins until set.",
+        "Sprinkle sugar and torch until caramelized."
+      ],
+      "nutrition": { "calories": 250, "protein": 5, "carbs": 20, "fat": 18 },
+      "tags": ["french", "dessert", "classic", "custard"],
+      "rating": 5,
+      "totalRatings": 9,
+      "viewCount": 390,
+      "createdAt": "2025-01-26T09:40:00Z",
+      "updatedAt": "2025-01-26T09:40:00Z"
+    },
+    {
+      "id": 31,
+      "categoryId": 7,
+      "categoryType": "SNACKS",
+      "image": "/banh-trang-tron.jpg",
+      "title": "Vietnamese Rice Paper Salad (Bánh Tráng Trộn)",
+      "author": "Khanh Nguyen",
+      "authorId": 1,
+      "description": "Popular Vietnamese street snack made with shredded rice paper and flavorful toppings.",
+      "longDescription": "Bánh Tráng Trộn is a classic Vietnamese street food snack made from shredded rice paper mixed with dried shrimp, beef jerky, quail eggs, herbs, and a tangy-sweet sauce.",
+      "cookingTime": "15 minutes",
+      "servings": 2,
+      "category": "Snacks",
+      "ingredients": [
+        { "name": "rice paper", "amount": 100, "unit": "GRAM" },
+        { "name": "dried shrimp", "amount": 30, "unit": "GRAM" },
+        { "name": "beef jerky", "amount": 50, "unit": "GRAM" },
+        { "name": "quail eggs", "amount": 4, "unit": "PIECE" },
+        { "name": "fresh herbs", "amount": 1, "unit": "CUP" }
+      ],
+      "steps": [
+        "Cut rice paper into thin strips.",
+        "Mix with dried shrimp, beef jerky, and herbs.",
+        "Add quail eggs and drizzle with sauce.",
+        "Toss well and serve immediately."
+      ],
+      "nutrition": { "calories": 280, "protein": 14, "carbs": 32, "fat": 10 },
+      "tags": ["vietnamese", "street food", "snack", "salad"],
+      "rating": 5,
+      "totalRatings": 11,
+      "viewCount": 480,
+      "createdAt": "2025-01-26T10:00:00Z",
+      "updatedAt": "2025-01-26T10:00:00Z"
+    },
+    {
+      "id": 32,
+      "categoryId": 7,
+      "categoryType": "SNACKS",
+      "image": "/caramel-popcorn.jpg",
+      "title": "Caramel Popcorn",
+      "author": "Tran Le",
+      "authorId": 2,
+      "description": "Sweet and crunchy caramel-coated popcorn.",
+      "longDescription": "Caramel popcorn is a classic snack where freshly popped corn is coated with a buttery caramel glaze, baked until crisp and crunchy.",
+      "cookingTime": "40 minutes",
+      "servings": 6,
+      "category": "Snacks",
+      "ingredients": [
+        { "name": "popcorn kernels", "amount": 100, "unit": "GRAM" },
+        { "name": "butter", "amount": 50, "unit": "GRAM" },
+        { "name": "brown sugar", "amount": 100, "unit": "GRAM" },
+        { "name": "corn syrup", "amount": 2, "unit": "TABLESPOON" },
+        { "name": "salt", "amount": 0.25, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Pop the popcorn kernels and place in a large bowl.",
+        "Melt butter with brown sugar and corn syrup.",
+        "Pour caramel mixture over popcorn and stir to coat.",
+        "Bake until crisp and golden."
+      ],
+      "nutrition": { "calories": 220, "protein": 2, "carbs": 36, "fat": 8 },
+      "tags": ["snack", "sweet", "caramel", "popcorn"],
+      "rating": 5,
+      "totalRatings": 9,
+      "viewCount": 360,
+      "createdAt": "2025-01-26T10:10:00Z",
+      "updatedAt": "2025-01-26T10:10:00Z"
+    },
+    {
+      "id": 33,
+      "categoryId": 7,
+      "categoryType": "SNACKS",
+      "image": "/seaweed-chips.jpg",
+      "title": "Crispy Seaweed Chips",
+      "author": "Nhung Vo",
+      "authorId": 3,
+      "description": "Light, crunchy, and savory baked seaweed chips.",
+      "longDescription": "Crispy Seaweed Chips are a light and addictive snack made by brushing nori sheets with sesame oil and soy sauce, then baking until perfectly crunchy. Sprinkled with sesame seeds for extra flavor, they are a healthy alternative to fried chips.",
+      "cookingTime": "15 minutes",
+      "servings": 2,
+      "category": "Snacks",
+      "ingredients": [
+        { "name": "dried seaweed (nori)", "amount": 10, "unit": "PIECE" },
+        { "name": "sesame oil", "amount": 2, "unit": "TABLESPOON" },
+        { "name": "soy sauce", "amount": 1, "unit": "TABLESPOON" },
+        { "name": "sesame seeds", "amount": 1, "unit": "TEASPOON" },
+        { "name": "salt", "amount": 0.5, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Preheat oven to 150°C (300°F).",
+        "Cut the seaweed sheets into halves or quarters.",
+        "Mix sesame oil, soy sauce, and salt in a small bowl.",
+        "Brush the mixture lightly onto seaweed pieces.",
+        "Place on a parchment-lined tray, sprinkle with sesame seeds.",
+        "Bake for 8–10 minutes until crisp.",
+        "Cool and enjoy immediately or store in an airtight container."
+      ],
+      "nutrition": { "calories": 90, "protein": 3, "carbs": 6, "fat": 5 },
+      "tags": ["snack", "seaweed", "crispy", "healthy", "baked"],
+      "rating": 4,
+      "totalRatings": 6,
+      "viewCount": 210,
+      "createdAt": "2025-01-30T09:00:00Z",
+      "updatedAt": "2025-01-30T09:00:00Z"
+    },
+    {
+      "id": 34,
+      "categoryId": 7,
+      "categoryType": "SNACKS",
+      "image": "/french-fries.jpg",
+      "title": "Crispy French Fries",
+      "author": "Nhu Tang",
+      "authorId": 4,
+      "description": "Golden and crispy homemade fries.",
+      "longDescription": "Homemade French fries made with potatoes cut into strips, soaked, fried twice for extra crispiness, and seasoned with salt.",
+      "cookingTime": "30 minutes",
+      "servings": 3,
+      "category": "Snacks",
+      "ingredients": [
+        { "name": "potatoes", "amount": 500, "unit": "GRAM" },
+        { "name": "vegetable oil", "amount": 500, "unit": "MILLILITER" },
+        { "name": "salt", "amount": 1, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Peel and cut potatoes into strips.",
+        "Soak in water to remove starch.",
+        "Fry once at lower temperature, then again at high heat.",
+        "Season with salt and serve hot."
+      ],
+      "nutrition": { "calories": 300, "protein": 4, "carbs": 45, "fat": 12 },
+      "tags": ["snack", "potato", "fried", "classic"],
+      "rating": 5,
+      "totalRatings": 15,
+      "viewCount": 600,
+      "createdAt": "2025-01-26T10:30:00Z",
+      "updatedAt": "2025-01-26T10:30:00Z"
+    },
+    {
+      "id": 35,
+      "categoryId": 7,
+      "categoryType": "SNACKS",
+      "image": "/nem-chua.jpg",
+      "title": "Vietnamese Fermented Pork Roll (Nem Chua)",
+      "author": "Guest User",
+      "authorId": 5,
+      "description": "Tangy and savory Vietnamese fermented pork snack.",
+      "longDescription": "Nem Chua is a Vietnamese specialty made of minced pork, garlic, and chili, wrapped in banana leaves and fermented naturally to develop a tangy, savory flavor.",
+      "cookingTime": "48 hours (fermentation)",
+      "servings": 6,
+      "category": "Snacks",
+      "ingredients": [
+        { "name": "pork", "amount": 400, "unit": "GRAM" },
+        { "name": "chili", "amount": 2, "unit": "PIECE" },
+        { "name": "banana leaves", "amount": 4, "unit": "PIECE" },
+        { "name": "salt", "amount": 1, "unit": "TEASPOON" }
+      ],
+      "steps": [
+        "Mix minced pork with garlic, chili, and seasoning.",
+        "Wrap in banana leaves tightly.",
+        "Leave to ferment at room temperature for 2 days.",
+        "Serve as a snack or appetizer."
+      ],
+      "nutrition": { "calories": 210, "protein": 18, "carbs": 3, "fat": 15 },
+      "tags": ["vietnamese", "fermented", "snack", "pork"],
+      "rating": 5,
+      "totalRatings": 7,
+      "viewCount": 310,
+      "createdAt": "2025-01-26T10:40:00Z",
+      "updatedAt": "2025-01-26T10:40:00Z"
     }
   ],
-  
+
   "ratings": [
     {
       "id": 1,
@@ -462,27 +1484,618 @@
       "comment": "Love these fish tacos! So fresh and flavorful.",
       "rating": 5,
       "createdAt": "2025-02-19T14:20:00Z"
+    },
+    {
+      "id": 12,
+      "recipeId": 6,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "So delicious, just like the street coffee I had in Hanoi.",
+      "rating": 5,
+      "createdAt": "2025-01-18T09:20:00Z"
+    },
+    {
+      "id": 13,
+      "recipeId": 6,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Tasty but hơi strong for me.",
+      "rating": 4,
+      "createdAt": "2025-01-19T14:45:00Z"
+    },
+
+    {
+      "id": 14,
+      "recipeId": 7,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Refreshing and light, rất hợp uống buổi sáng.",
+      "rating": 5,
+      "createdAt": "2025-01-20T10:15:00Z"
+    },
+    {
+      "id": 15,
+      "recipeId": 7,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Good flavor but a bit too sweet cho mình.",
+      "rating": 4,
+      "createdAt": "2025-01-21T16:30:00Z"
+    },
+
+    {
+      "id": 16,
+      "recipeId": 8,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "So fresh! Nước dừa mát lạnh đúng chuẩn Việt Nam.",
+      "rating": 5,
+      "createdAt": "2025-01-22T11:40:00Z"
+    },
+    {
+      "id": 17,
+      "recipeId": 8,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Simple, natural, but hơi nhạt nếu không thêm đá.",
+      "rating": 4,
+      "createdAt": "2025-01-23T13:05:00Z"
+    },
+
+    {
+      "id": 18,
+      "recipeId": 9,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Love the taste, trà xanh này really relaxing.",
+      "rating": 5,
+      "createdAt": "2025-01-24T09:10:00Z"
+    },
+    {
+      "id": 19,
+      "recipeId": 9,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Ngon nhưng hơi đắng nếu uống không đường.",
+      "rating": 3,
+      "createdAt": "2025-01-25T17:50:00Z"
+    },
+
+    {
+      "id": 20,
+      "recipeId": 10,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Sweet and creamy, sữa đậu nành này perfect for breakfast.",
+      "rating": 5,
+      "createdAt": "2025-01-26T08:45:00Z"
+    },
+    {
+      "id": 21,
+      "recipeId": 10,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Quite good, nhưng mình thích ít ngọt hơn.",
+      "rating": 4,
+      "createdAt": "2025-01-27T15:20:00Z"
+    },
+    {
+      "id": 22,
+      "recipeId": 11,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Fresh and tasty spring rolls. Love the dipping sauce!",
+      "rating": 5,
+      "createdAt": "2025-01-23T08:10:00Z"
+    },
+    {
+      "id": 23,
+      "recipeId": 11,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Good balance of herbs and shrimp, but could use more greens.",
+      "rating": 4,
+      "createdAt": "2025-01-23T09:00:00Z"
+    },
+    {
+      "id": 24,
+      "recipeId": 12,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Bruschetta is crispy and fresh. Perfect for a quick snack.",
+      "rating": 5,
+      "createdAt": "2025-01-23T10:00:00Z"
+    },
+    {
+      "id": 25,
+      "recipeId": 12,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Simple but delicious, tomatoes are very fresh.",
+      "rating": 4,
+      "createdAt": "2025-01-23T10:30:00Z"
+    },
+    {
+      "id": 26,
+      "recipeId": 13,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Spicy Thai spring rolls, very tasty.",
+      "rating": 4,
+      "createdAt": "2025-01-23T11:00:00Z"
+    },
+    {
+      "id": 27,
+      "recipeId": 13,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Nice Thai flavors, a bit spicy but very flavorful.",
+      "rating": 5,
+      "createdAt": "2025-01-23T11:15:00Z"
+    },
+    {
+      "id": 28,
+      "recipeId": 14,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Cheesy nachos, fun to eat. Great for sharing.",
+      "rating": 5,
+      "createdAt": "2025-01-23T12:00:00Z"
+    },
+    {
+      "id": 29,
+      "recipeId": 14,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Crispy and flavorful, but a bit too much cheese.",
+      "rating": 4,
+      "createdAt": "2025-01-23T12:20:00Z"
+    },
+    {
+      "id": 30,
+      "recipeId": 15,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Crispy spring rolls, just like homemade.",
+      "rating": 5,
+      "createdAt": "2025-01-23T13:00:00Z"
+    },
+    {
+      "id": 31,
+      "recipeId": 15,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Crispy and delicious, but a little oily.",
+      "rating": 4,
+      "createdAt": "2025-01-23T13:15:00Z"
+    },
+    {
+      "id": 32,
+      "recipeId": 16,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Pancakes are soft and fluffy. Just like American style.",
+      "rating": 5,
+      "createdAt": "2025-01-23T14:00:00Z"
+    },
+    {
+      "id": 33,
+      "recipeId": 16,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Tasty, but I prefer more syrup.",
+      "rating": 4,
+      "createdAt": "2025-01-23T14:20:00Z"
+    },
+    {
+      "id": 34,
+      "recipeId": 17,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Rich and hearty porridge, just like home.",
+      "rating": 5,
+      "createdAt": "2025-01-23T15:00:00Z"
+    },
+    {
+      "id": 35,
+      "recipeId": 17,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Good, but a bit too strong for breakfast.",
+      "rating": 3,
+      "createdAt": "2025-01-23T15:30:00Z"
+    },
+    {
+      "id": 36,
+      "recipeId": 18,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Buttery croissant, delicious with strawberry jam.",
+      "rating": 5,
+      "createdAt": "2025-01-23T16:00:00Z"
+    },
+    {
+      "id": 37,
+      "recipeId": 18,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Light breakfast, classic French style.",
+      "rating": 4,
+      "createdAt": "2025-01-23T16:20:00Z"
+    },
+    {
+      "id": 38,
+      "recipeId": 19,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Sticky rice full of toppings, very filling.",
+      "rating": 5,
+      "createdAt": "2025-01-23T17:00:00Z"
+    },
+    {
+      "id": 39,
+      "recipeId": 19,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Good flavor, but a little too salty.",
+      "rating": 4,
+      "createdAt": "2025-01-23T17:20:00Z"
+    },
+    {
+      "id": 40,
+      "recipeId": 20,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Soft and fragrant, delicious with fish sauce.",
+      "rating": 5,
+      "createdAt": "2025-01-23T18:00:00Z"
+    },
+    {
+      "id": 41,
+      "recipeId": 20,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Delicate and tasty, but takes time to prepare.",
+      "rating": 4,
+      "createdAt": "2025-01-23T18:15:00Z"
+    },
+    {
+      "id": 42,
+      "recipeId": 21,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "The garlic green beans were perfectly cooked, still crisp with a wonderful aroma of garlic. Simple but really satisfying.",
+      "rating": 5,
+      "createdAt": "2025-02-01T09:20:00Z"
+    },
+    {
+      "id": 43,
+      "recipeId": 21,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Great balance of flavor! I loved how the seasoning enhanced the beans without overpowering them.",
+      "rating": 4,
+      "createdAt": "2025-02-01T12:40:00Z"
+    },
+    {
+      "id": 44,
+      "recipeId": 22,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Crispy roasted potatoes with rosemary and garlic were absolutely delicious. Golden on the outside, fluffy inside.",
+      "rating": 5,
+      "createdAt": "2025-02-02T08:15:00Z"
+    },
+    {
+      "id": 45,
+      "recipeId": 22,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "A classic side dish, but this version really stands out. Perfectly seasoned and roasted just right.",
+      "rating": 4,
+      "createdAt": "2025-02-02T11:05:00Z"
+    },
+    {
+      "id": 46,
+      "recipeId": 23,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "The coleslaw was fresh, creamy, and had just the right crunch. Perfect complement to grilled meats.",
+      "rating": 5,
+      "createdAt": "2025-02-03T10:25:00Z"
+    },
+    {
+      "id": 47,
+      "recipeId": 23,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Loved the tangy dressing and the mix of vegetables. Very refreshing and balanced.",
+      "rating": 4,
+      "createdAt": "2025-02-03T13:10:00Z"
+    },
+    {
+      "id": 48,
+      "recipeId": 24,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Steamed rice was fluffy and perfectly cooked. A staple done really well!",
+      "rating": 5,
+      "createdAt": "2025-02-04T07:50:00Z"
+    },
+    {
+      "id": 49,
+      "recipeId": 24,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Simple but essential. The rice had a light texture and no stickiness. Excellent base for any dish.",
+      "rating": 4,
+      "createdAt": "2025-02-04T09:35:00Z"
+    },
+    {
+      "id": 50,
+      "recipeId": 25,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "The sautéed spinach with garlic was tender and flavorful. Light, healthy, and tasty.",
+      "rating": 5,
+      "createdAt": "2025-02-05T11:15:00Z"
+    },
+    {
+      "id": 51,
+      "recipeId": 25,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Really enjoyed the freshness of the spinach. Garlic added a nice kick without being overwhelming.",
+      "rating": 4,
+      "createdAt": "2025-02-05T14:20:00Z"
+    },
+    {
+      "id": 52,
+      "recipeId": 26,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "The chocolate lava cake was rich and indulgent, with a perfectly gooey center. Absolutely heavenly.",
+      "rating": 5,
+      "createdAt": "2025-02-06T10:00:00Z"
+    },
+    {
+      "id": 53,
+      "recipeId": 26,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Decadent dessert! The balance between the soft cake and molten chocolate was spot on.",
+      "rating": 5,
+      "createdAt": "2025-02-06T12:30:00Z"
+    },
+    {
+      "id": 54,
+      "recipeId": 27,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Fresh fruit salad with honey dressing was light, refreshing, and beautifully colorful.",
+      "rating": 4,
+      "createdAt": "2025-02-07T09:40:00Z"
+    },
+    {
+      "id": 55,
+      "recipeId": 27,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "I loved the mix of fruits and the subtle sweetness of honey. Very refreshing!",
+      "rating": 5,
+      "createdAt": "2025-02-07T13:15:00Z"
+    },
+    {
+      "id": 56,
+      "recipeId": 28,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "The tiramisu was creamy, rich, and had just the right coffee flavor. A true classic done well.",
+      "rating": 5,
+      "createdAt": "2025-02-08T08:25:00Z"
+    },
+    {
+      "id": 57,
+      "recipeId": 28,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Delicious layers of mascarpone and espresso-soaked ladyfingers. Smooth and indulgent.",
+      "rating": 5,
+      "createdAt": "2025-02-08T10:45:00Z"
+    },
+    {
+      "id": 58,
+      "recipeId": 29,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Cheesecake had a creamy filling and buttery crust. Not too sweet, just perfect.",
+      "rating": 5,
+      "createdAt": "2025-02-09T09:30:00Z"
+    },
+    {
+      "id": 59,
+      "recipeId": 29,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Smooth, creamy, and with a delightful crust. A dessert I’d gladly eat again.",
+      "rating": 4,
+      "createdAt": "2025-02-09T11:20:00Z"
+    },
+    {
+      "id": 60,
+      "recipeId": 30,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Banana fritters were golden and crispy outside, soft and sweet inside. A nostalgic treat.",
+      "rating": 5,
+      "createdAt": "2025-02-10T07:55:00Z"
+    },
+    {
+      "id": 61,
+      "recipeId": 30,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Perfectly fried and not too oily. The bananas melted in the mouth. Lovely dessert!",
+      "rating": 4,
+      "createdAt": "2025-02-10T09:10:00Z"
+    },
+    {
+      "id": 62,
+      "recipeId": 31,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Spring rolls were fresh, vibrant, and packed with crisp vegetables. Peanut dipping sauce was excellent.",
+      "rating": 5,
+      "createdAt": "2025-02-11T08:20:00Z"
+    },
+    {
+      "id": 63,
+      "recipeId": 31,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "Loved the fresh herbs and rice paper wrap. So refreshing and light.",
+      "rating": 4,
+      "createdAt": "2025-02-11T10:50:00Z"
+    },
+    {
+      "id": 64,
+      "recipeId": 32,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Popcorn was buttery, crisp, and addictive. Perfect snack for a movie night.",
+      "rating": 5,
+      "createdAt": "2025-02-12T09:15:00Z"
+    },
+    {
+      "id": 65,
+      "recipeId": 32,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "Light and crunchy, not overly salty. A simple but satisfying snack.",
+      "rating": 4,
+      "createdAt": "2025-02-12T12:30:00Z"
+    },
+    {
+      "id": 66,
+      "recipeId": 33,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Great texture and flavor in every bite.",
+      "rating": 5,
+      "createdAt": "2025-02-13T07:45:00Z"
+    },
+    {
+      "id": 67,
+      "recipeId": 33,
+      "userId": 2,
+      "user": "Tran Le",
+      "comment": "Crispy chips with amazing salty flavour. Delicious snack to share.",
+      "rating": 4,
+      "createdAt": "2025-02-13T09:40:00Z"
+    },
+    {
+      "id": 68,
+      "recipeId": 34,
+      "userId": 1,
+      "user": "Khanh Nguyen",
+      "comment": "French fries were golden, crispy, and seasoned perfectly. Classic comfort food.",
+      "rating": 5,
+      "createdAt": "2025-02-14T08:05:00Z"
+    },
+    {
+      "id": 69,
+      "recipeId": 34,
+      "userId": 3,
+      "user": "Nhung Vo",
+      "comment": "Crispy on the outside and fluffy inside. Simple but done so well.",
+      "rating": 4,
+      "createdAt": "2025-02-14T11:30:00Z"
+    },
+    {
+      "id": 70,
+      "recipeId": 35,
+      "userId": 5,
+      "user": "Guest User",
+      "comment": "The pretzels were soft and chewy with a perfect salty crust. Warm and comforting.",
+      "rating": 5,
+      "createdAt": "2025-02-15T09:10:00Z"
+    },
+    {
+      "id": 71,
+      "recipeId": 35,
+      "userId": 4,
+      "user": "Nhu Tang",
+      "comment": "Wonderful texture and flavor. I especially liked them fresh out of the oven.",
+      "rating": 4,
+      "createdAt": "2025-02-15T11:55:00Z"
     }
   ],
-  
+
   "tags": [
-    {"id": 1, "name": "vietnamese", "slug": "vietnamese", "count": 2},
-    {"id": 2, "name": "italian", "slug": "italian", "count": 1},
-    {"id": 3, "name": "thai", "slug": "thai", "count": 1},
-    {"id": 4, "name": "mexican", "slug": "mexican", "count": 1},
-    {"id": 5, "name": "soup", "slug": "soup", "count": 1},
-    {"id": 6, "name": "sandwich", "slug": "sandwich", "count": 1},
-    {"id": 7, "name": "pasta", "slug": "pasta", "count": 1},
-    {"id": 8, "name": "noodles", "slug": "noodles", "count": 2},
-    {"id": 9, "name": "seafood", "slug": "seafood", "count": 2},
-    {"id": 10, "name": "street-food", "slug": "street-food", "count": 2},
-    {"id": 11, "name": "grilled", "slug": "grilled", "count": 1},
-    {"id": 12, "name": "stir-fry", "slug": "stir-fry", "count": 1},
-    {"id": 13, "name": "tacos", "slug": "tacos", "count": 1},
-    {"id": 14, "name": "traditional", "slug": "traditional", "count": 1},
-    {"id": 15, "name": "classic", "slug": "classic", "count": 1},
-    {"id": 16, "name": "beef", "slug": "beef", "count": 1},
-    {"id": 17, "name": "roman", "slug": "roman", "count": 1},
-    {"id": 18, "name": "fresh", "slug": "fresh", "count": 1}
+    { "id": 1, "name": "vietnamese", "slug": "vietnamese", "count": 16 },
+    { "id": 2, "name": "soup", "slug": "soup", "count": 1 },
+    { "id": 3, "name": "beef", "slug": "beef", "count": 1 },
+    { "id": 4, "name": "traditional", "slug": "traditional", "count": 3 },
+    { "id": 5, "name": "sandwich", "slug": "sandwich", "count": 1 },
+    { "id": 6, "name": "grilled", "slug": "grilled", "count": 1 },
+    { "id": 7, "name": "street-food", "slug": "street-food", "count": 5 },
+    { "id": 8, "name": "italian", "slug": "italian", "count": 2 },
+    { "id": 9, "name": "pasta", "slug": "pasta", "count": 1 },
+    { "id": 10, "name": "classic", "slug": "classic", "count": 5 },
+    { "id": 11, "name": "thai", "slug": "thai", "count": 2 },
+    { "id": 12, "name": "noodles", "slug": "noodles", "count": 1 },
+    { "id": 13, "name": "mexican", "slug": "mexican", "count": 1 },
+    { "id": 14, "name": "seafood", "slug": "seafood", "count": 1 },
+    { "id": 15, "name": "coffee", "slug": "coffee", "count": 1 },
+    { "id": 16, "name": "tea", "slug": "tea", "count": 1 },
+    { "id": 17, "name": "iced", "slug": "iced", "count": 2 },
+    { "id": 18, "name": "refreshing", "slug": "refreshing", "count": 1 },
+    { "id": 19, "name": "juice", "slug": "juice", "count": 1 },
+    { "id": 20, "name": "dessert", "slug": "dessert", "count": 7 },
+    { "id": 21, "name": "sweet", "slug": "sweet", "count": 7 },
+    { "id": 22, "name": "colorful", "slug": "colorful", "count": 1 },
+    { "id": 23, "name": "smoothie", "slug": "smoothie", "count": 2 },
+    { "id": 24, "name": "fruit", "slug": "fruit", "count": 3 },
+    { "id": 25, "name": "mango", "slug": "mango", "count": 1 },
+    { "id": 26, "name": "fresh", "slug": "fresh", "count": 3 },
+    { "id": 27, "name": "appetizer", "slug": "appetizer", "count": 6 },
+    { "id": 28, "name": "fried", "slug": "fried", "count": 2 },
+    { "id": 29, "name": "crispy", "slug": "crispy", "count": 2 },
+    { "id": 30, "name": "breakfast", "slug": "breakfast", "count": 3 },
+    { "id": 31, "name": "porridge", "slug": "porridge", "count": 1 },
+    { "id": 32, "name": "french", "slug": "french", "count": 2 },
+    { "id": 33, "name": "pastry", "slug": "pastry", "count": 1 },
+    { "id": 34, "name": "sticky-rice", "slug": "sticky-rice", "count": 1 },
+    { "id": 35, "name": "steamed", "slug": "steamed", "count": 1 },
+    { "id": 36, "name": "side-dish", "slug": "side-dish", "count": 5 },
+    { "id": 37, "name": "vegetable", "slug": "vegetable", "count": 3 },
+    { "id": 38, "name": "garlic", "slug": "garlic", "count": 1 },
+    { "id": 39, "name": "butter", "slug": "butter", "count": 1 },
+    { "id": 40, "name": "honey", "slug": "honey", "count": 1 },
+    { "id": 41, "name": "quick", "slug": "quick", "count": 3 },
+    { "id": 42, "name": "korean", "slug": "korean", "count": 1 },
+    { "id": 43, "name": "fermented", "slug": "fermented", "count": 2 },
+    { "id": 44, "name": "spicy", "slug": "spicy", "count": 1 },
+    {
+      "id": 45,
+      "name": "italian-dessert",
+      "slug": "italian-dessert",
+      "count": 1
+    },
+    {
+      "id": 46,
+      "name": "coffee-dessert",
+      "slug": "coffee-dessert",
+      "count": 1
+    },
+    { "id": 47, "name": "coconut", "slug": "coconut", "count": 1 },
+    { "id": 48, "name": "baked", "slug": "baked", "count": 1 },
+    { "id": 49, "name": "custard", "slug": "custard", "count": 1 },
+    { "id": 50, "name": "snack", "slug": "snack", "count": 5 },
+    { "id": 51, "name": "caramel", "slug": "caramel", "count": 1 },
+    { "id": 52, "name": "popcorn", "slug": "popcorn", "count": 1 },
+    { "id": 53, "name": "seaweed", "slug": "seaweed", "count": 1 },
+    { "id": 54, "name": "potato", "slug": "potato", "count": 1 },
+    { "id": 55, "name": "pork", "slug": "pork", "count": 1 }
   ]
 }
