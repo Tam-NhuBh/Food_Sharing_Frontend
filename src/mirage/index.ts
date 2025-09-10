@@ -65,15 +65,11 @@ export function makeServer({ environment = "development" } = {}) {
         return schema.db.categories.find(request.params.id);
       });
 
-      // this.get("/ingredients", (schema) => {
-      //   return schema.db.ingredients;
-      // });
 
       this.get("/ingredient-units", (schema) => schema.db.ingredientUnits);
       this.get("/ingredient-units/:id", (schema, request) =>
         schema.db.ingredientUnits.find(request.params.id)
       );
-
 
       this.get("/users", (schema) => {
         return schema.db.users;
@@ -89,6 +85,11 @@ export function makeServer({ environment = "development" } = {}) {
 
       this.get("/ratings/:id", (schema, request) => {
         return schema.db.ratings.find(request.params.id);
+      });
+
+      this.get("/recipes/:id/ratings", (schema, request) => {
+        const recipeId = Number(request.params.id);
+        return schema.db.ratings.where({ recipeId });
       });
     },
   });
