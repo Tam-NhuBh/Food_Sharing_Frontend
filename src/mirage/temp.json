@@ -22,6 +22,15 @@
       "SIDE_DISHES": "Side Dishes",
       "DESSERTS": "Desserts",
       "SNACKS": "Snacks"
+    },
+    "Tags": {
+      "BEVERAGES": "Beverages",
+      "APPETIZERS": "Appetizers",
+      "BREAKFAST_FOODS": "Breakfast Foods",
+      "MAIN_COURSE": "Main Course",
+      "SIDE_DISHES": "Side Dishes",
+      "DESSERTS": "Desserts",
+      "SNACKS": "Snacks"
     }
   },
 
@@ -78,9 +87,22 @@
       "password": "$2b$10$xxxxxxxxxxx",
       "fullName": "Khanh Nguyen",
       "avatar": "/avatars/khanh_nguyen.svg",
-      "favourites": [2, 3, 4],
-      "followers": [2, 3, 4, 5, 6],
-      "recipesCreated": [1, 5]
+      "favourites": [
+        2,
+        3,
+        4
+      ],
+      "followers": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "recipesCreated": [
+        1,
+        5
+      ]
     },
     {
       "id": 2,
@@ -89,9 +111,19 @@
       "password": "$2b$10$xxxxxxxxxxx",
       "fullName": "Tran Le",
       "avatar": "/avatars/tran_le.svg",
-      "favourites": [1, 3, 5],
-      "followers": [1, 3, 4],
-      "recipesCreated": [2]
+      "favourites": [
+        1,
+        3,
+        5
+      ],
+      "followers": [
+        1,
+        3,
+        4
+      ],
+      "recipesCreated": [
+        2
+      ]
     },
     {
       "id": 3,
@@ -100,9 +132,21 @@
       "password": "$2b$10$xxxxxxxxxxx",
       "fullName": "Nhung Vo",
       "avatar": "/avatars/nhung_vo.svg",
-      "favourites": [1, 2, 4, 5],
-      "followers": [1, 2, 4, 5],
-      "recipesCreated": [3]
+      "favourites": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "followers": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "recipesCreated": [
+        3
+      ]
     },
     {
       "id": 4,
@@ -111,9 +155,20 @@
       "password": "$2b$10$xxxxxxxxxxx",
       "fullName": "Nhu Tang",
       "avatar": "/avatars/nhu_tang.svg",
-      "favourites": [1, 2, 3, 5],
-      "followers": [1, 2, 3],
-      "recipesCreated": [4]
+      "favourites": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "followers": [
+        1,
+        2,
+        3
+      ],
+      "recipesCreated": [
+        4
+      ]
     },
     {
       "id": 5,
@@ -122,8 +177,13 @@
       "password": "$2b$10$xxxxxxxxxxx",
       "fullName": "Guest User",
       "avatar": "/avatars/guest_user.svg",
-      "favourites": [1, 3],
-      "followers": [1],
+      "favourites": [
+        1,
+        3
+      ],
+      "followers": [
+        1
+      ],
       "recipesCreated": []
     },
     {
@@ -134,7 +194,9 @@
       "fullName": "Admin User",
       "avatar": "/avatars/admin_user.svg",
       "favourites": [],
-      "followers": [1],
+      "followers": [
+        1
+      ],
       "recipesCreated": []
     }
   ],
@@ -154,14 +216,46 @@
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
-        { "name": "beef bones", "amount": 500, "unit": "GRAM" },
-        { "name": "beef brisket", "amount": 300, "unit": "GRAM" },
-        { "name": "rice noodles", "amount": 200, "unit": "GRAM" },
-        { "name": "onion", "amount": 1, "unit": "PIECE" },
-        { "name": "star anise", "amount": 3, "unit": "PIECE" },
-        { "name": "fish sauce", "amount": 30, "unit": "MILLILITER" },
-        { "name": "bean sprouts", "amount": 1, "unit": "CUP" },
-        { "name": "fresh herbs", "amount": 1, "unit": "CUP" }
+        {
+          "name": "beef bones",
+          "amount": 500,
+          "unit": "GRAM"
+        },
+        {
+          "name": "beef brisket",
+          "amount": 300,
+          "unit": "GRAM"
+        },
+        {
+          "name": "rice noodles",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "onion",
+          "amount": 1,
+          "unit": "PIECE"
+        },
+        {
+          "name": "star anise",
+          "amount": 3,
+          "unit": "PIECE"
+        },
+        {
+          "name": "fish sauce",
+          "amount": 30,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "bean sprouts",
+          "amount": 1,
+          "unit": "CUP"
+        },
+        {
+          "name": "fresh herbs",
+          "amount": 1,
+          "unit": "CUP"
+        }
       ],
       "steps": [
         "Char onion and ginger over open flame",
@@ -178,7 +272,12 @@
         "carbs": 42,
         "fat": 10
       },
-      "tags": ["vietnamese", "soup", "beef", "traditional"],
+      "tags": [
+        "vietnamese",
+        "soup",
+        "beef",
+        "traditional"
+      ],
       "rating": 5,
       "totalRatings": 3,
       "viewCount": 256,
@@ -199,13 +298,41 @@
       "servings": 2,
       "category": "Main Course",
       "ingredients": [
-        { "name": "Vietnamese baguettes", "amount": 2, "unit": "PIECE" },
-        { "name": "pork shoulder", "amount": 300, "unit": "GRAM" },
-        { "name": "lemongrass", "amount": 2, "unit": "PIECE" },
-        { "name": "fish sauce", "amount": 50, "unit": "MILLILITER" },
-        { "name": "pickled vegetables", "amount": 200, "unit": "GRAM" },
-        { "name": "cilantro", "amount": 1, "unit": "CUP" },
-        { "name": "mayonnaise", "amount": 30, "unit": "MILLILITER" }
+        {
+          "name": "Vietnamese baguettes",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "pork shoulder",
+          "amount": 300,
+          "unit": "GRAM"
+        },
+        {
+          "name": "lemongrass",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "fish sauce",
+          "amount": 50,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "pickled vegetables",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "cilantro",
+          "amount": 1,
+          "unit": "CUP"
+        },
+        {
+          "name": "mayonnaise",
+          "amount": 30,
+          "unit": "MILLILITER"
+        }
       ],
       "steps": [
         "Marinate pork with lemongrass and fish sauce for 30 minutes",
@@ -222,7 +349,12 @@
         "carbs": 48,
         "fat": 14
       },
-      "tags": ["vietnamese", "sandwich", "grilled", "street-food"],
+      "tags": [
+        "vietnamese",
+        "sandwich",
+        "grilled",
+        "street-food"
+      ],
       "rating": 4,
       "totalRatings": 2,
       "viewCount": 189,
@@ -243,13 +375,41 @@
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
-        { "name": "spaghetti", "amount": 400, "unit": "GRAM" },
-        { "name": "pancetta", "amount": 150, "unit": "GRAM" },
-        { "name": "eggs", "amount": 3, "unit": "PIECE" },
-        { "name": "Pecorino Romano", "amount": 100, "unit": "GRAM" },
-        { "name": "Parmesan", "amount": 50, "unit": "GRAM" },
-        { "name": "black pepper", "amount": 10, "unit": "GRAM" },
-        { "name": "pasta water", "amount": 1, "unit": "CUP" }
+        {
+          "name": "spaghetti",
+          "amount": 400,
+          "unit": "GRAM"
+        },
+        {
+          "name": "pancetta",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "eggs",
+          "amount": 3,
+          "unit": "PIECE"
+        },
+        {
+          "name": "Pecorino Romano",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "Parmesan",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "black pepper",
+          "amount": 10,
+          "unit": "GRAM"
+        },
+        {
+          "name": "pasta water",
+          "amount": 1,
+          "unit": "CUP"
+        }
       ],
       "steps": [
         "Cook spaghetti in salted water until al dente",
@@ -266,7 +426,12 @@
         "carbs": 52,
         "fat": 20
       },
-      "tags": ["italian", "pasta", "classic", "roman"],
+      "tags": [
+        "italian",
+        "pasta",
+        "classic",
+        "roman"
+      ],
       "rating": 5,
       "totalRatings": 2,
       "viewCount": 342,
@@ -287,13 +452,41 @@
       "servings": 2,
       "category": "Main Course",
       "ingredients": [
-        { "name": "rice noodles", "amount": 200, "unit": "GRAM" },
-        { "name": "shrimp", "amount": 200, "unit": "GRAM" },
-        { "name": "eggs", "amount": 2, "unit": "PIECE" },
-        { "name": "tamarind paste", "amount": 50, "unit": "MILLILITER" },
-        { "name": "fish sauce", "amount": 30, "unit": "MILLILITER" },
-        { "name": "bean sprouts", "amount": 1, "unit": "CUP" },
-        { "name": "peanuts", "amount": 50, "unit": "GRAM" }
+        {
+          "name": "rice noodles",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "shrimp",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "eggs",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "tamarind paste",
+          "amount": 50,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "fish sauce",
+          "amount": 30,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "bean sprouts",
+          "amount": 1,
+          "unit": "CUP"
+        },
+        {
+          "name": "peanuts",
+          "amount": 50,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Soak rice noodles in warm water until soft",
@@ -310,7 +503,12 @@
         "carbs": 48,
         "fat": 10
       },
-      "tags": ["thai", "noodles", "stir-fry", "street-food"],
+      "tags": [
+        "thai",
+        "noodles",
+        "stir-fry",
+        "street-food"
+      ],
       "rating": 3.5,
       "totalRatings": 2,
       "viewCount": 234,
@@ -331,13 +529,41 @@
       "servings": 4,
       "category": "Main Course",
       "ingredients": [
-        { "name": "white fish fillets", "amount": 500, "unit": "GRAM" },
-        { "name": "corn tortillas", "amount": 8, "unit": "PIECE" },
-        { "name": "cabbage", "amount": 2, "unit": "CUP" },
-        { "name": "sour cream", "amount": 100, "unit": "MILLILITER" },
-        { "name": "limes", "amount": 2, "unit": "PIECE" },
-        { "name": "cilantro", "amount": 1, "unit": "CUP" },
-        { "name": "chili powder", "amount": 10, "unit": "GRAM" }
+        {
+          "name": "white fish fillets",
+          "amount": 500,
+          "unit": "GRAM"
+        },
+        {
+          "name": "corn tortillas",
+          "amount": 8,
+          "unit": "PIECE"
+        },
+        {
+          "name": "cabbage",
+          "amount": 2,
+          "unit": "CUP"
+        },
+        {
+          "name": "sour cream",
+          "amount": 100,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "limes",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "cilantro",
+          "amount": 1,
+          "unit": "CUP"
+        },
+        {
+          "name": "chili powder",
+          "amount": 10,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Season fish with spices",
@@ -354,7 +580,12 @@
         "carbs": 32,
         "fat": 10
       },
-      "tags": ["mexican", "seafood", "fresh", "tacos"],
+      "tags": [
+        "mexican",
+        "seafood",
+        "fresh",
+        "tacos"
+      ],
       "rating": 4.5,
       "totalRatings": 2,
       "viewCount": 156,
@@ -375,10 +606,26 @@
       "servings": 1,
       "category": "Beverages",
       "ingredients": [
-        { "name": "Vietnamese coffee grounds", "amount": 25, "unit": "GRAM" },
-        { "name": "condensed milk", "amount": 40, "unit": "MILLILITER" },
-        { "name": "ice cubes", "amount": 5, "unit": "PIECE" },
-        { "name": "hot water", "amount": 120, "unit": "MILLILITER" }
+        {
+          "name": "Vietnamese coffee grounds",
+          "amount": 25,
+          "unit": "GRAM"
+        },
+        {
+          "name": "condensed milk",
+          "amount": 40,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "ice cubes",
+          "amount": 5,
+          "unit": "PIECE"
+        },
+        {
+          "name": "hot water",
+          "amount": 120,
+          "unit": "MILLILITER"
+        }
       ],
       "steps": [
         "Brew coffee using a Vietnamese drip filter (phin).",
@@ -386,8 +633,17 @@
         "Pour brewed coffee into the glass and stir.",
         "Add ice cubes and serve."
       ],
-      "nutrition": { "calories": 180, "protein": 3, "carbs": 25, "fat": 6 },
-      "tags": ["vietnamese", "coffee", "iced"],
+      "nutrition": {
+        "calories": 180,
+        "protein": 3,
+        "carbs": 25,
+        "fat": 6
+      },
+      "tags": [
+        "vietnamese",
+        "coffee",
+        "iced"
+      ],
       "rating": 5,
       "totalRatings": 12,
       "viewCount": 450,
@@ -398,7 +654,7 @@
       "id": 7,
       "categoryId": 1,
       "categoryType": "BEVERAGES",
-      "image": "iced-tea.jpg",
+      "image": "iced-tea.png",
       "title": "Vietnamese Iced Tea",
       "author": "Khanh Nguyen",
       "authorId": 1,
@@ -408,17 +664,39 @@
       "servings": 2,
       "category": "Beverages",
       "ingredients": [
-        { "name": "green tea leaves", "amount": 10, "unit": "GRAM" },
-        { "name": "hot water", "amount": 500, "unit": "MILLILITER" },
-        { "name": "ice cubes", "amount": 10, "unit": "PIECE" }
+        {
+          "name": "green tea leaves",
+          "amount": 10,
+          "unit": "GRAM"
+        },
+        {
+          "name": "hot water",
+          "amount": 500,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "ice cubes",
+          "amount": 10,
+          "unit": "PIECE"
+        }
       ],
       "steps": [
         "Steep green tea leaves in hot water for 5 minutes.",
         "Strain the tea into a jug.",
         "Add ice cubes and serve chilled."
       ],
-      "nutrition": { "calories": 0, "protein": 0, "carbs": 0, "fat": 0 },
-      "tags": ["vietnamese", "tea", "iced", "refreshing"],
+      "nutrition": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0
+      },
+      "tags": [
+        "vietnamese",
+        "tea",
+        "iced",
+        "refreshing"
+      ],
       "rating": 4,
       "totalRatings": 8,
       "viewCount": 300,
@@ -439,16 +717,34 @@
       "servings": 1,
       "category": "Beverages",
       "ingredients": [
-        { "name": "sugarcane stalks", "amount": 300, "unit": "GRAM" },
-        { "name": "ice cubes", "amount": 5, "unit": "PIECE" }
+        {
+          "name": "sugarcane stalks",
+          "amount": 300,
+          "unit": "GRAM"
+        },
+        {
+          "name": "ice cubes",
+          "amount": 5,
+          "unit": "PIECE"
+        }
       ],
       "steps": [
         "Press sugarcane stalks through a juicer.",
         "Pour juice into a glass.",
         "Add ice cubes and serve immediately."
       ],
-      "nutrition": { "calories": 120, "protein": 0, "carbs": 30, "fat": 0 },
-      "tags": ["vietnamese", "juice", "sweet", "street-food"],
+      "nutrition": {
+        "calories": 120,
+        "protein": 0,
+        "carbs": 30,
+        "fat": 0
+      },
+      "tags": [
+        "vietnamese",
+        "juice",
+        "sweet",
+        "street-food"
+      ],
       "rating": 5,
       "totalRatings": 20,
       "viewCount": 600,
@@ -469,12 +765,36 @@
       "servings": 2,
       "category": "Beverages",
       "ingredients": [
-        { "name": "mung beans", "amount": 50, "unit": "GRAM" },
-        { "name": "red beans", "amount": 50, "unit": "GRAM" },
-        { "name": "pandan jelly", "amount": 50, "unit": "GRAM" },
-        { "name": "coconut milk", "amount": 100, "unit": "MILLILITER" },
-        { "name": "sugar", "amount": 30, "unit": "GRAM" },
-        { "name": "ice cubes", "amount": 10, "unit": "PIECE" }
+        {
+          "name": "mung beans",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "red beans",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "pandan jelly",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "coconut milk",
+          "amount": 100,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "sugar",
+          "amount": 30,
+          "unit": "GRAM"
+        },
+        {
+          "name": "ice cubes",
+          "amount": 10,
+          "unit": "PIECE"
+        }
       ],
       "steps": [
         "Cook mung beans and red beans until soft.",
@@ -483,8 +803,18 @@
         "Pour coconut milk and sugar syrup.",
         "Top with crushed ice and serve."
       ],
-      "nutrition": { "calories": 280, "protein": 6, "carbs": 50, "fat": 8 },
-      "tags": ["vietnamese", "dessert", "sweet", "colorful"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 6,
+        "carbs": 50,
+        "fat": 8
+      },
+      "tags": [
+        "vietnamese",
+        "dessert",
+        "sweet",
+        "colorful"
+      ],
       "rating": 5,
       "totalRatings": 15,
       "viewCount": 520,
@@ -505,10 +835,26 @@
       "servings": 2,
       "category": "Beverages",
       "ingredients": [
-        { "name": "ripe mango", "amount": 2, "unit": "PIECE" },
-        { "name": "condensed milk", "amount": 40, "unit": "MILLILITER" },
-        { "name": "fresh milk", "amount": 100, "unit": "MILLILITER" },
-        { "name": "ice cubes", "amount": 10, "unit": "PIECE" }
+        {
+          "name": "ripe mango",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "condensed milk",
+          "amount": 40,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "fresh milk",
+          "amount": 100,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "ice cubes",
+          "amount": 10,
+          "unit": "PIECE"
+        }
       ],
       "steps": [
         "Peel and cut mango into chunks.",
@@ -516,8 +862,18 @@
         "Blend until smooth and creamy.",
         "Pour into glasses and serve cold."
       ],
-      "nutrition": { "calories": 210, "protein": 4, "carbs": 45, "fat": 3 },
-      "tags": ["vietnamese", "smoothie", "fruit", "mango"],
+      "nutrition": {
+        "calories": 210,
+        "protein": 4,
+        "carbs": 45,
+        "fat": 3
+      },
+      "tags": [
+        "vietnamese",
+        "smoothie",
+        "fruit",
+        "mango"
+      ],
       "rating": 5,
       "totalRatings": 10,
       "viewCount": 400,
@@ -538,11 +894,31 @@
       "servings": 4,
       "category": "Appetizers",
       "ingredients": [
-        { "name": "rice paper", "amount": 8, "unit": "PIECE" },
-        { "name": "shrimp", "amount": 200, "unit": "GRAM" },
-        { "name": "pork belly", "amount": 150, "unit": "GRAM" },
-        { "name": "vermicelli noodles", "amount": 100, "unit": "GRAM" },
-        { "name": "fresh herbs", "amount": 1, "unit": "CUP" }
+        {
+          "name": "rice paper",
+          "amount": 8,
+          "unit": "PIECE"
+        },
+        {
+          "name": "shrimp",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "pork belly",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "vermicelli noodles",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "fresh herbs",
+          "amount": 1,
+          "unit": "CUP"
+        }
       ],
       "steps": [
         "Boil shrimp and pork, then slice thinly.",
@@ -550,8 +926,18 @@
         "Layer noodles, herbs, shrimp, and pork.",
         "Roll tightly and serve with dipping sauce."
       ],
-      "nutrition": { "calories": 180, "protein": 12, "carbs": 22, "fat": 5 },
-      "tags": ["vietnamese", "fresh", "appetizer", "healthy"],
+      "nutrition": {
+        "calories": 180,
+        "protein": 12,
+        "carbs": 22,
+        "fat": 5
+      },
+      "tags": [
+        "vietnamese",
+        "fresh",
+        "appetizer",
+        "healthy"
+      ],
       "rating": 5,
       "totalRatings": 8,
       "viewCount": 300,
@@ -572,11 +958,31 @@
       "servings": 4,
       "category": "Appetizers",
       "ingredients": [
-        { "name": "rice paper", "amount": 12, "unit": "PIECE" },
-        { "name": "ground pork", "amount": 200, "unit": "GRAM" },
-        { "name": "shrimp", "amount": 100, "unit": "GRAM" },
-        { "name": "carrot", "amount": 1, "unit": "PIECE" },
-        { "name": "glass noodles", "amount": 50, "unit": "GRAM" }
+        {
+          "name": "rice paper",
+          "amount": 12,
+          "unit": "PIECE"
+        },
+        {
+          "name": "ground pork",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "shrimp",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "carrot",
+          "amount": 1,
+          "unit": "PIECE"
+        },
+        {
+          "name": "glass noodles",
+          "amount": 50,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Mix pork, shrimp, and vegetables together.",
@@ -584,8 +990,18 @@
         "Deep fry until golden brown.",
         "Serve with fish sauce dip."
       ],
-      "nutrition": { "calories": 250, "protein": 15, "carbs": 20, "fat": 12 },
-      "tags": ["vietnamese", "fried", "appetizer", "crispy"],
+      "nutrition": {
+        "calories": 250,
+        "protein": 15,
+        "carbs": 20,
+        "fat": 12
+      },
+      "tags": [
+        "vietnamese",
+        "fried",
+        "appetizer",
+        "crispy"
+      ],
       "rating": 4,
       "totalRatings": 12,
       "viewCount": 450,
@@ -606,10 +1022,26 @@
       "servings": 3,
       "category": "Appetizers",
       "ingredients": [
-        { "name": "rice flour", "amount": 150, "unit": "GRAM" },
-        { "name": "coconut milk", "amount": 200, "unit": "MILLILITER" },
-        { "name": "shrimp", "amount": 150, "unit": "GRAM" },
-        { "name": "green onion", "amount": 2, "unit": "PIECE" }
+        {
+          "name": "rice flour",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "coconut milk",
+          "amount": 200,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "shrimp",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "green onion",
+          "amount": 2,
+          "unit": "PIECE"
+        }
       ],
       "steps": [
         "Mix rice flour batter with coconut milk.",
@@ -617,8 +1049,17 @@
         "Top with shrimp and cook until crispy.",
         "Serve with vegetables and dipping sauce."
       ],
-      "nutrition": { "calories": 220, "protein": 10, "carbs": 28, "fat": 8 },
-      "tags": ["vietnamese", "street-food", "appetizer"],
+      "nutrition": {
+        "calories": 220,
+        "protein": 10,
+        "carbs": 28,
+        "fat": 8
+      },
+      "tags": [
+        "vietnamese",
+        "street-food",
+        "appetizer"
+      ],
       "rating": 5,
       "totalRatings": 6,
       "viewCount": 280,
@@ -639,10 +1080,26 @@
       "servings": 4,
       "category": "Appetizers",
       "ingredients": [
-        { "name": "rice flour", "amount": 200, "unit": "GRAM" },
-        { "name": "tapioca flour", "amount": 50, "unit": "GRAM" },
-        { "name": "dried shrimp", "amount": 50, "unit": "GRAM" },
-        { "name": "scallions", "amount": 2, "unit": "PIECE" }
+        {
+          "name": "rice flour",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "tapioca flour",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "dried shrimp",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "scallions",
+          "amount": 2,
+          "unit": "PIECE"
+        }
       ],
       "steps": [
         "Mix rice flour and tapioca flour with water.",
@@ -650,8 +1107,17 @@
         "Top with dried shrimp and scallion oil.",
         "Serve with fish sauce dip."
       ],
-      "nutrition": { "calories": 190, "protein": 6, "carbs": 34, "fat": 3 },
-      "tags": ["vietnamese", "traditional", "appetizer"],
+      "nutrition": {
+        "calories": 190,
+        "protein": 6,
+        "carbs": 34,
+        "fat": 3
+      },
+      "tags": [
+        "vietnamese",
+        "traditional",
+        "appetizer"
+      ],
       "rating": 4,
       "totalRatings": 5,
       "viewCount": 210,
@@ -672,10 +1138,26 @@
       "servings": 3,
       "category": "Appetizers",
       "ingredients": [
-        { "name": "green papaya", "amount": 1, "unit": "PIECE" },
-        { "name": "carrot", "amount": 1, "unit": "PIECE" },
-        { "name": "fresh herbs", "amount": 1, "unit": "CUP" },
-        { "name": "roasted peanuts", "amount": 50, "unit": "GRAM" }
+        {
+          "name": "green papaya",
+          "amount": 1,
+          "unit": "PIECE"
+        },
+        {
+          "name": "carrot",
+          "amount": 1,
+          "unit": "PIECE"
+        },
+        {
+          "name": "fresh herbs",
+          "amount": 1,
+          "unit": "CUP"
+        },
+        {
+          "name": "roasted peanuts",
+          "amount": 50,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Shred green papaya and carrot.",
@@ -683,8 +1165,18 @@
         "Toss with fish sauce dressing.",
         "Serve chilled."
       ],
-      "nutrition": { "calories": 160, "protein": 5, "carbs": 20, "fat": 6 },
-      "tags": ["vietnamese", "salad", "appetizer", "fresh"],
+      "nutrition": {
+        "calories": 160,
+        "protein": 5,
+        "carbs": 20,
+        "fat": 6
+      },
+      "tags": [
+        "vietnamese",
+        "salad",
+        "appetizer",
+        "fresh"
+      ],
       "rating": 5,
       "totalRatings": 7,
       "viewCount": 260,
@@ -705,10 +1197,26 @@
       "servings": 2,
       "category": "Breakfast Foods",
       "ingredients": [
-        { "name": "all-purpose flour", "amount": 150, "unit": "GRAM" },
-        { "name": "milk", "amount": 200, "unit": "MILLILITER" },
-        { "name": "egg", "amount": 1, "unit": "PIECE" },
-        { "name": "baking powder", "amount": 1, "unit": "TEASPOON" }
+        {
+          "name": "all-purpose flour",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "milk",
+          "amount": 200,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "egg",
+          "amount": 1,
+          "unit": "PIECE"
+        },
+        {
+          "name": "baking powder",
+          "amount": 1,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Mix flour, baking powder, egg, and milk into a smooth batter.",
@@ -716,8 +1224,18 @@
         "Cook until golden on both sides.",
         "Serve with butter and maple syrup."
       ],
-      "nutrition": { "calories": 310, "protein": 9, "carbs": 52, "fat": 8 },
-      "tags": ["american", "breakfast", "classic", "sweet"],
+      "nutrition": {
+        "calories": 310,
+        "protein": 9,
+        "carbs": 52,
+        "fat": 8
+      },
+      "tags": [
+        "american",
+        "breakfast",
+        "classic",
+        "sweet"
+      ],
       "rating": 5,
       "totalRatings": 20,
       "viewCount": 600,
@@ -738,10 +1256,26 @@
       "servings": 4,
       "category": "Breakfast Foods",
       "ingredients": [
-        { "name": "rice", "amount": 200, "unit": "GRAM" },
-        { "name": "pork innards", "amount": 300, "unit": "GRAM" },
-        { "name": "pork blood pudding", "amount": 100, "unit": "GRAM" },
-        { "name": "fish sauce", "amount": 30, "unit": "MILLILITER" }
+        {
+          "name": "rice",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "pork innards",
+          "amount": 300,
+          "unit": "GRAM"
+        },
+        {
+          "name": "pork blood pudding",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "fish sauce",
+          "amount": 30,
+          "unit": "MILLILITER"
+        }
       ],
       "steps": [
         "Cook rice with water until porridge consistency.",
@@ -749,8 +1283,18 @@
         "Slice innards and add to porridge.",
         "Season with fish sauce and serve with herbs."
       ],
-      "nutrition": { "calories": 250, "protein": 18, "carbs": 35, "fat": 5 },
-      "tags": ["vietnamese", "porridge", "savory", "traditional"],
+      "nutrition": {
+        "calories": 250,
+        "protein": 18,
+        "carbs": 35,
+        "fat": 5
+      },
+      "tags": [
+        "vietnamese",
+        "porridge",
+        "savory",
+        "traditional"
+      ],
       "rating": 4,
       "totalRatings": 8,
       "viewCount": 320,
@@ -771,9 +1315,21 @@
       "servings": 2,
       "category": "Breakfast Foods",
       "ingredients": [
-        { "name": "croissant", "amount": 2, "unit": "PIECE" },
-        { "name": "unsalted butter", "amount": 20, "unit": "GRAM" },
-        { "name": "fruit jam", "amount": 30, "unit": "GRAM" }
+        {
+          "name": "croissant",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": 20,
+          "unit": "GRAM"
+        },
+        {
+          "name": "fruit jam",
+          "amount": 30,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Warm croissants in the oven for a few minutes.",
@@ -781,8 +1337,18 @@
         "Add a layer of fruit jam.",
         "Serve warm with coffee or tea."
       ],
-      "nutrition": { "calories": 280, "protein": 5, "carbs": 32, "fat": 15 },
-      "tags": ["french", "pastry", "breakfast", "classic"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 5,
+        "carbs": 32,
+        "fat": 15
+      },
+      "tags": [
+        "french",
+        "pastry",
+        "breakfast",
+        "classic"
+      ],
       "rating": 4,
       "totalRatings": 12,
       "viewCount": 480,
@@ -803,10 +1369,26 @@
       "servings": 3,
       "category": "Breakfast Foods",
       "ingredients": [
-        { "name": "sticky rice", "amount": 200, "unit": "GRAM" },
-        { "name": "chinese sausage", "amount": 2, "unit": "PIECE" },
-        { "name": "quail eggs", "amount": 6, "unit": "PIECE" },
-        { "name": "scallions", "amount": 20, "unit": "GRAM" }
+        {
+          "name": "sticky rice",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "chinese sausage",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "quail eggs",
+          "amount": 6,
+          "unit": "PIECE"
+        },
+        {
+          "name": "scallions",
+          "amount": 20,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Soak sticky rice overnight and steam until cooked.",
@@ -814,8 +1396,18 @@
         "Boil quail eggs and peel.",
         "Assemble with shredded pork and scallion oil."
       ],
-      "nutrition": { "calories": 420, "protein": 12, "carbs": 80, "fat": 8 },
-      "tags": ["vietnamese", "sticky-rice", "savory", "street-food"],
+      "nutrition": {
+        "calories": 420,
+        "protein": 12,
+        "carbs": 80,
+        "fat": 8
+      },
+      "tags": [
+        "vietnamese",
+        "sticky-rice",
+        "savory",
+        "street-food"
+      ],
       "rating": 5,
       "totalRatings": 9,
       "viewCount": 300,
@@ -836,10 +1428,26 @@
       "servings": 3,
       "category": "Breakfast Foods",
       "ingredients": [
-        { "name": "rice flour", "amount": 150, "unit": "GRAM" },
-        { "name": "minced pork", "amount": 200, "unit": "GRAM" },
-        { "name": "wood ear mushrooms", "amount": 50, "unit": "GRAM" },
-        { "name": "fish sauce", "amount": 20, "unit": "MILLILITER" }
+        {
+          "name": "rice flour",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "minced pork",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "wood ear mushrooms",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "fish sauce",
+          "amount": 20,
+          "unit": "MILLILITER"
+        }
       ],
       "steps": [
         "Mix rice flour with water to create batter.",
@@ -847,8 +1455,18 @@
         "Fill with minced pork and mushrooms.",
         "Roll and serve with dipping sauce."
       ],
-      "nutrition": { "calories": 280, "protein": 12, "carbs": 40, "fat": 8 },
-      "tags": ["vietnamese", "steamed", "savory", "traditional"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 12,
+        "carbs": 40,
+        "fat": 8
+      },
+      "tags": [
+        "vietnamese",
+        "steamed",
+        "savory",
+        "traditional"
+      ],
       "rating": 4,
       "totalRatings": 6,
       "viewCount": 210,
@@ -869,12 +1487,36 @@
       "servings": 4,
       "category": "Side Dishes",
       "ingredients": [
-        { "name": "carrots", "amount": 500, "unit": "GRAM" },
-        { "name": "olive oil", "amount": 2, "unit": "TABLESPOON" },
-        { "name": "honey", "amount": 1.5, "unit": "TABLESPOON" },
-        { "name": "fresh thyme", "amount": 1, "unit": "TEASPOON" },
-        { "name": "salt", "amount": 0.5, "unit": "TEASPOON" },
-        { "name": "black pepper", "amount": 0.25, "unit": "TEASPOON" }
+        {
+          "name": "carrots",
+          "amount": 500,
+          "unit": "GRAM"
+        },
+        {
+          "name": "olive oil",
+          "amount": 2,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "honey",
+          "amount": 1.5,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "fresh thyme",
+          "amount": 1,
+          "unit": "TEASPOON"
+        },
+        {
+          "name": "salt",
+          "amount": 0.5,
+          "unit": "TEASPOON"
+        },
+        {
+          "name": "black pepper",
+          "amount": 0.25,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Preheat oven to 200°C (400°F).",
@@ -884,8 +1526,19 @@
         "Roast for 20–25 minutes, stirring halfway through, until tender and caramelized.",
         "Serve warm as a sweet and savory side dish."
       ],
-      "nutrition": { "calories": 150, "protein": 2, "carbs": 22, "fat": 6 },
-      "tags": ["side-dish", "vegetable", "honey", "roasted", "quick"],
+      "nutrition": {
+        "calories": 150,
+        "protein": 2,
+        "carbs": 22,
+        "fat": 6
+      },
+      "tags": [
+        "side-dish",
+        "vegetable",
+        "honey",
+        "roasted",
+        "quick"
+      ],
       "rating": 5,
       "totalRatings": 5,
       "viewCount": 150,
@@ -906,11 +1559,31 @@
       "servings": 4,
       "category": "Side Dishes",
       "ingredients": [
-        { "name": "potatoes", "amount": 500, "unit": "GRAM" },
-        { "name": "butter", "amount": 50, "unit": "GRAM" },
-        { "name": "heavy cream", "amount": 100, "unit": "MILLILITER" },
-        { "name": "salt", "amount": 1, "unit": "TEASPOON" },
-        { "name": "pepper", "amount": 0.25, "unit": "TEASPOON" }
+        {
+          "name": "potatoes",
+          "amount": 500,
+          "unit": "GRAM"
+        },
+        {
+          "name": "butter",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "heavy cream",
+          "amount": 100,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "salt",
+          "amount": 1,
+          "unit": "TEASPOON"
+        },
+        {
+          "name": "pepper",
+          "amount": 0.25,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Boil potatoes until tender.",
@@ -918,8 +1591,17 @@
         "Stir in butter and cream.",
         "Season with salt and pepper, then serve warm."
       ],
-      "nutrition": { "calories": 220, "protein": 4, "carbs": 35, "fat": 8 },
-      "tags": ["classic", "comfort-food", "side-dish"],
+      "nutrition": {
+        "calories": 220,
+        "protein": 4,
+        "carbs": 35,
+        "fat": 8
+      },
+      "tags": [
+        "classic",
+        "comfort-food",
+        "side-dish"
+      ],
       "rating": 4,
       "totalRatings": 5,
       "viewCount": 185,
@@ -940,11 +1622,31 @@
       "servings": 6,
       "category": "Side Dishes",
       "ingredients": [
-        { "name": "napa cabbage", "amount": 1, "unit": "HEAD" },
-        { "name": "Korean chili flakes", "amount": 3, "unit": "TABLESPOON" },
-        { "name": "garlic", "amount": 4, "unit": "CLOVE" },
-        { "name": "ginger", "amount": 20, "unit": "GRAM" },
-        { "name": "salt", "amount": 2, "unit": "TABLESPOON" }
+        {
+          "name": "napa cabbage",
+          "amount": 1,
+          "unit": "HEAD"
+        },
+        {
+          "name": "Korean chili flakes",
+          "amount": 3,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "garlic",
+          "amount": 4,
+          "unit": "CLOVE"
+        },
+        {
+          "name": "ginger",
+          "amount": 20,
+          "unit": "GRAM"
+        },
+        {
+          "name": "salt",
+          "amount": 2,
+          "unit": "TABLESPOON"
+        }
       ],
       "steps": [
         "Salt cabbage and let sit for 2 hours.",
@@ -953,8 +1655,18 @@
         "Coat cabbage with paste and ferment overnight or longer.",
         "Serve as a spicy side dish."
       ],
-      "nutrition": { "calories": 40, "protein": 2, "carbs": 6, "fat": 0 },
-      "tags": ["korean", "fermented", "spicy", "side-dish"],
+      "nutrition": {
+        "calories": 40,
+        "protein": 2,
+        "carbs": 6,
+        "fat": 0
+      },
+      "tags": [
+        "korean",
+        "fermented",
+        "spicy",
+        "side-dish"
+      ],
       "rating": 5,
       "totalRatings": 6,
       "viewCount": 330,
@@ -975,11 +1687,31 @@
       "servings": 4,
       "category": "Side Dishes",
       "ingredients": [
-        { "name": "fresh green beans", "amount": 400, "unit": "GRAM" },
-        { "name": "butter", "amount": 2, "unit": "TABLESPOON" },
-        { "name": "garlic cloves", "amount": 3, "unit": "PIECE" },
-        { "name": "salt", "amount": 1, "unit": "TEASPOON" },
-        { "name": "black pepper", "amount": 0.5, "unit": "TEASPOON" }
+        {
+          "name": "fresh green beans",
+          "amount": 400,
+          "unit": "GRAM"
+        },
+        {
+          "name": "butter",
+          "amount": 2,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "garlic cloves",
+          "amount": 3,
+          "unit": "PIECE"
+        },
+        {
+          "name": "salt",
+          "amount": 1,
+          "unit": "TEASPOON"
+        },
+        {
+          "name": "black pepper",
+          "amount": 0.5,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Trim the ends of the green beans.",
@@ -989,8 +1721,19 @@
         "Add green beans, season with salt and pepper, and stir-fry for 2–3 minutes.",
         "Serve warm as a side dish."
       ],
-      "nutrition": { "calories": 120, "protein": 3, "carbs": 10, "fat": 8 },
-      "tags": ["side-dish", "vegetable", "garlic", "butter", "quick"],
+      "nutrition": {
+        "calories": 120,
+        "protein": 3,
+        "carbs": 10,
+        "fat": 8
+      },
+      "tags": [
+        "side-dish",
+        "vegetable",
+        "garlic",
+        "butter",
+        "quick"
+      ],
       "rating": 5,
       "totalRatings": 8,
       "viewCount": 275,
@@ -1011,11 +1754,31 @@
       "servings": 2,
       "category": "Side Dishes",
       "ingredients": [
-        { "name": "tomatoes", "amount": 2, "unit": "PIECE" },
-        { "name": "fresh mozzarella", "amount": 150, "unit": "GRAM" },
-        { "name": "basil leaves", "amount": 10, "unit": "LEAF" },
-        { "name": "olive oil", "amount": 1, "unit": "TABLESPOON" },
-        { "name": "balsamic glaze", "amount": 1, "unit": "TABLESPOON" }
+        {
+          "name": "tomatoes",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "fresh mozzarella",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "basil leaves",
+          "amount": 10,
+          "unit": "LEAF"
+        },
+        {
+          "name": "olive oil",
+          "amount": 1,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "balsamic glaze",
+          "amount": 1,
+          "unit": "TABLESPOON"
+        }
       ],
       "steps": [
         "Slice tomatoes and mozzarella.",
@@ -1023,8 +1786,18 @@
         "Drizzle with olive oil and balsamic glaze.",
         "Serve fresh as a light side dish."
       ],
-      "nutrition": { "calories": 180, "protein": 8, "carbs": 6, "fat": 14 },
-      "tags": ["italian", "fresh", "vegetarian", "side-dish"],
+      "nutrition": {
+        "calories": 180,
+        "protein": 8,
+        "carbs": 6,
+        "fat": 14
+      },
+      "tags": [
+        "italian",
+        "fresh",
+        "vegetarian",
+        "side-dish"
+      ],
       "rating": 5,
       "totalRatings": 4,
       "viewCount": 260,
@@ -1045,14 +1818,46 @@
       "servings": 4,
       "category": "Desserts",
       "ingredients": [
-        { "name": "dark chocolate", "amount": 120, "unit": "GRAM" },
-        { "name": "unsalted butter", "amount": 100, "unit": "GRAM" },
-        { "name": "granulated sugar", "amount": 100, "unit": "GRAM" },
-        { "name": "eggs", "amount": 2, "unit": "PIECE" },
-        { "name": "egg yolks", "amount": 2, "unit": "PIECE" },
-        { "name": "all-purpose flour", "amount": 50, "unit": "GRAM" },
-        { "name": "vanilla extract", "amount": 1, "unit": "TEASPOON" },
-        { "name": "pinch of salt", "amount": 1, "unit": "PINCH" }
+        {
+          "name": "dark chocolate",
+          "amount": 120,
+          "unit": "GRAM"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "granulated sugar",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "eggs",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "egg yolks",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "all-purpose flour",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": 1,
+          "unit": "TEASPOON"
+        },
+        {
+          "name": "pinch of salt",
+          "amount": 1,
+          "unit": "PINCH"
+        }
       ],
       "steps": [
         "Preheat oven to 200°C (400°F) and grease 4 ramekins with butter.",
@@ -1064,8 +1869,19 @@
         "Bake for 10–12 minutes, until the edges are set but the center is soft.",
         "Let cool for 2 minutes, then invert onto plates and serve immediately."
       ],
-      "nutrition": { "calories": 320, "protein": 6, "carbs": 30, "fat": 20 },
-      "tags": ["dessert", "chocolate", "cake", "molten", "quick"],
+      "nutrition": {
+        "calories": 320,
+        "protein": 6,
+        "carbs": 30,
+        "fat": 20
+      },
+      "tags": [
+        "dessert",
+        "chocolate",
+        "cake",
+        "molten",
+        "quick"
+      ],
       "rating": 5,
       "totalRatings": 12,
       "viewCount": 400,
@@ -1086,11 +1902,31 @@
       "servings": 6,
       "category": "Desserts",
       "ingredients": [
-        { "name": "ladyfingers", "amount": 200, "unit": "GRAM" },
-        { "name": "espresso", "amount": 150, "unit": "MILLILITER" },
-        { "name": "mascarpone cheese", "amount": 250, "unit": "GRAM" },
-        { "name": "eggs", "amount": 2, "unit": "PIECE" },
-        { "name": "cocoa powder", "amount": 2, "unit": "TABLESPOON" }
+        {
+          "name": "ladyfingers",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "espresso",
+          "amount": 150,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "mascarpone cheese",
+          "amount": 250,
+          "unit": "GRAM"
+        },
+        {
+          "name": "eggs",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "cocoa powder",
+          "amount": 2,
+          "unit": "TABLESPOON"
+        }
       ],
       "steps": [
         "Dip ladyfingers in espresso.",
@@ -1098,8 +1934,18 @@
         "Repeat layers and dust with cocoa powder.",
         "Chill for at least 2 hours before serving."
       ],
-      "nutrition": { "calories": 320, "protein": 7, "carbs": 35, "fat": 16 },
-      "tags": ["italian", "dessert", "coffee", "classic"],
+      "nutrition": {
+        "calories": 320,
+        "protein": 7,
+        "carbs": 35,
+        "fat": 16
+      },
+      "tags": [
+        "italian",
+        "dessert",
+        "coffee",
+        "classic"
+      ],
       "rating": 5,
       "totalRatings": 12,
       "viewCount": 500,
@@ -1120,11 +1966,31 @@
       "servings": 3,
       "category": "Desserts",
       "ingredients": [
-        { "name": "sticky rice", "amount": 200, "unit": "GRAM" },
-        { "name": "coconut milk", "amount": 200, "unit": "MILLILITER" },
-        { "name": "sugar", "amount": 40, "unit": "GRAM" },
-        { "name": "ripe mango", "amount": 2, "unit": "PIECE" },
-        { "name": "salt", "amount": 0.25, "unit": "TEASPOON" }
+        {
+          "name": "sticky rice",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "coconut milk",
+          "amount": 200,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "sugar",
+          "amount": 40,
+          "unit": "GRAM"
+        },
+        {
+          "name": "ripe mango",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "salt",
+          "amount": 0.25,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Cook sticky rice until soft.",
@@ -1132,8 +1998,18 @@
         "Slice ripe mango and serve alongside rice.",
         "Drizzle with coconut sauce before serving."
       ],
-      "nutrition": { "calories": 300, "protein": 5, "carbs": 60, "fat": 6 },
-      "tags": ["thai", "dessert", "fruit", "coconut"],
+      "nutrition": {
+        "calories": 300,
+        "protein": 5,
+        "carbs": 60,
+        "fat": 6
+      },
+      "tags": [
+        "thai",
+        "dessert",
+        "fruit",
+        "coconut"
+      ],
       "rating": 5,
       "totalRatings": 10,
       "viewCount": 350,
@@ -1154,11 +2030,31 @@
       "servings": 8,
       "category": "Desserts",
       "ingredients": [
-        { "name": "dark chocolate", "amount": 200, "unit": "GRAM" },
-        { "name": "butter", "amount": 100, "unit": "GRAM" },
-        { "name": "sugar", "amount": 150, "unit": "GRAM" },
-        { "name": "eggs", "amount": 2, "unit": "PIECE" },
-        { "name": "flour", "amount": 100, "unit": "GRAM" }
+        {
+          "name": "dark chocolate",
+          "amount": 200,
+          "unit": "GRAM"
+        },
+        {
+          "name": "butter",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "sugar",
+          "amount": 150,
+          "unit": "GRAM"
+        },
+        {
+          "name": "eggs",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "flour",
+          "amount": 100,
+          "unit": "GRAM"
+        }
       ],
       "steps": [
         "Melt chocolate and butter together.",
@@ -1166,8 +2062,18 @@
         "Stir in flour and mix until combined.",
         "Bake until set and fudgy in the center."
       ],
-      "nutrition": { "calories": 280, "protein": 4, "carbs": 35, "fat": 15 },
-      "tags": ["chocolate", "dessert", "baked", "sweet"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 4,
+        "carbs": 35,
+        "fat": 15
+      },
+      "tags": [
+        "chocolate",
+        "dessert",
+        "baked",
+        "sweet"
+      ],
       "rating": 5,
       "totalRatings": 14,
       "viewCount": 470,
@@ -1188,10 +2094,26 @@
       "servings": 4,
       "category": "Desserts",
       "ingredients": [
-        { "name": "heavy cream", "amount": 250, "unit": "MILLILITER" },
-        { "name": "egg yolks", "amount": 4, "unit": "PIECE" },
-        { "name": "sugar", "amount": 60, "unit": "GRAM" },
-        { "name": "vanilla extract", "amount": 1, "unit": "TEASPOON" }
+        {
+          "name": "heavy cream",
+          "amount": 250,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "egg yolks",
+          "amount": 4,
+          "unit": "PIECE"
+        },
+        {
+          "name": "sugar",
+          "amount": 60,
+          "unit": "GRAM"
+        },
+        {
+          "name": "vanilla extract",
+          "amount": 1,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Heat cream with vanilla.",
@@ -1199,8 +2121,18 @@
         "Bake custard in ramekins until set.",
         "Sprinkle sugar and torch until caramelized."
       ],
-      "nutrition": { "calories": 250, "protein": 5, "carbs": 20, "fat": 18 },
-      "tags": ["french", "dessert", "classic", "custard"],
+      "nutrition": {
+        "calories": 250,
+        "protein": 5,
+        "carbs": 20,
+        "fat": 18
+      },
+      "tags": [
+        "french",
+        "dessert",
+        "classic",
+        "custard"
+      ],
       "rating": 5,
       "totalRatings": 9,
       "viewCount": 390,
@@ -1221,11 +2153,31 @@
       "servings": 2,
       "category": "Snacks",
       "ingredients": [
-        { "name": "rice paper", "amount": 100, "unit": "GRAM" },
-        { "name": "dried shrimp", "amount": 30, "unit": "GRAM" },
-        { "name": "beef jerky", "amount": 50, "unit": "GRAM" },
-        { "name": "quail eggs", "amount": 4, "unit": "PIECE" },
-        { "name": "fresh herbs", "amount": 1, "unit": "CUP" }
+        {
+          "name": "rice paper",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "dried shrimp",
+          "amount": 30,
+          "unit": "GRAM"
+        },
+        {
+          "name": "beef jerky",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "quail eggs",
+          "amount": 4,
+          "unit": "PIECE"
+        },
+        {
+          "name": "fresh herbs",
+          "amount": 1,
+          "unit": "CUP"
+        }
       ],
       "steps": [
         "Cut rice paper into thin strips.",
@@ -1233,8 +2185,18 @@
         "Add quail eggs and drizzle with sauce.",
         "Toss well and serve immediately."
       ],
-      "nutrition": { "calories": 280, "protein": 14, "carbs": 32, "fat": 10 },
-      "tags": ["vietnamese", "street food", "snack", "salad"],
+      "nutrition": {
+        "calories": 280,
+        "protein": 14,
+        "carbs": 32,
+        "fat": 10
+      },
+      "tags": [
+        "vietnamese",
+        "street food",
+        "snack",
+        "salad"
+      ],
       "rating": 5,
       "totalRatings": 11,
       "viewCount": 480,
@@ -1255,11 +2217,31 @@
       "servings": 6,
       "category": "Snacks",
       "ingredients": [
-        { "name": "popcorn kernels", "amount": 100, "unit": "GRAM" },
-        { "name": "butter", "amount": 50, "unit": "GRAM" },
-        { "name": "brown sugar", "amount": 100, "unit": "GRAM" },
-        { "name": "corn syrup", "amount": 2, "unit": "TABLESPOON" },
-        { "name": "salt", "amount": 0.25, "unit": "TEASPOON" }
+        {
+          "name": "popcorn kernels",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "butter",
+          "amount": 50,
+          "unit": "GRAM"
+        },
+        {
+          "name": "brown sugar",
+          "amount": 100,
+          "unit": "GRAM"
+        },
+        {
+          "name": "corn syrup",
+          "amount": 2,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "salt",
+          "amount": 0.25,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Pop the popcorn kernels and place in a large bowl.",
@@ -1267,8 +2249,18 @@
         "Pour caramel mixture over popcorn and stir to coat.",
         "Bake until crisp and golden."
       ],
-      "nutrition": { "calories": 220, "protein": 2, "carbs": 36, "fat": 8 },
-      "tags": ["snack", "sweet", "caramel", "popcorn"],
+      "nutrition": {
+        "calories": 220,
+        "protein": 2,
+        "carbs": 36,
+        "fat": 8
+      },
+      "tags": [
+        "snack",
+        "sweet",
+        "caramel",
+        "popcorn"
+      ],
       "rating": 5,
       "totalRatings": 9,
       "viewCount": 360,
@@ -1289,11 +2281,31 @@
       "servings": 2,
       "category": "Snacks",
       "ingredients": [
-        { "name": "dried seaweed (nori)", "amount": 10, "unit": "PIECE" },
-        { "name": "sesame oil", "amount": 2, "unit": "TABLESPOON" },
-        { "name": "soy sauce", "amount": 1, "unit": "TABLESPOON" },
-        { "name": "sesame seeds", "amount": 1, "unit": "TEASPOON" },
-        { "name": "salt", "amount": 0.5, "unit": "TEASPOON" }
+        {
+          "name": "dried seaweed (nori)",
+          "amount": 10,
+          "unit": "PIECE"
+        },
+        {
+          "name": "sesame oil",
+          "amount": 2,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "soy sauce",
+          "amount": 1,
+          "unit": "TABLESPOON"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": 1,
+          "unit": "TEASPOON"
+        },
+        {
+          "name": "salt",
+          "amount": 0.5,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Preheat oven to 150°C (300°F).",
@@ -1304,8 +2316,19 @@
         "Bake for 8–10 minutes until crisp.",
         "Cool and enjoy immediately or store in an airtight container."
       ],
-      "nutrition": { "calories": 90, "protein": 3, "carbs": 6, "fat": 5 },
-      "tags": ["snack", "seaweed", "crispy", "healthy", "baked"],
+      "nutrition": {
+        "calories": 90,
+        "protein": 3,
+        "carbs": 6,
+        "fat": 5
+      },
+      "tags": [
+        "snack",
+        "seaweed",
+        "crispy",
+        "healthy",
+        "baked"
+      ],
       "rating": 4,
       "totalRatings": 6,
       "viewCount": 210,
@@ -1326,9 +2349,21 @@
       "servings": 3,
       "category": "Snacks",
       "ingredients": [
-        { "name": "potatoes", "amount": 500, "unit": "GRAM" },
-        { "name": "vegetable oil", "amount": 500, "unit": "MILLILITER" },
-        { "name": "salt", "amount": 1, "unit": "TEASPOON" }
+        {
+          "name": "potatoes",
+          "amount": 500,
+          "unit": "GRAM"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": 500,
+          "unit": "MILLILITER"
+        },
+        {
+          "name": "salt",
+          "amount": 1,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Peel and cut potatoes into strips.",
@@ -1336,8 +2371,18 @@
         "Fry once at lower temperature, then again at high heat.",
         "Season with salt and serve hot."
       ],
-      "nutrition": { "calories": 300, "protein": 4, "carbs": 45, "fat": 12 },
-      "tags": ["snack", "potato", "fried", "classic"],
+      "nutrition": {
+        "calories": 300,
+        "protein": 4,
+        "carbs": 45,
+        "fat": 12
+      },
+      "tags": [
+        "snack",
+        "potato",
+        "fried",
+        "classic"
+      ],
       "rating": 5,
       "totalRatings": 15,
       "viewCount": 600,
@@ -1358,10 +2403,26 @@
       "servings": 6,
       "category": "Snacks",
       "ingredients": [
-        { "name": "pork", "amount": 400, "unit": "GRAM" },
-        { "name": "chili", "amount": 2, "unit": "PIECE" },
-        { "name": "banana leaves", "amount": 4, "unit": "PIECE" },
-        { "name": "salt", "amount": 1, "unit": "TEASPOON" }
+        {
+          "name": "pork",
+          "amount": 400,
+          "unit": "GRAM"
+        },
+        {
+          "name": "chili",
+          "amount": 2,
+          "unit": "PIECE"
+        },
+        {
+          "name": "banana leaves",
+          "amount": 4,
+          "unit": "PIECE"
+        },
+        {
+          "name": "salt",
+          "amount": 1,
+          "unit": "TEASPOON"
+        }
       ],
       "steps": [
         "Mix minced pork with garlic, chili, and seasoning.",
@@ -1369,8 +2430,18 @@
         "Leave to ferment at room temperature for 2 days.",
         "Serve as a snack or appetizer."
       ],
-      "nutrition": { "calories": 210, "protein": 18, "carbs": 3, "fat": 15 },
-      "tags": ["vietnamese", "fermented", "snack", "pork"],
+      "nutrition": {
+        "calories": 210,
+        "protein": 18,
+        "carbs": 3,
+        "fat": 15
+      },
+      "tags": [
+        "vietnamese",
+        "fermented",
+        "snack",
+        "pork"
+      ],
       "rating": 5,
       "totalRatings": 7,
       "viewCount": 310,
@@ -1378,7 +2449,7 @@
       "updatedAt": "2025-01-26T10:40:00Z"
     }
   ],
-
+  
   "ratings": [
     {
       "id": 1,
@@ -1497,7 +2568,6 @@
       "rating": 4,
       "createdAt": "2025-01-19T14:45:00Z"
     },
-
     {
       "id": 14,
       "recipeId": 7,
@@ -1516,7 +2586,6 @@
       "rating": 4,
       "createdAt": "2025-01-21T16:30:00Z"
     },
-
     {
       "id": 16,
       "recipeId": 8,
@@ -1535,7 +2604,6 @@
       "rating": 4,
       "createdAt": "2025-01-23T13:05:00Z"
     },
-
     {
       "id": 18,
       "recipeId": 9,
@@ -1554,7 +2622,6 @@
       "rating": 3,
       "createdAt": "2025-01-25T17:50:00Z"
     },
-
     {
       "id": 20,
       "recipeId": 10,
@@ -2023,63 +3090,5 @@
       "rating": 4,
       "createdAt": "2025-02-15T11:55:00Z"
     }
-  ],
-
-  "tags": [
-    { "id": 1, "name": "vietnamese", "count": 16 },
-    { "id": 2, "name": "soup", "count": 1 },
-    { "id": 3, "name": "beef", "count": 1 },
-    { "id": 4, "name": "traditional", "count": 3 },
-    { "id": 5, "name": "sandwich", "count": 1 },
-    { "id": 6, "name": "grilled", "count": 1 },
-    { "id": 7, "name": "street-food", "count": 5 },
-    { "id": 8, "name": "italian", "count": 2 },
-    { "id": 9, "name": "pasta", "count": 1 },
-    { "id": 10, "name": "classic", "count": 5 },
-    { "id": 11, "name": "thai", "count": 2 },
-    { "id": 12, "name": "noodles", "count": 1 },
-    { "id": 13, "name": "mexican", "count": 1 },
-    { "id": 14, "name": "seafood", "count": 1 },
-    { "id": 15, "name": "coffee", "count": 1 },
-    { "id": 16, "name": "tea", "count": 1 },
-    { "id": 17, "name": "iced", "count": 2 },
-    { "id": 18, "name": "refreshing", "count": 1 },
-    { "id": 19, "name": "juice", "count": 1 },
-    { "id": 20, "name": "dessert", "count": 7 },
-    { "id": 21, "name": "sweet", "count": 7 },
-    { "id": 22, "name": "colorful", "count": 1 },
-    { "id": 23, "name": "smoothie", "count": 2 },
-    { "id": 24, "name": "fruit", "count": 3 },
-    { "id": 25, "name": "mango", "count": 1 },
-    { "id": 26, "name": "fresh", "count": 3 },
-    { "id": 27, "name": "appetizer", "count": 6 },
-    { "id": 28, "name": "fried", "count": 2 },
-    { "id": 29, "name": "crispy", "count": 2 },
-    { "id": 30, "name": "breakfast", "count": 3 },
-    { "id": 31, "name": "porridge", "count": 1 },
-    { "id": 32, "name": "french", "count": 2 },
-    { "id": 33, "name": "pastry", "count": 1 },
-    { "id": 34, "name": "sticky-rice", "count": 1 },
-    { "id": 35, "name": "steamed", "count": 1 },
-    { "id": 36, "name": "side-dish", "count": 5 },
-    { "id": 37, "name": "vegetable", "count": 3 },
-    { "id": 38, "name": "garlic", "count": 1 },
-    { "id": 39, "name": "butter", "count": 1 },
-    { "id": 40, "name": "honey", "count": 1 },
-    { "id": 41, "name": "quick", "count": 3 },
-    { "id": 42, "name": "korean", "count": 1 },
-    { "id": 43, "name": "fermented", "count": 2 },
-    { "id": 44, "name": "spicy", "count": 1 },
-    { "id": 45, "name": "italian-dessert", "count": 1 },
-    { "id": 46, "name": "coffee-dessert", "count": 1 },
-    { "id": 47, "name": "coconut", "count": 1 },
-    { "id": 48, "name": "baked", "count": 1 },
-    { "id": 49, "name": "custard", "count": 1 },
-    { "id": 50, "name": "snack", "count": 5 },
-    { "id": 51, "name": "caramel", "count": 1 },
-    { "id": 52, "name": "popcorn", "count": 1 },
-    { "id": 53, "name": "seaweed", "count": 1 },
-    { "id": 54, "name": "potato", "count": 1 },
-    { "id": 55, "name": "pork", "count": 1 }
   ]
 }

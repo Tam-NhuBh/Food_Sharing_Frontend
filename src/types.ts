@@ -14,13 +14,24 @@ export enum IngredientUnit {
 }
 
 export enum CategoryType {
-  BEVERAGES = "BEVERAGES",
-  APPETIZERS = "APPETIZERS",
-  BREAKFAST_FOODS = "BREAKFAST_FOODS",
-  MAIN_COURSE = "MAIN_COURSE",
-  SIDE_DISHES = "SIDE_DISHES",
-  DESSERTS = "DESSERTS",
-  SNACKS = "SNACKS"
+  BEVERAGES = "Beverages",
+  APPETIZERS = "Appetizers",
+  BREAKFAST_FOODS = "Breakfast Foods",
+  MAIN_COURSE = "Main Course",
+  SIDE_DISHES = "Síde Dishes",
+  DESSERTS = "Desserts",
+  SNACKS = "Snacks",
+}
+
+// filter recipe theo tag
+export enum Tags {
+  BEVERAGES = "Beverages",
+  APPETIZERS = "Appetizers",
+  BREAKFAST_FOODS = "Breakfast Foods",
+  MAIN_COURSE = "Main Course",
+  SIDE_DISHES = "Síde Dishes",
+  DESSERTS = "Desserts",
+  SNACKS = "Snacks",
 }
 
 export interface Category {
@@ -95,11 +106,4 @@ export interface Rating {
   comment: string;
   rating: number;
   createdAt: string;
-}
-
-// filter recipe theo tag
-export interface Tag {
-  id: number;
-  name: string; 
-  count: number;
 }
