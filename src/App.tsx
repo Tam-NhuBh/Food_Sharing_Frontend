@@ -9,7 +9,6 @@ function App() {
       <div className="min-h-screen">
         <Outlet />
       </div>
-
       <Footer />
     </main>
   );

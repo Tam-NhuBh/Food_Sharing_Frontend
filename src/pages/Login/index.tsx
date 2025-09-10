@@ -6,7 +6,7 @@ export default function Login() {
   const [password, setPassword] = useState<string>("");
 
   useEffect(() => {
-    fetch("api/users").then(res => res.json())
+    fetch("api/users?username=khanh_nguyen").then(res => res.json())
                       .then(res => console.log(res));
     
   }, [])
