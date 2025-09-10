@@ -13,7 +13,7 @@ export function makeServer({ environment = "development" } = {}) {
     },
 
     seeds(server) {
-      server.db.loadData({recipes});
+      server.db.loadData({ recipes });
     },
 
     routes() {
@@ -25,7 +25,10 @@ export function makeServer({ environment = "development" } = {}) {
 
       this.get("/recipes/:id", (schema, request) => {
         return schema.db.recipes.find(request.params.id);
-      })
+      });
+
+      this.passthrough("https://identitytoolkit.googleapis.com/**");
+      this.passthrough("https://securetoken.googleapis.com/**");
     },
   });
 

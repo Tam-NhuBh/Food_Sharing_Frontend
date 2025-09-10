@@ -1,22 +1,20 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { setLogLevel } from "firebase/app";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCy3SdCKm7YeKEjZsh6iAl8EAeNRwvgngQ",
-  authDomain: "nomnomapp-5ba4a.firebaseapp.com",
-  projectId: "nomnomapp-5ba4a",
-  storageBucket: "nomnomapp-5ba4a.firebasestorage.app",
-  messagingSenderId: "1079300225764",
-  appId: "1:1079300225764:web:533674a1da3b03e1050af1",
-  measurementId: "G-6W3C5E30SH",
+  apiKey: "AIzaSyBlCVAQAC-artJZ5aF4Ar-6mMGYeixZqiY",
+  authDomain: "nomnom-5f0bb.firebaseapp.com",
+  projectId: "nomnom-5f0bb",
+  storageBucket: "nomnom-5f0bb.appspot.com",
+  messagingSenderId: "674313941661",
+  appId: "1:674313941661:web:4f06e2f89cba609aa31a74",
+  measurementId: "G-9JMBL10K9P",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-export { auth }
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
+// bật log debug để thấy request ra ngoài
+setLogLevel("debug");
+
+export const auth = getAuth(app);
