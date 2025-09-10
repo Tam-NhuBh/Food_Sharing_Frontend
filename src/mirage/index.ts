@@ -10,7 +10,6 @@ export function makeServer({ environment = "development" } = {}) {
       category: Model.extend({}),
       user: Model.extend({}),
       rating: Model.extend({}),
-      tag: Model.extend({}),
       ingredientUnit: Model.extend({}),
     },
 
@@ -44,11 +43,6 @@ export function makeServer({ environment = "development" } = {}) {
       // Seed ratings
       data.ratings.forEach((rating) => {
         db.ratings.insert(rating);
-      });
-
-      // Seed tags
-      data.tags.forEach((tag) => {
-        db.tags.insert(tag);
       });
     },
 
@@ -95,14 +89,6 @@ export function makeServer({ environment = "development" } = {}) {
 
       this.get("/ratings/:id", (schema, request) => {
         return schema.db.ratings.find(request.params.id);
-      });
-
-      this.get("/tags", (schema) => {
-        return schema.db.tags;
-      });
-
-      this.get("/tags/:id", (schema, request) => {
-        return schema.db.tags.find(request.params.id);
       });
     },
   });
