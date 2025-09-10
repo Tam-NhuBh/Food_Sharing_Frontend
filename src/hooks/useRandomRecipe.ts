@@ -1,22 +1,28 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import type { Recipe } from "../types";
 
-const useRandomRecipes = (recipes: Recipe[] = [], count: number = 3) => {
+const useRandomRecipes = (recipes: Recipe[] | undefined, count: number = 3) => {
   const [randomRecipes, setRandomRecipes] = useState<Recipe[]>([]);
 
-  const getRandomRecipes = useCallback(() => {
+  useEffect(() => {
+    if (!recipes || recipes.length === 0) {
+      setRandomRecipes([]);
+      return;
+    }
+
+    // Shuffle once when recipes/count change
+    const shuffled = [...recipes].sort(() => Math.random() - 0.5);
+    setRandomRecipes(shuffled.slice(0, Math.min(count, recipes.length)));
+  }, [recipes?.length, count]); 
+
+  const getRandomRecipes = () => {
     if (!recipes || recipes.length === 0) {
       setRandomRecipes([]);
       return;
     }
     const shuffled = [...recipes].sort(() => Math.random() - 0.5);
     setRandomRecipes(shuffled.slice(0, Math.min(count, recipes.length)));
-  }, [recipes, count]);
-
-  // Generate initial random recipes on mount
-  useEffect(() => {
-    getRandomRecipes();
-  }, [getRandomRecipes]);
+  };
 
   return { randomRecipes, getRandomRecipes };
 };
