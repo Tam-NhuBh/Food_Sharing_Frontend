@@ -1,16 +1,20 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { auth } from "../../firebase/config";
+import { useEffect, useState } from "react";
+import { hashPassword } from "../../utils";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  useEffect(() => {
+    fetch("api/users").then(res => res.json())
+                      .then(res => console.log(res));
+    
+  }, [])
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault();
     try {
-      const credentials = await signInWithEmailAndPassword(auth, email, password);
-      console.log(credentials);
+      const hashedPassword = await hashPassword(password);
+      console.log(hashedPassword);
     }
     catch (err) {
       console.log(err)

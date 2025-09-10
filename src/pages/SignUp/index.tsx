@@ -1,21 +1,11 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { auth } from "../../firebase/config";
+
 export default function SignUp() {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-
-    const handleClick = async (e: React.MouseEvent) => {
+    const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
-        console.log(email);
-        console.log(password)
-        try {
-          const credentials = await createUserWithEmailAndPassword(auth, email, password);
-          console.log(credentials);
-        }
-        catch (err) {
-          console.log(err)
-        }
+        
       };
     return (
       <div className="flex flex-col gap-3 items-center">
