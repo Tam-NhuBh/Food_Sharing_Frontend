@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 
 const LandingPage = lazy(() => import('../pages/LandingPage'));
 const About = lazy(() => import('../pages/About'));
-const RecipeLayout = lazy(() => import('../pages/recipes/RecipeLayout'));
+//const RecipeLayout = lazy(() => import('../pages/recipes/RecipeLayout'));
 const AddRecipe = lazy(() => import('../pages/recipes/AddRecipe'));
 const RecipeList = lazy(() => import('../pages/recipes/RecipeList'));
 const RecipeDetail = lazy(() => import('../pages/recipes/RecipeDetail'));
@@ -29,7 +29,7 @@ const routes: RouteObject[] = [
       },
       {
         path: 'recipes',
-        element: <RecipeLayout />,
+        //element: <RecipeLayout />,
         children: [
           {
             index: true,

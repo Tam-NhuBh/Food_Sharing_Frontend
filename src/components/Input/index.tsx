@@ -9,15 +9,15 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
 	({ label, error, className = '', ...props }, ref) => {
 		return (
-			<div className="flex flex-col gap-1">
+			<div className="flex flex-col gap-1 w-full">
 				{label && (
-					<label className="text-sm font-medium text-gray-700 dark:text-gray-200">
+					<label className="font-medium text-sm sm:text-md text-black dark:text-gray-600">
 						{label}
 					</label>
 				)}
 				<input
 					ref={ref}
-					className={`px-3 py-2 border rounded-lg transition ${error ? 'border-red-500' : 'border-[#B3B3B3]'} ${className}`}
+					className={`w-full px-3 py-2 border rounded-lg transition ${error ? 'border-red-500' : 'border-[#B3B3B3]'} ${className}`}
 					{...props}
 				/>
 				{error && (
