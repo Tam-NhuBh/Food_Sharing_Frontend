@@ -10,7 +10,8 @@ export function makeServer({ environment = "development" } = {}) {
       category: Model.extend({}),
       user: Model.extend({}),
       rating: Model.extend({}),
-      tag: Model.extend({})  
+      tag: Model.extend({}),
+      ingredientUnit: Model.extend({}),
     },
 
     seeds(server) {
@@ -28,6 +29,11 @@ export function makeServer({ environment = "development" } = {}) {
       // Seed categories
       data.categories.forEach((category) => {
         db.categories.insert(category);
+      });
+
+      // Seed ingredients
+      Object.entries(data.enums.IngredientUnit).forEach(([key, value]) => {
+        db.ingredientUnits.insert({ id: key, label: value });
       });
 
       // Seed users
@@ -60,10 +66,20 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/categories", (schema) => {
         return schema.db.categories;
       });
-      
+
       this.get("/categories/:id", (schema, request) => {
         return schema.db.categories.find(request.params.id);
       });
+
+      // this.get("/ingredients", (schema) => {
+      //   return schema.db.ingredients;
+      // });
+
+      this.get("/ingredient-units", (schema) => schema.db.ingredientUnits);
+      this.get("/ingredient-units/:id", (schema, request) =>
+        schema.db.ingredientUnits.find(request.params.id)
+      );
+
 
       this.get("/users", (schema) => {
         return schema.db.users;
@@ -76,7 +92,7 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/ratings", (schema) => {
         return schema.db.ratings;
       });
-      
+
       this.get("/ratings/:id", (schema, request) => {
         return schema.db.ratings.find(request.params.id);
       });
@@ -84,7 +100,7 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/tags", (schema) => {
         return schema.db.tags;
       });
-      
+
       this.get("/tags/:id", (schema, request) => {
         return schema.db.tags.find(request.params.id);
       });
