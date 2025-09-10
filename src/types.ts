@@ -1,36 +1,105 @@
+export enum IngredientUnit {
+  GRAM = "GRAM",
+  KILOGRAM = "KILOGRAM",
+  LITER = "LITER",
+  MILLILITER = "MILLILITER",
+  PIECE = "PIECE",
+  CUP = "CUP",
+  TEASPOON = "TEASPOON",
+  TABLESPOON = "TABLESPOON",
+  PINCH = "PINCH",
+  LEAF = "LEAF",
+  HEAD = "HEAD",
+  CLOVE = "CLOVE"
+}
+
+export enum CategoryType {
+  BEVERAGES = "BEVERAGES",
+  APPETIZERS = "APPETIZERS",
+  BREAKFAST_FOODS = "BREAKFAST_FOODS",
+  MAIN_COURSE = "MAIN_COURSE",
+  SIDE_DISHES = "SIDE_DISHES",
+  DESSERTS = "DESSERTS",
+  SNACKS = "SNACKS"
+}
+
+export interface Category {
+  id: number;
+  name: string;
+  type: CategoryType;
+  icon: string;
+}
+
 export interface Recipe {
   id: number;
+  categoryId: number;
+  categoryType: CategoryType;
   image: string;
   title: string;
   author: string;
+  authorId: number;
   description: string;
   longDescription: string;
   cookingTime: string;
-  category: string | string[];
+  servings: number;
+  category: string;
   ingredients: Ingredient[];
   steps: string[];
-  isFavourite?: boolean;
+  nutrition: Nutrition;
+  tags: string[];
   rating: number;
-  comments?: Comment[];
+  totalRatings: number;
+  viewCount: number;
   createdAt: string;
+  updatedAt: string;
 }
 
 export interface Ingredient {
   name: string;
   amount: number;
-  unit: string;
+  unit: IngredientUnit | string;
 }
 
-export interface Comment {
-    userId: number,
-    username: string,
-    comment: string,
-    ratingComment: number
+// dinh dưỡng của từng recipe
+export interface Nutrition {
+  calories: number;
+  protein: number;
+  carbs: number;
+  fat: number;
 }
+
+// export interface Comment {
+//     userId: number,
+//     username: string,
+//     comment: string,
+//     ratingComment: number
+// }
 
 export interface User {
-    id: number,
-    username: string,
-    password: string,
-    favourites: number[]
+  id: number;
+  username: string;
+  email: string;
+  password: string;
+  fullName: string;
+  avatar: string;
+  favourites: number[]; // danh sach recipe ma user favorite
+  followers: number[]; // danh sach user favorite recipe cua user
+  recipesCreated: number[];
+}
+
+export interface Rating {
+  id: number;
+  recipeId: number;
+  userId: number;
+  user: string; 
+  comment: string;
+  rating: number;
+  createdAt: string;
+}
+
+// filter recipe theo tag
+export interface Tag {
+  id: number;
+  name: string; 
+  count: number;
 }

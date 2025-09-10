@@ -64,7 +64,7 @@ export default function LandingPage() {
                   category: recipe.category,
                   actions: "Read Recipe",
                 };
-              }) as RecipeCardProps[]
+              }) as unknown as RecipeCardProps[]
             }
           ></RecipeCardList>
         )}
@@ -121,7 +121,7 @@ export default function LandingPage() {
                 description: recipe.description,
                 category: recipe.category,
                 actions: "Read Recipe",
-              })) as RecipeCardProps[]
+              })) as unknown as RecipeCardProps[]
             }
           />
         )}
