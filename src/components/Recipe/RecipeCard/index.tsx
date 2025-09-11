@@ -7,6 +7,7 @@ export interface RecipeCardProps {
   title: string;
   description?: string;
   category?: string[];
+  cookingTime?: string[];
   actions?: React.ReactNode;
   className?: string;
   onClick?: () => void;
@@ -18,6 +19,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
   category,
   title,
   description,
+  cookingTime,
   actions,
   className = "",
 }) => {
@@ -47,8 +49,13 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
         )}
         <h2 className="text-lg font-bold mb-2 font-worksans">{title}</h2>
         {description && (
-          <p className="font-worksans font-medium text-black flex-1 mb-4">
+          <p className="font-worksans font-medium text-black flex-1 mb-1">
             {description}
+          </p>
+        )}
+        {cookingTime && (
+          <p className="font-worksans font-medium text-black flex-1 mt-1 mb-4">
+            ⏳ Cooking Duration: {cookingTime}
           </p>
         )}
         {actions && (

@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
 import ReviewCardList from "../../../components/Review/ReviewCardList";
 import type { ReviewCardProps } from "../../../components/Review/ReviewCard";
-import Input from "../../../components/Input";
-import Button from "../../../components/Button";
+import SearchBar from "../../../components/Search";
 
 export default function RecipeDetail() {
   const { id } = useParams();
@@ -28,60 +27,46 @@ export default function RecipeDetail() {
   return (
     <>
       {/* Search Bar */}
-      <section className="px-6 md:px-20 xl:px-32 bg-light-gray">
-        <div className="flex flex-row py-4">
-          <Input
-            placeholder="Search recipes..."
-            className="w-full bg-white border-0 py-3"
-          />
-          <Button variant="primary" className="rounded-sm py-3">
-            Search
-          </Button>
-        </div>
-      </section>
+      <SearchBar />
 
       {/* Recipe Part */}
       <section className="px-6 md:px-20 xl:px-32 bg-white pt-8">
-        <h2 className="md:text-3xl text-xl font-bold font-playfair mb-3">
+        <h2 className="md:text-7xl text-xl font-bold font-playfair mb-3">
           {recipe?.title}
         </h2>
-        <p className="font-worksans italic text-gray-600 mb-4">
-          {recipe?.author}
-        </p>
-        <p className="font-worksans text-black font-bold mb-2">
-          {recipe?.description}
+        <p className="font-worksans italic text-gray-600 mb-7">
+          👩‍🍳 {recipe?.author}
         </p>
         <p className="font-worksans text-black mb-4">
           {recipe?.longDescription}
         </p>
       </section>
 
-      <section>
+      <section className="relative w-full max-w-7xl mx-auto overflow-visible">
         <img
           src={recipe?.image}
           alt={recipe?.title}
           className="w-full h-auto object-cover mb-4"
         />
-      </section>
+        <div className="absolute bottom-0 left-1/2 px-6 md:px-20 xl:px-32 bg-primary text-white rounded-lg py-6 -translate-x-1/2 translate-y-1/2">
+        <div className="grid grid-cols-2 font-worksans font-medium md:text-lg text-sm">
+          <div className="flex flex-col items-center">
+            <p className="font-bold">Serving</p>
+            <p>{recipe?.servings}</p>
+          </div>
 
-<section className="px-6 md:px-20 xl:px-32 bg-primary text-white pt-8">
-  <div className="grid grid-cols-2 text-center font-worksans font-medium md:text-lg text-sm">
-    <div className="flex flex-col">
-      <p>Serving</p>
-      <p>{recipe?.servings}</p>
-    </div>
+          <div className="flex flex-col items-center">
+            <p className="font-bold">Cooking Time</p>
+            <p>{recipe?.cookingTime}</p>
+          </div>
+          </div>
 
-    <div className="flex flex-col">
-      <p>Cooking Time</p>
-      <p>{recipe?.cookingTime}</p>
-    </div>
-
-    {/* <div className="flex flex-col">
+          {/* <div className="flex flex-col">
       <p>Difficulty</p>
       <p>{recipe?.difficulty}</p>
     </div> */}
-  </div>
-</section>
+        </div>
+      </section>
       <section className="px-6 md:px-20 xl:px-32 bg-light-gray pt-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-white p-4">

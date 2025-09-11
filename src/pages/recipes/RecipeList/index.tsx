@@ -4,7 +4,7 @@ import type { Recipe } from "../../../types";
 import type { RecipeCardProps } from "../../../components/Recipe/RecipeCard";
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
-import Input from "../../../components/Input";
+import SearchBar from "../../../components/Search";
 
 export default function RecipeList() {
   const [recipes, setRecipes] = useState<Recipe[]>();
@@ -13,6 +13,7 @@ export default function RecipeList() {
       .then((res) => res.json())
       .then((res) => setRecipes(res as Recipe[]));
   }, []);
+  
   return (
     <div className="font-worksans flex flex-col min-h-screen">
       {/* Hero */}
@@ -46,17 +47,7 @@ export default function RecipeList() {
       </section>
 
       {/* Search Bar */}
-      <section className="px-6 md:px-20 xl:px-32 bg-cream">
-        <div className="flex flex-row py-4">
-          <Input
-            placeholder="Search recipes..."
-            className="w-full bg-white border-0 py-3"
-          />
-          <Button variant="primary" className="rounded-sm py-3">
-            Search
-          </Button>
-        </div>
-      </section>
+      <SearchBar />
 
       {/* Filter Bar */}
       <section className="px-6 md:px-20 xl:px-32 pt-8">
@@ -83,6 +74,7 @@ export default function RecipeList() {
                   title: recipe.title,
                   description: recipe.description,
                   category: recipe.category,
+                  cookingTime: recipe.cookingTime,
                   actions: "Read Recipe",
                 };
               }) as unknown as RecipeCardProps[]
