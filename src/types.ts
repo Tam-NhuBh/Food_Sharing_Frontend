@@ -1,3 +1,5 @@
+import type { User as FirebaseUser } from "firebase/auth";
+
 export enum IngredientUnit {
   GRAM = "GRAM",
   KILOGRAM = "KILOGRAM",
@@ -10,7 +12,7 @@ export enum IngredientUnit {
   PINCH = "PINCH",
   LEAF = "LEAF",
   HEAD = "HEAD",
-  CLOVE = "CLOVE"
+  CLOVE = "CLOVE",
 }
 
 export enum CategoryType {
@@ -20,7 +22,7 @@ export enum CategoryType {
   MAIN_COURSE = "MAIN_COURSE",
   SIDE_DISHES = "SIDE_DISHES",
   DESSERTS = "DESSERTS",
-  SNACKS = "SNACKS"
+  SNACKS = "SNACKS",
 }
 
 export interface Category {
@@ -91,7 +93,7 @@ export interface Rating {
   id: number;
   recipeId: number;
   userId: number;
-  user: string; 
+  user: string;
   comment: string;
   rating: number;
   createdAt: string;
@@ -100,6 +102,11 @@ export interface Rating {
 // filter recipe theo tag
 export interface Tag {
   id: number;
-  name: string; 
+  name: string;
   count: number;
+}
+
+export interface AuthContextType {
+  user: FirebaseUser | null;
+  loading: boolean;
 }

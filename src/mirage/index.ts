@@ -89,6 +89,9 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/tags/:id", (schema, request) => {
         return schema.db.tags.find(request.params.id);
       });
+      
+      this.passthrough("https://identitytoolkit.googleapis.com/**");
+      this.passthrough("https://securetoken.googleapis.com/**");
     },
   });
 

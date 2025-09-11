@@ -1,10 +1,21 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // lightweight icons
+import { signOut } from "firebase/auth";
+import { auth } from "../../../firebase/config";
+import useAuth from "../../../hooks/useAuth";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogOutOpen, setIsLogOutOpen] = useState(false);
   const location = useLocation();
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const handleLogOut = async () => {
+    setIsLogOutOpen(false);
+    await signOut(auth);
+    navigate('/login');
+  }
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300 shadow relative">
       {/* Logo */}
@@ -43,17 +54,35 @@ export default function Header() {
       </nav>
 
       {/* Desktop Auth */}
-      <div className="hidden md:flex items-center space-x-4 text-md lg:text-lg">
-        <Link to="/login" className="font-worksans">
-          Login
-        </Link>
-        <Link
-          to="/sign-up"
-          className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
-        >
-          Sign up
-        </Link>
-      </div>
+      {!user && (
+        <div className="hidden md:flex items-center space-x-4 text-md lg:text-lg">
+          <Link to="/login" className="font-worksans">
+            Login
+          </Link>
+          <Link
+            to="/sign-up"
+            className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
+          >
+            Sign up
+          </Link>
+        </div>
+      )}
+
+      {user && (
+        <div className="flex gap-5 relative">
+          <p
+            className="font-bold cursor-pointer text-primary invisible md:visible"
+            onClick={() => setIsLogOutOpen((prev) => !prev)}
+          >
+            {user.email}
+          </p>
+          {isLogOutOpen && (
+            <div className="absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white" onClick={handleLogOut}>
+              <p className="font-bold">Log Out</p>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Mobile Hamburger */}
       <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>

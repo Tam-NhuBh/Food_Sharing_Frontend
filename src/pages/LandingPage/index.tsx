@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 import { useEffect, useState } from "react";
 import useRandomRecipes from "../../hooks/useRandomRecipe";
 
+
 export default function LandingPage() {
   const [recipes, setRecipes] = useState<Recipe[]>();
   const { randomRecipes, getRandomRecipes } = useRandomRecipes(recipes, 3);
@@ -18,7 +19,6 @@ export default function LandingPage() {
         setRecipes((res as Recipe[]).slice(0, 3));
       });
   }, []);
-
   return (
     <div className="font-worksans flex flex-col gap-8">
       {/* Section 1: Hero with background */}
