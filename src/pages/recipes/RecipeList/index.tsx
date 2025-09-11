@@ -1,19 +1,36 @@
 import { useEffect, useState } from "react";
 import RecipeCardList from "../../../components/CardList";
-import type { Recipe } from "../../../types";
+import type { Category, Recipe } from "../../../types";
 import type { RecipeCardProps } from "../../../components/Recipe/RecipeCard";
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import SearchBar from "../../../components/Search";
+import CategoryFilter from "../../../components/CategoryFilter";
 
 export default function RecipeList() {
-  const [recipes, setRecipes] = useState<Recipe[]>();
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [categories, setCategroies] = useState<Category[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
   useEffect(() => {
     fetch("/api/recipes")
       .then((res) => res.json())
       .then((res) => setRecipes(res as Recipe[]));
+
+    fetch("/api/categories")
+      .then((res) => res.json())
+      .then(setCategroies);
   }, []);
   
+  // console.log("selectedchange on recipe comp:", fetch("api/categories"))
+
+  const filteredRecipes =
+    selectedCategory === "all"
+      ? recipes
+      : recipes.filter((r) => String((r).categoryId) === selectedCategory);
+
+  console.log("selectedchange on recipe comp:", filteredRecipes)
+
   return (
     <div className="font-worksans flex flex-col min-h-screen">
       {/* Hero */}
@@ -51,23 +68,24 @@ export default function RecipeList() {
 
       {/* Filter Bar */}
       <section className="px-6 md:px-20 xl:px-32 pt-8">
-        <div className="flex justify-between items-center mb-5">
-          <h2 className="md:text-2xl text-lg font-bold font-playfair">
-            Browse by <span className="text-primary">Category</span>
-          </h2>
-        </div>
+        <CategoryFilter
+          categories={categories}
+          selected={selectedCategory}
+          allCategories={true}
+          onChange={setSelectedCategory}
+        />
       </section>
 
       {/* Recipe List */}
       <section className="px-6 md:px-20 xl:px-32 py-8">
-        {/* <h2 className="md:text-2xl text-lg font-bold font-playfair mb-5">
+        <h2 className="md:text-2xl text-lg font-bold font-playfair mb-5">
           Recipe List
-        </h2> */}
+        </h2>
 
-        {recipes && recipes.length > 0 ? (
+        {filteredRecipes.length > 0 ? (
           <RecipeCardList
             recipes={
-              recipes.map((recipe) => {
+              filteredRecipes.map((recipe) => {
                 return {
                   id: recipe.id,
                   image: recipe.image,
