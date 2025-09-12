@@ -16,13 +16,23 @@ export enum IngredientUnit {
 }
 
 export enum CategoryType {
-  BEVERAGES = "BEVERAGES",
-  APPETIZERS = "APPETIZERS",
-  BREAKFAST_FOODS = "BREAKFAST_FOODS",
-  MAIN_COURSE = "MAIN_COURSE",
-  SIDE_DISHES = "SIDE_DISHES",
-  DESSERTS = "DESSERTS",
-  SNACKS = "SNACKS",
+  BEVERAGES = "Beverages",
+  APPETIZERS = "Appetizers",
+  BREAKFAST_FOODS = "Breakfast Foods",
+  MAIN_COURSE = "Main Course",
+  SIDE_DISHES = "Síde Dishes",
+  DESSERTS = "Desserts",
+  SNACKS = "Snacks",
+}
+
+export enum Tags {
+  BEVERAGES = "Beverages",
+  APPETIZERS = "Appetizers",
+  BREAKFAST_FOODS = "Breakfast Foods",
+  MAIN_COURSE = "Main Course",
+  SIDE_DISHES = "Síde Dishes",
+  DESSERTS = "Desserts",
+  SNACKS = "Snacks",
 }
 
 export interface Category {
@@ -62,7 +72,6 @@ export interface Ingredient {
   unit: IngredientUnit | string;
 }
 
-// dinh dưỡng của từng recipe
 export interface Nutrition {
   calories: number;
   protein: number;
@@ -84,8 +93,8 @@ export interface User {
   password: string;
   fullName: string;
   avatar: string;
-  favourites: number[]; // danh sach recipe ma user favorite
-  followers: number[]; // danh sach user favorite recipe cua user
+  favourites: number[]; 
+  followers: number[]; 
   recipesCreated: number[];
 }
 
@@ -99,7 +108,6 @@ export interface Rating {
   createdAt: string;
 }
 
-// filter recipe theo tag
 export interface Tag {
   id: number;
   name: string;
@@ -110,3 +118,4 @@ export interface AuthContextType {
   user: FirebaseUser | null;
   loading: boolean;
 }
+

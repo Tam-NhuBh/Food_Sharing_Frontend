@@ -11,7 +11,7 @@ const ReviewCardList: React.FC<ReviewCardListProps> = ({ reviews, className = ''
 	return (
 		<div className={`flex flex-col gap-4 ${className}`}>
 			{reviews.map((review, idx) => (
-				<ReviewCard key={review.name + idx} {...review} />
+				<ReviewCard key={review.user + idx} {...review} />
 			))}
 		</div>
 	);
