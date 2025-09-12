@@ -1,17 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
-import ReviewCardList from "../../../components/Review/ReviewCardList";
-import type { ReviewCardProps } from "../../../components/Review/ReviewCard";
 import SearchBar from "../../../components/Search";
 import Button from "../../../components/Button";
 import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
+import RatingForm from "../../../components/RatingForm";
+
+// remove URLs and symbols
+const textInput = (t: string) => t
+    .replace(/(https?:\/\/|www\.)\S+/gi, "")
+    .replace(/[^a-zA-Z0-9\s.,!?'"()-]/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
 
 export default function RecipeDetail() {
   const { id } = useParams();
+  const recipeId = Number(id);
+
   const [recipe, setRecipe] = useState<Recipe>();
   const [ratings, setRatings] = useState<Rating[]>([]);
   const [isFav, setIsFav] = useState(false);
+  // const [ratings, setRatings] = useState<Rating[]>([]);
+  const [serverRatings, setServerRatings] = useState<Rating[]>([]);
+  const [localRatings, setLocalRatings] = useState<Rating[]>([]);
+
+  const [showForm, setShowForm] = useState(false);
+  const [stars, setStars] = useState(5);
+  const [comment, setComment] = useState("");
 
   useEffect(() => {
     fetch(`/api/recipes/${id}`)
@@ -22,10 +37,59 @@ export default function RecipeDetail() {
   }, [id]);
 
   useEffect(() => {
-    fetch(`/api/recipes/${id}/ratings`)
+    if (!recipeId) return;
+    fetch(`/api/recipes/${recipeId}/ratings`)
       .then((res) => res.json())
-      .then((res) => setRatings(res as Rating[]));
-  }, [id]);
+      .then((res) => setServerRatings(res as Rating[]))
+      .catch(() => setServerRatings([]));
+  }, [recipeId]);
+
+  useEffect(() => {
+    if (!recipeId) return;
+    try {
+      const raw = localStorage.getItem(`ratings:${recipeId}`);
+      setLocalRatings(raw ? (JSON.parse(raw) as Rating[]) : []);
+    } catch {
+      setLocalRatings([]);
+    }
+  }, [recipeId]);
+
+  const ratings: Rating[] = useMemo(() => {
+    return [...localRatings, ...serverRatings].sort(
+      (a, b) => +new Date(b.createdAt) - +new Date(a.createdAt)
+    );
+  }, [localRatings, serverRatings]);
+
+  const openForm = () => setShowForm(true);
+  const cancelForm = () => {
+    setShowForm(false);
+    setStars(5);
+    setComment("");
+  };
+
+  const handleSubmit = () => {
+    const clean = textInput(comment);
+    if (!clean) {
+      alert("Please enter a valid comment (no links or special symbols).");
+      return;
+    }
+
+    const newItem: Rating = {
+      id: Date.now(),
+      recipeId,
+      userId: 0, // demo for gueest typing
+      user: "Guest User",
+      rating: stars,
+      comment: clean,
+      createdAt: new Date().toISOString(),
+    };
+
+    const next = [newItem, ...localRatings];
+    setLocalRatings(next);
+    localStorage.setItem(`ratings:${recipeId}`, JSON.stringify(next));
+
+    cancelForm();
+  };
 
   useEffect(() => {
     const favs = JSON.parse(localStorage.getItem("favRecipes") || "[]");
@@ -109,6 +173,11 @@ export default function RecipeDetail() {
               <p>{recipe?.cookingTime}</p>
             </div>
           </div>
+
+          {/* <div className="flex flex-col">
+                <p>Difficulty</p>
+                <p>{recipe?.difficulty}</p>
+              </div> */}
         </div>
       </section>
       <section className="px-6 md:px-20 xl:px-32 bg-light-gray pt-8">
@@ -215,26 +284,19 @@ export default function RecipeDetail() {
 
         <h2 className="flex items-center md:text-2xl text-lg font-bold font-playfair mb-4">
           Review <span className="ml-1 text-primary"> Rating</span>
-          <Button
-            variant="primary"
-            className="ml-auto cursor-pointer text-sm rounded-lg py-3"
-          >
-            Write a Review
-          </Button>
-        </h2>
-
-        {ratings.length > 0 && (
-          <ReviewCardList
-            reviews={ratings.map(
-              (rating): ReviewCardProps => ({
-                //id: rating.id,
-                user: rating.user,
-                comment: rating.comment,
-                rating: rating.rating,
-              })
-            )}
+        <div className="px-0 pb-8">
+          <RatingForm
+            ratings={ratings}
+            showForm={showForm}
+            stars={stars}
+            comment={comment}
+            onOpenForm={openForm}
+            onCancel={cancelForm}
+            onStarsChange={setStars}
+            onCommentChange={setComment}
+            onSubmit={handleSubmit}
           />
-        )}
+        </div>
       </section>
     </>
   );
