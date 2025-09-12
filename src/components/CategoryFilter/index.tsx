@@ -32,7 +32,7 @@ export default function CategoryFilter({
     <div>
       <div className="flex justify-between items-center mb-3">
         <h2 className="md:text-2xl text-lg font-bold font-playfair">
-          Browse by <span className="text-pink-600">Category</span>
+          Browse by <span className="text-primary">Category</span>
         </h2>
         <Button variant="primary" className="flex items-center gap-2 bg-transparent">
           <Filter className="w-4 h-4" /> Filter by
