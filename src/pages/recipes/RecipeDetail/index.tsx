@@ -2,12 +2,13 @@ import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
 import SearchBar from "../../../components/Search";
-import Button from "../../../components/Button";
+//import Button from "../../../components/Button";
 import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 
 // remove URLs and symbols
-const textInput = (t: string) => t
+const textInput = (t: string) =>
+  t
     .replace(/(https?:\/\/|www\.)\S+/gi, "")
     .replace(/[^a-zA-Z0-9\s.,!?'"()-]/g, "")
     .replace(/\s{2,}/g, " ")
@@ -18,7 +19,7 @@ export default function RecipeDetail() {
   const recipeId = Number(id);
 
   const [recipe, setRecipe] = useState<Recipe>();
-  const [ratings, setRatings] = useState<Rating[]>([]);
+  //const [ratings, setRatings] = useState<Rating[]>([]);
   const [isFav, setIsFav] = useState(false);
   // const [ratings, setRatings] = useState<Rating[]>([]);
   const [serverRatings, setServerRatings] = useState<Rating[]>([]);
@@ -54,7 +55,7 @@ export default function RecipeDetail() {
     }
   }, [recipeId]);
 
-  const ratings: Rating[] = useMemo(() => {
+  const allRatings: Rating[] = useMemo(() => {
     return [...localRatings, ...serverRatings].sort(
       (a, b) => +new Date(b.createdAt) - +new Date(a.createdAt)
     );
@@ -114,7 +115,7 @@ export default function RecipeDetail() {
   };
 
   return (
-    <>
+    <div className="font-worksans w-full">
       {/* Search Bar */}
       <SearchBar />
 
@@ -284,9 +285,10 @@ export default function RecipeDetail() {
 
         <h2 className="flex items-center md:text-2xl text-lg font-bold font-playfair mb-4">
           Review <span className="ml-1 text-primary"> Rating</span>
+        </h2>
         <div className="px-0 pb-8">
           <RatingForm
-            ratings={ratings}
+            ratings={allRatings}
             showForm={showForm}
             stars={stars}
             comment={comment}
@@ -298,6 +300,6 @@ export default function RecipeDetail() {
           />
         </div>
       </section>
-    </>
+    </div>
   );
 }

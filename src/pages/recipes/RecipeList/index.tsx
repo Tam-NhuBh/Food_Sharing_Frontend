@@ -32,7 +32,7 @@ export default function RecipeList() {
   console.log("selectedchange on recipe comp:", filteredRecipes)
 
   return (
-    <div className="font-worksans flex flex-col min-h-screen">
+    <div className="font-worksans flex flex-col min-h-screen w-full">
       {/* Hero */}
       <section className="relative flex items-center justify-start px-10 md:px-20 py-16 min-h-[20px] sm:min-h-[200px]">
         <img

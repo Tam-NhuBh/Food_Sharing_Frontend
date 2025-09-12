@@ -66,16 +66,23 @@ export function makeServer({ environment = "development" } = {}) {
       });
 
       this.get("/users", (schema, request) => {
-        if (request.queryParams) return schema.db.users.where(request.queryParams);
+        const filters = request.queryParams;
+
+        if (Object.keys(filters).length > 0) {
+          return schema.db.users.where(filters);
+        }
+
+        return schema.db.users;
+      });
 
       this.get("/ingredient-units", (schema) => schema.db.ingredientUnits);
       this.get("/ingredient-units/:id", (schema, request) =>
         schema.db.ingredientUnits.find(request.params.id)
       );
 
-//       this.get("/users", (schema) => {
-//         return schema.db.users;
-//       });
+      // this.get("/users", (schema) => {
+      //   return schema.db.users;
+      // });
 
       this.get("/users/:id", (schema, request) => {
         return schema.db.users.find(request.params.id);
@@ -93,7 +100,7 @@ export function makeServer({ environment = "development" } = {}) {
         const recipeId = Number(request.params.id);
         return schema.db.ratings.where({ recipeId });
       });
-      
+
       this.passthrough("https://identitytoolkit.googleapis.com/**");
       this.passthrough("https://securetoken.googleapis.com/**");
     },
