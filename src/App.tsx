@@ -8,20 +8,20 @@ import type { User } from "firebase/auth";
 import { AuthContext } from "./context/AuthContext";
 
 function App() {
-// const originalFetch = window.fetch;
-// window.fetch = async (...args) => {
-//   console.log("👉 Fetch called:", args[0]);
-//   try {
-//     const response = await originalFetch(...args);
-//     console.log("✅ Fetch success:", args[0], response);
-//     return response;
-//   } catch (err) {
-//     console.error("❌ Fetch failed:", args[0], err);
-//     throw err;
-//   }
+  // const originalFetch = window.fetch;
+  // window.fetch = async (...args) => {
+  //   console.log("👉 Fetch called:", args[0]);
+  //   try {
+  //     const response = await originalFetch(...args);
+  //     console.log("✅ Fetch success:", args[0], response);
+  //     return response;
+  //   } catch (err) {
+  //     console.error("❌ Fetch failed:", args[0], err);
+  //     throw err;
+  //   }
   const [user, setUser] = useState<User | null>(null);
   const [userLoading, setUserLoading] = useState(true);
-  
+
   useEffect(() => {
     onAuthStateChanged(auth, (u) => {
       setUserLoading(true);
@@ -29,13 +29,20 @@ function App() {
       else setUser(null);
       setUserLoading(false);
     });
-  }, [])
+  }, []);
 
   return (
-    <AuthContext value={{user: user, loading: userLoading}}>
-      <main className="min-h-screen w-full">
+    <AuthContext value={{ user: user, loading: userLoading }}>
+      {/* <main className="min-h-screen w-full">
         <Header />
         <div className="min-h-screen">
+          <Outlet />
+        </div>
+        <Footer />
+      </main> */}
+      <main className="min-h-screen flex flex-col w-full">
+        <Header />
+        <div className="flex-grow flex">
           <Outlet />
         </div>
         <Footer />

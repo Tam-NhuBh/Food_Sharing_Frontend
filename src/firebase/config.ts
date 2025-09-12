@@ -14,7 +14,6 @@ const firebaseConfig = {
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// bật log debug để thấy request ra ngoài
 setLogLevel("debug");
 
 export const auth = getAuth(app);
