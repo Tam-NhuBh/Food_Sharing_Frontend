@@ -1,19 +1,19 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { setLogLevel } from "firebase/app";
+//import { setLogLevel } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBlCVAQAC-artJZ5aF4Ar-6mMGYeixZqiY",
-  authDomain: "nomnom-5f0bb.firebaseapp.com",
-  projectId: "nomnom-5f0bb",
-  storageBucket: "nomnom-5f0bb.appspot.com",
-  messagingSenderId: "674313941661",
-  appId: "1:674313941661:web:4f06e2f89cba609aa31a74",
-  measurementId: "G-9JMBL10K9P",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-setLogLevel("debug");
+//setLogLevel("debug");
 
 export const auth = getAuth(app);
