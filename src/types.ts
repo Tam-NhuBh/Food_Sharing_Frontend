@@ -54,6 +54,7 @@ export interface Recipe {
   cookingTime: string;
   servings: number;
   category: string;
+  difficulty: "Easy" | "Medium" | "Hard";
   ingredients: Ingredient[];
   steps: string[];
   nutrition: Nutrition;

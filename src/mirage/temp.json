@@ -215,6 +215,7 @@
       "cookingTime": "180 minutes",
       "servings": 4,
       "category": "Main Course",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "beef bones",
@@ -297,6 +298,7 @@
       "cookingTime": "45 minutes",
       "servings": 2,
       "category": "Main Course",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "Vietnamese baguettes",
@@ -349,12 +351,7 @@
         "carbs": 48,
         "fat": 14
       },
-      "tags": [
-        "vietnamese",
-        "sandwich",
-        "grilled",
-        "street-food"
-      ],
+      "tags": ["vietnamese", "sandwich", "grilled", "street-food"],
       "rating": 4,
       "totalRatings": 2,
       "viewCount": 189,
@@ -374,6 +371,7 @@
       "cookingTime": "20 minutes",
       "servings": 4,
       "category": "Main Course",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "spaghetti",
@@ -426,12 +424,7 @@
         "carbs": 52,
         "fat": 20
       },
-      "tags": [
-        "italian",
-        "pasta",
-        "classic",
-        "roman"
-      ],
+      "tags": ["italian", "pasta", "classic", "roman"],
       "rating": 5,
       "totalRatings": 2,
       "viewCount": 342,
@@ -451,6 +444,7 @@
       "cookingTime": "30 minutes",
       "servings": 2,
       "category": "Main Course",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "rice noodles",
@@ -503,12 +497,7 @@
         "carbs": 48,
         "fat": 10
       },
-      "tags": [
-        "thai",
-        "noodles",
-        "stir-fry",
-        "street-food"
-      ],
+      "tags": ["thai", "noodles", "stir-fry", "street-food"],
       "rating": 3.5,
       "totalRatings": 2,
       "viewCount": 234,
@@ -528,6 +517,7 @@
       "cookingTime": "25 minutes",
       "servings": 4,
       "category": "Main Course",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "white fish fillets",
@@ -580,12 +570,7 @@
         "carbs": 32,
         "fat": 10
       },
-      "tags": [
-        "mexican",
-        "seafood",
-        "fresh",
-        "tacos"
-      ],
+      "tags": ["mexican", "seafood", "fresh", "tacos"],
       "rating": 4.5,
       "totalRatings": 2,
       "viewCount": 156,
@@ -605,6 +590,7 @@
       "cookingTime": "10 minutes",
       "servings": 1,
       "category": "Beverages",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "Vietnamese coffee grounds",
@@ -639,11 +625,7 @@
         "carbs": 25,
         "fat": 6
       },
-      "tags": [
-        "vietnamese",
-        "coffee",
-        "iced"
-      ],
+      "tags": ["vietnamese", "coffee", "iced"],
       "rating": 5,
       "totalRatings": 12,
       "viewCount": 450,
@@ -663,6 +645,7 @@
       "cookingTime": "15 minutes",
       "servings": 2,
       "category": "Beverages",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "green tea leaves",
@@ -691,12 +674,7 @@
         "carbs": 0,
         "fat": 0
       },
-      "tags": [
-        "vietnamese",
-        "tea",
-        "iced",
-        "refreshing"
-      ],
+      "tags": ["vietnamese", "tea", "iced", "refreshing"],
       "rating": 4,
       "totalRatings": 8,
       "viewCount": 300,
@@ -716,6 +694,7 @@
       "cookingTime": "5 minutes",
       "servings": 1,
       "category": "Beverages",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "sugarcane stalks",
@@ -739,12 +718,7 @@
         "carbs": 30,
         "fat": 0
       },
-      "tags": [
-        "vietnamese",
-        "juice",
-        "sweet",
-        "street-food"
-      ],
+      "tags": ["vietnamese", "juice", "sweet", "street-food"],
       "rating": 5,
       "totalRatings": 20,
       "viewCount": 600,
@@ -764,6 +738,7 @@
       "cookingTime": "25 minutes",
       "servings": 2,
       "category": "Beverages",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "mung beans",
@@ -809,12 +784,7 @@
         "carbs": 50,
         "fat": 8
       },
-      "tags": [
-        "vietnamese",
-        "dessert",
-        "sweet",
-        "colorful"
-      ],
+      "tags": ["vietnamese", "dessert", "sweet", "colorful"],
       "rating": 5,
       "totalRatings": 15,
       "viewCount": 520,
@@ -834,6 +804,7 @@
       "cookingTime": "10 minutes",
       "servings": 2,
       "category": "Beverages",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "ripe mango",
@@ -868,12 +839,7 @@
         "carbs": 45,
         "fat": 3
       },
-      "tags": [
-        "vietnamese",
-        "smoothie",
-        "fruit",
-        "mango"
-      ],
+      "tags": ["vietnamese", "smoothie", "fruit", "mango"],
       "rating": 5,
       "totalRatings": 10,
       "viewCount": 400,
@@ -893,6 +859,7 @@
       "cookingTime": "25 minutes",
       "servings": 4,
       "category": "Appetizers",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "rice paper",
@@ -932,12 +899,7 @@
         "carbs": 22,
         "fat": 5
       },
-      "tags": [
-        "vietnamese",
-        "fresh",
-        "appetizer",
-        "healthy"
-      ],
+      "tags": ["vietnamese", "fresh", "appetizer", "healthy"],
       "rating": 5,
       "totalRatings": 8,
       "viewCount": 300,
@@ -957,6 +919,7 @@
       "cookingTime": "40 minutes",
       "servings": 4,
       "category": "Appetizers",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "rice paper",
@@ -996,12 +959,7 @@
         "carbs": 20,
         "fat": 12
       },
-      "tags": [
-        "vietnamese",
-        "fried",
-        "appetizer",
-        "crispy"
-      ],
+      "tags": ["vietnamese", "fried", "appetizer", "crispy"],
       "rating": 4,
       "totalRatings": 12,
       "viewCount": 450,
@@ -1021,6 +979,7 @@
       "cookingTime": "30 minutes",
       "servings": 3,
       "category": "Appetizers",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "rice flour",
@@ -1055,11 +1014,7 @@
         "carbs": 28,
         "fat": 8
       },
-      "tags": [
-        "vietnamese",
-        "street-food",
-        "appetizer"
-      ],
+      "tags": ["vietnamese", "street-food", "appetizer"],
       "rating": 5,
       "totalRatings": 6,
       "viewCount": 280,
@@ -1079,6 +1034,7 @@
       "cookingTime": "35 minutes",
       "servings": 4,
       "category": "Appetizers",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "rice flour",
@@ -1113,11 +1069,7 @@
         "carbs": 34,
         "fat": 3
       },
-      "tags": [
-        "vietnamese",
-        "traditional",
-        "appetizer"
-      ],
+      "tags": ["vietnamese", "traditional", "appetizer"],
       "rating": 4,
       "totalRatings": 5,
       "viewCount": 210,
@@ -1137,6 +1089,7 @@
       "cookingTime": "20 minutes",
       "servings": 3,
       "category": "Appetizers",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "green papaya",
@@ -1171,12 +1124,7 @@
         "carbs": 20,
         "fat": 6
       },
-      "tags": [
-        "vietnamese",
-        "salad",
-        "appetizer",
-        "fresh"
-      ],
+      "tags": ["vietnamese", "salad", "appetizer", "fresh"],
       "rating": 5,
       "totalRatings": 7,
       "viewCount": 260,
@@ -1196,6 +1144,7 @@
       "cookingTime": "20 minutes",
       "servings": 2,
       "category": "Breakfast Foods",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "all-purpose flour",
@@ -1230,12 +1179,7 @@
         "carbs": 52,
         "fat": 8
       },
-      "tags": [
-        "american",
-        "breakfast",
-        "classic",
-        "sweet"
-      ],
+      "tags": ["american", "breakfast", "classic", "sweet"],
       "rating": 5,
       "totalRatings": 20,
       "viewCount": 600,
@@ -1255,6 +1199,7 @@
       "cookingTime": "60 minutes",
       "servings": 4,
       "category": "Breakfast Foods",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "rice",
@@ -1289,12 +1234,7 @@
         "carbs": 35,
         "fat": 5
       },
-      "tags": [
-        "vietnamese",
-        "porridge",
-        "savory",
-        "traditional"
-      ],
+      "tags": ["vietnamese", "porridge", "savory", "traditional"],
       "rating": 4,
       "totalRatings": 8,
       "viewCount": 320,
@@ -1314,6 +1254,7 @@
       "cookingTime": "15 minutes",
       "servings": 2,
       "category": "Breakfast Foods",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "croissant",
@@ -1343,12 +1284,7 @@
         "carbs": 32,
         "fat": 15
       },
-      "tags": [
-        "french",
-        "pastry",
-        "breakfast",
-        "classic"
-      ],
+      "tags": ["french", "pastry", "breakfast", "classic"],
       "rating": 4,
       "totalRatings": 12,
       "viewCount": 480,
@@ -1368,6 +1304,7 @@
       "cookingTime": "45 minutes",
       "servings": 3,
       "category": "Breakfast Foods",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "sticky rice",
@@ -1402,12 +1339,7 @@
         "carbs": 80,
         "fat": 8
       },
-      "tags": [
-        "vietnamese",
-        "sticky-rice",
-        "savory",
-        "street-food"
-      ],
+      "tags": ["vietnamese", "sticky-rice", "savory", "street-food"],
       "rating": 5,
       "totalRatings": 9,
       "viewCount": 300,
@@ -1427,6 +1359,7 @@
       "cookingTime": "40 minutes",
       "servings": 3,
       "category": "Breakfast Foods",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "rice flour",
@@ -1461,12 +1394,7 @@
         "carbs": 40,
         "fat": 8
       },
-      "tags": [
-        "vietnamese",
-        "steamed",
-        "savory",
-        "traditional"
-      ],
+      "tags": ["vietnamese", "steamed", "savory", "traditional"],
       "rating": 4,
       "totalRatings": 6,
       "viewCount": 210,
@@ -1486,6 +1414,7 @@
       "cookingTime": "25 minutes",
       "servings": 4,
       "category": "Side Dishes",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "carrots",
@@ -1532,13 +1461,7 @@
         "carbs": 22,
         "fat": 6
       },
-      "tags": [
-        "side-dish",
-        "vegetable",
-        "honey",
-        "roasted",
-        "quick"
-      ],
+      "tags": ["side-dish", "vegetable", "honey", "roasted", "quick"],
       "rating": 5,
       "totalRatings": 5,
       "viewCount": 150,
@@ -1558,6 +1481,7 @@
       "cookingTime": "25 minutes",
       "servings": 4,
       "category": "Side Dishes",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "potatoes",
@@ -1597,11 +1521,7 @@
         "carbs": 35,
         "fat": 8
       },
-      "tags": [
-        "classic",
-        "comfort-food",
-        "side-dish"
-      ],
+      "tags": ["classic", "comfort-food", "side-dish"],
       "rating": 4,
       "totalRatings": 5,
       "viewCount": 185,
@@ -1621,6 +1541,7 @@
       "cookingTime": "1440 minutes",
       "servings": 6,
       "category": "Side Dishes",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "napa cabbage",
@@ -1661,12 +1582,7 @@
         "carbs": 6,
         "fat": 0
       },
-      "tags": [
-        "korean",
-        "fermented",
-        "spicy",
-        "side-dish"
-      ],
+      "tags": ["korean", "fermented", "spicy", "side-dish"],
       "rating": 5,
       "totalRatings": 6,
       "viewCount": 330,
@@ -1686,6 +1602,7 @@
       "cookingTime": "15 minutes",
       "servings": 4,
       "category": "Side Dishes",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "fresh green beans",
@@ -1727,13 +1644,7 @@
         "carbs": 10,
         "fat": 8
       },
-      "tags": [
-        "side-dish",
-        "vegetable",
-        "garlic",
-        "butter",
-        "quick"
-      ],
+      "tags": ["side-dish", "vegetable", "garlic", "butter", "quick"],
       "rating": 5,
       "totalRatings": 8,
       "viewCount": 275,
@@ -1753,6 +1664,7 @@
       "cookingTime": "10 minutes",
       "servings": 2,
       "category": "Side Dishes",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "tomatoes",
@@ -1792,12 +1704,7 @@
         "carbs": 6,
         "fat": 14
       },
-      "tags": [
-        "italian",
-        "fresh",
-        "vegetarian",
-        "side-dish"
-      ],
+      "tags": ["italian", "fresh", "vegetarian", "side-dish"],
       "rating": 5,
       "totalRatings": 4,
       "viewCount": 260,
@@ -1817,6 +1724,7 @@
       "cookingTime": "20 minutes",
       "servings": 4,
       "category": "Desserts",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "dark chocolate",
@@ -1875,13 +1783,7 @@
         "carbs": 30,
         "fat": 20
       },
-      "tags": [
-        "dessert",
-        "chocolate",
-        "cake",
-        "molten",
-        "quick"
-      ],
+      "tags": ["dessert", "chocolate", "cake", "molten", "quick"],
       "rating": 5,
       "totalRatings": 12,
       "viewCount": 400,
@@ -1901,6 +1803,7 @@
       "cookingTime": "30 minutes",
       "servings": 6,
       "category": "Desserts",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "ladyfingers",
@@ -1940,12 +1843,7 @@
         "carbs": 35,
         "fat": 16
       },
-      "tags": [
-        "italian",
-        "dessert",
-        "coffee",
-        "classic"
-      ],
+      "tags": ["italian", "dessert", "coffee", "classic"],
       "rating": 5,
       "totalRatings": 12,
       "viewCount": 500,
@@ -1965,6 +1863,7 @@
       "cookingTime": "45 minutes",
       "servings": 3,
       "category": "Desserts",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "sticky rice",
@@ -2004,12 +1903,7 @@
         "carbs": 60,
         "fat": 6
       },
-      "tags": [
-        "thai",
-        "dessert",
-        "fruit",
-        "coconut"
-      ],
+      "tags": ["thai", "dessert", "fruit", "coconut"],
       "rating": 5,
       "totalRatings": 10,
       "viewCount": 350,
@@ -2029,6 +1923,7 @@
       "cookingTime": "35 minutes",
       "servings": 8,
       "category": "Desserts",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "dark chocolate",
@@ -2068,12 +1963,7 @@
         "carbs": 35,
         "fat": 15
       },
-      "tags": [
-        "chocolate",
-        "dessert",
-        "baked",
-        "sweet"
-      ],
+      "tags": ["chocolate", "dessert", "baked", "sweet"],
       "rating": 5,
       "totalRatings": 14,
       "viewCount": 470,
@@ -2093,6 +1983,7 @@
       "cookingTime": "50 minutes",
       "servings": 4,
       "category": "Desserts",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "heavy cream",
@@ -2127,12 +2018,7 @@
         "carbs": 20,
         "fat": 18
       },
-      "tags": [
-        "french",
-        "dessert",
-        "classic",
-        "custard"
-      ],
+      "tags": ["french", "dessert", "classic", "custard"],
       "rating": 5,
       "totalRatings": 9,
       "viewCount": 390,
@@ -2152,6 +2038,7 @@
       "cookingTime": "15 minutes",
       "servings": 2,
       "category": "Snacks",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "rice paper",
@@ -2191,12 +2078,7 @@
         "carbs": 32,
         "fat": 10
       },
-      "tags": [
-        "vietnamese",
-        "street food",
-        "snack",
-        "salad"
-      ],
+      "tags": ["vietnamese", "street food", "snack", "salad"],
       "rating": 5,
       "totalRatings": 11,
       "viewCount": 480,
@@ -2216,6 +2098,7 @@
       "cookingTime": "40 minutes",
       "servings": 6,
       "category": "Snacks",
+      "difficulty": "Easy",
       "ingredients": [
         {
           "name": "popcorn kernels",
@@ -2255,12 +2138,7 @@
         "carbs": 36,
         "fat": 8
       },
-      "tags": [
-        "snack",
-        "sweet",
-        "caramel",
-        "popcorn"
-      ],
+      "tags": ["snack", "sweet", "caramel", "popcorn"],
       "rating": 5,
       "totalRatings": 9,
       "viewCount": 360,
@@ -2280,6 +2158,7 @@
       "cookingTime": "15 minutes",
       "servings": 2,
       "category": "Snacks",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "dried seaweed (nori)",
@@ -2322,13 +2201,7 @@
         "carbs": 6,
         "fat": 5
       },
-      "tags": [
-        "snack",
-        "seaweed",
-        "crispy",
-        "healthy",
-        "baked"
-      ],
+      "tags": ["snack", "seaweed", "crispy", "healthy", "baked"],
       "rating": 4,
       "totalRatings": 6,
       "viewCount": 210,
@@ -2348,6 +2221,7 @@
       "cookingTime": "30 minutes",
       "servings": 3,
       "category": "Snacks",
+      "difficulty": "Medium",
       "ingredients": [
         {
           "name": "potatoes",
@@ -2377,12 +2251,7 @@
         "carbs": 45,
         "fat": 12
       },
-      "tags": [
-        "snack",
-        "potato",
-        "fried",
-        "classic"
-      ],
+      "tags": ["snack", "potato", "fried", "classic"],
       "rating": 5,
       "totalRatings": 15,
       "viewCount": 600,
@@ -2402,6 +2271,7 @@
       "cookingTime": "48 hours (fermentation)",
       "servings": 6,
       "category": "Snacks",
+      "difficulty": "Hard",
       "ingredients": [
         {
           "name": "pork",
@@ -2436,12 +2306,7 @@
         "carbs": 3,
         "fat": 15
       },
-      "tags": [
-        "vietnamese",
-        "fermented",
-        "snack",
-        "pork"
-      ],
+      "tags": ["vietnamese", "fermented", "snack", "pork"],
       "rating": 5,
       "totalRatings": 7,
       "viewCount": 310,
