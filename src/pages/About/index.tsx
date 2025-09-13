@@ -6,7 +6,7 @@ import Steps from "../../components/Steps";
 
 export default function About() {
   return (
-    <div className="font-worksans text-gray-800">
+    <div className="font-worksans text-gray-800 w-full">
       {/* banner (a attention-grabbing visual element) with text and a call-to-action */}
       <section className="relative overflow-hidden bg-gradient-to-b from-rose-100 via-cream to-white shadow">
         <Hero />
