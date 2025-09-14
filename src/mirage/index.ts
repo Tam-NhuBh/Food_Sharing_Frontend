@@ -56,8 +56,8 @@ export function makeServer({ environment = "development" } = {}) {
           const description = request.queryParams.description?.toString() ?? "";
           return schema.db.recipes.filter(
             (recipe) =>
-              (recipe as Recipe).title.includes(title) ||
-              (recipe as Recipe).description.includes(description)
+              (recipe as Recipe).title.toLowerCase().includes(title.toLowerCase()) ||
+              (recipe as Recipe).description.toLowerCase().includes(description.toLowerCase())
           );
         }
         return schema.db.recipes;

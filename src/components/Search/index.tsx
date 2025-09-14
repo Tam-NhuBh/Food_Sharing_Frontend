@@ -4,6 +4,7 @@ import Button from "../Button";
 import Input from "../Input";
 import type { Recipe } from "../../types";
 import { useNavigate } from "react-router-dom";
+import { useDebounce } from "../../hooks/useDebounce";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -13,22 +14,23 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [query, setQuery] = useState("");
+  const debouncedQuery = useDebounce(query);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const navigate = useNavigate();
   const handleSearch = () => {
     if (onSearch) onSearch(query);
   };
-  console.log(recipes);
   useEffect(() => {
-    if (query.length > 0) {
-      fetch(`api/recipes?title=${query}&description=${query}`)
+    if (debouncedQuery.length > 0) {
+      fetch(
+        `/api/recipes?title=${debouncedQuery}&description=${debouncedQuery}`
+      )
         .then((res) => res.json())
         .then((res) => setRecipes(res as Recipe[]));
+    } else {
+      setRecipes([]);
     }
-    else {
-      setRecipes([])
-    }
-  }, [query])
+  }, [debouncedQuery])
 
   const onClick = (id: number) => {
     navigate(`/recipes/${id}`);
@@ -51,14 +53,14 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           Search
         </Button>
         {recipes.length > 0 && (
-          <div className="w-full bg-primary absolute top-18 rounded-md p-5 text-white z-100 flex flex-col gap-3">
+          <div className="w-full bg-primary absolute top-18 rounded-md p-0 md:p-3 text-white z-100 flex flex-col text-[.7rem] md:text-[1rem]">
             {recipes.map((recipe) => (
-              <div className="flex gap-5 cursor-pointer hover:bg-dark-primary p-2 rounded-md" onClick={() => onClick(recipe.id)} key={recipe.id}>
-                <img src={recipe.image} alt={recipe.title} width={120} className="rounded-md"/>
+              <div className="flex gap-3 md:gap-5 cursor-pointer hover:bg-dark-primary p-2 rounded-md" onClick={() => onClick(recipe.id)} key={recipe.id}>
+                <img src={recipe.image} alt={recipe.title} className="rounded-md w-[77px] md:w-[120px]"/>
                 <div className="flex flex-col">
                   <div className="flex gap-2 items-center">
-                    <p className="font-bold text-[1.2rem]">{recipe.title}</p>
-                    <p className="border-white border-[1px] px-2 rounded-md text-[.7rem]">
+                    <p className="font-bold md:text-[1.2rem]">{recipe.title}</p>
+                    <p className="border-white border-[1px] px-2 rounded-md text-[.5rem] md:text-[.7rem]">
                       {recipe.category}
                     </p>
                   </div>
