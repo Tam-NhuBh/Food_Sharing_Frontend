@@ -16,7 +16,7 @@ export default function LandingPage() {
     fetch("/api/recipes")
       .then((res) => res.json())
       .then((res) => {
-        setRecipes((res as Recipe[]).slice(0, 3));
+        setRecipes((res as Recipe[]));
       });
   }, []);
   return (
@@ -55,7 +55,7 @@ export default function LandingPage() {
         {recipes && (
           <RecipeCardList
             recipes={
-              recipes.map((recipe) => {
+              recipes.slice(0, 3).map((recipe) => {
                 return {
                   id: recipe.id,
                   image: recipe.image,
