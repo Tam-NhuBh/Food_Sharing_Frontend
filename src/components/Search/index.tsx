@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import Button from "../Button";
 import Input from "../Input";
+import { Search } from "lucide-react";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -25,13 +25,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           placeholder="Search recipes..."
           className="w-full bg-white border-0 py-3 pr-[130px]"
         />
-        <Button
+        <button
           onClick={handleSearch}
-          variant="primary"
-          className="absolute right-0 cursor-pointer rounded-lg py-3 w-[120px]"
+          className="absolute right-0 rounded-lg py-3 w-[50px]"
         >
-          Search
-        </Button>
+          <Search className="w-6 h-6 text-primary" />
+        </button>
       </div>
     </section>
   );
