@@ -17,9 +17,11 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const debouncedQuery = useDebounce(query);
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const navigate = useNavigate();
+
   const handleSearch = () => {
     if (onSearch) onSearch(query);
   };
+  
   useEffect(() => {
     if (debouncedQuery.length > 0) {
       fetch(
@@ -33,6 +35,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   }, [debouncedQuery])
 
   const onClick = (id: number) => {
+    setQuery('');
     navigate(`/recipes/${id}`);
   }
 
