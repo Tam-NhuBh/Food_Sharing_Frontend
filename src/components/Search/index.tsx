@@ -47,11 +47,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search recipes..."
           className="w-full bg-white border-0 py-3 pr-[130px]"
+          onBlur={() => setQuery("")}
         />
         <Button
           onClick={handleSearch}
           variant="primary"
-          className="absolute right-0 cursor-pointer rounded-lg py-3 w-[120px]"
+          className="absolute right-0 cursor-pointer rounded-lg py-3 md:w-[120px]"
         >
           Search
         </Button>
