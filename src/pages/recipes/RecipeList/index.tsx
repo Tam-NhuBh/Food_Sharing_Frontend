@@ -1,20 +1,38 @@
 import { useEffect, useState } from "react";
 import RecipeCardList from "../../../components/CardList";
-import type { Recipe } from "../../../types";
+import type { Category, Recipe } from "../../../types";
 import type { RecipeCardProps } from "../../../components/Recipe/RecipeCard";
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
-import Input from "../../../components/Input";
+import SearchBar from "../../../components/Search";
+import CategoryFilter from "../../../components/CategoryFilter";
 
 export default function RecipeList() {
-  const [recipes, setRecipes] = useState<Recipe[]>();
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [categories, setCategroies] = useState<Category[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
   useEffect(() => {
     fetch("/api/recipes")
       .then((res) => res.json())
       .then((res) => setRecipes(res as Recipe[]));
+
+    fetch("/api/categories")
+      .then((res) => res.json())
+      .then(setCategroies);
   }, []);
+  
+  // console.log("selectedchange on recipe comp:", fetch("api/categories"))
+
+  const filteredRecipes =
+    selectedCategory === "all"
+      ? recipes
+      : recipes.filter((r) => String((r).categoryId) === selectedCategory);
+
+  console.log("selectedchange on recipe comp:", filteredRecipes)
+
   return (
-    <div className="font-worksans flex flex-col min-h-screen">
+    <div className="font-worksans flex flex-col min-h-screen w-full">
       {/* Hero */}
       <section className="relative flex items-center justify-start px-10 md:px-20 py-16 min-h-[20px] sm:min-h-[200px]">
         <img
@@ -46,43 +64,35 @@ export default function RecipeList() {
       </section>
 
       {/* Search Bar */}
-      <section className="px-6 md:px-20 xl:px-32 bg-cream">
-        <div className="flex flex-row py-4">
-          <Input
-            placeholder="Search recipes..."
-            className="w-full bg-white border-0 py-3"
-          />
-          <Button variant="primary" className="rounded-sm py-3">
-            Search
-          </Button>
-        </div>
-      </section>
+      <SearchBar />
 
       {/* Filter Bar */}
       <section className="px-6 md:px-20 xl:px-32 pt-8">
-        <div className="flex justify-between items-center mb-5">
-          <h2 className="md:text-2xl text-lg font-bold font-playfair">
-            Browse by <span className="text-primary">Category</span>
-          </h2>
-        </div>
+        <CategoryFilter
+          categories={categories}
+          selected={selectedCategory}
+          allCategories={true}
+          onChange={setSelectedCategory}
+        />
       </section>
 
       {/* Recipe List */}
       <section className="px-6 md:px-20 xl:px-32 py-8">
-        {/* <h2 className="md:text-2xl text-lg font-bold font-playfair mb-5">
+        <h2 className="md:text-2xl text-lg font-bold font-playfair mb-5">
           Recipe List
-        </h2> */}
+        </h2>
 
-        {recipes && recipes.length > 0 ? (
+        {filteredRecipes.length > 0 ? (
           <RecipeCardList
             recipes={
-              recipes.map((recipe) => {
+              filteredRecipes.map((recipe) => {
                 return {
                   id: recipe.id,
                   image: recipe.image,
                   title: recipe.title,
                   description: recipe.description,
                   category: recipe.category,
+                  cookingTime: recipe.cookingTime,
                   actions: "Read Recipe",
                 };
               }) as unknown as RecipeCardProps[]

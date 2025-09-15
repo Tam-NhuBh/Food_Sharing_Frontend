@@ -11,6 +11,14 @@
   /* Color */
   --color-primary: #A64F67;
   --color-cream: #FDFBEE;
+  --color-input: #F9FBFC;
+  --color-input-border: #B3B3B3;
   --color-light-gray: #F9FBFC;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+button {
+  cursor: pointer;
 }
 

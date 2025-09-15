@@ -7,6 +7,7 @@ import type { Recipe } from "../../types";
 import { useEffect, useState } from "react";
 import useRandomRecipes from "../../hooks/useRandomRecipe";
 
+
 export default function LandingPage() {
   const [recipes, setRecipes] = useState<Recipe[]>();
   const { randomRecipes, getRandomRecipes } = useRandomRecipes(recipes, 3);
@@ -15,12 +16,11 @@ export default function LandingPage() {
     fetch("/api/recipes")
       .then((res) => res.json())
       .then((res) => {
-        setRecipes((res as Recipe[]).slice(0, 3));
+        setRecipes((res as Recipe[]));
       });
   }, []);
-
   return (
-    <div className="font-worksans flex flex-col gap-8">
+    <div className="font-worksans flex flex-col gap-8 w-full">
       {/* Section 1: Hero with background */}
       <section className="relative flex items-center justify-end px-10 md:px-20 py-16 min-h-[50px] sm:min-h-[500px]">
         {/* Background Image */}
@@ -55,7 +55,7 @@ export default function LandingPage() {
         {recipes && (
           <RecipeCardList
             recipes={
-              recipes.map((recipe) => {
+              recipes.slice(0, 3).map((recipe) => {
                 return {
                   id: recipe.id,
                   image: recipe.image,
