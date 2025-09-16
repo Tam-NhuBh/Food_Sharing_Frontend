@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
-import SearchBar from "../../../components/Search";
 //import Button from "../../../components/Button";
 import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
@@ -120,7 +119,7 @@ export default function RecipeDetail() {
   return (
     <div className="font-worksans w-full">
       {/* Search Bar */}
-      <SearchBar />
+      {/* <SearchBar /> */}
 
       {/* Recipe Part */}
       <section className="px-6 md:px-20 xl:px-32 bg-white pt-8">

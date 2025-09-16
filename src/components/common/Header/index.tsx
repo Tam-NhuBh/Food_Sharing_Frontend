@@ -5,7 +5,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase/config";
 import useAuth from "../../../hooks/useAuth";
 
-export default function Header() {
+export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: () => void, isSearchOpen: boolean}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogOutOpen, setIsLogOutOpen] = useState(false);
   const location = useLocation();
@@ -53,6 +53,14 @@ export default function Header() {
         >
           About
         </Link>
+        <div
+          className={`font-worksans cursor-pointer hover:text-primary ${
+            isSearchOpen ? "text-primary" : ""
+          }`}
+          onClick={toggleSearch}
+        >
+          Search
+        </div>
       </nav>
 
       {/* Desktop Auth */}
@@ -118,6 +126,17 @@ export default function Header() {
           >
             About
           </Link>
+          <div
+            className={`font-worksans cursor-pointer hover:text-primary ${
+              isSearchOpen ? "text-primary" : ""
+            }`}
+            onClick={() => {
+              toggleSearch();
+              setIsOpen(false);
+            }}
+          >
+            Search
+          </div>
 
           {!user && (
             <div className="flex flex-row gap-4">
@@ -146,13 +165,12 @@ export default function Header() {
               >
                 {user.email}
               </p>
-                <div
-                  className="text-left py-2 bg-light-gray text-black rounded-sm w-full cursor-pointer"
-                  onClick={handleLogOut}
-                >
-                  <p className="font-worksans hover:underline">Log Out</p>
-                </div>
-
+              <div
+                className="text-left py-2 bg-light-gray text-black rounded-sm w-full cursor-pointer"
+                onClick={handleLogOut}
+              >
+                <p className="font-worksans hover:underline">Log Out</p>
+              </div>
             </div>
           )}
         </div>

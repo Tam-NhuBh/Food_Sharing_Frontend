@@ -14,6 +14,7 @@
   --color-input: #F9FBFC;
   --color-input-border: #B3B3B3;
   --color-light-gray: #F9FBFC;
+  --color-dark-primary: #833f5d;
 }
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }

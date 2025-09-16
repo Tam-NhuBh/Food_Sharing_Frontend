@@ -4,7 +4,6 @@ import type { Category, Recipe } from "../../../types";
 import type { RecipeCardProps } from "../../../components/Recipe/RecipeCard";
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
-import SearchBar from "../../../components/Search";
 import CategoryFilter from "../../../components/CategoryFilter";
 
 export default function RecipeList() {
@@ -64,7 +63,7 @@ export default function RecipeList() {
       </section>
 
       {/* Search Bar */}
-      <SearchBar />
+      {/* <SearchBar /> */}
 
       {/* Filter Bar */}
       <section className="px-6 md:px-20 xl:px-32 pt-8">

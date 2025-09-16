@@ -1,5 +1,6 @@
 import { createServer, Model } from "miragejs";
 import data from "./temp.json";
+import type { Recipe } from "../types";
 
 export function makeServer({ environment = "development" } = {}) {
   const server = createServer({
@@ -49,7 +50,16 @@ export function makeServer({ environment = "development" } = {}) {
     routes() {
       this.namespace = "api";
 
-      this.get("/recipes", (schema) => {
+      this.get("/recipes", (schema, request) => {
+        if (request.queryParams) {
+          const title = request.queryParams.title?.toString() ?? "";
+          const description = request.queryParams.description?.toString() ?? "";
+          return schema.db.recipes.filter(
+            (recipe) =>
+              (recipe as Recipe).title.toLowerCase().includes(title.toLowerCase()) ||
+              (recipe as Recipe).description.toLowerCase().includes(description.toLowerCase())
+          );
+        }
         return schema.db.recipes;
       });
 
