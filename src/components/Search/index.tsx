@@ -60,7 +60,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           <div className="w-full bg-primary absolute top-18 rounded-md p-0 md:p-3 text-white z-100 flex flex-col text-[.7rem] md:text-[1rem]">
             {recipes.map((recipe) => (
               <div className="flex gap-3 md:gap-5 cursor-pointer hover:bg-dark-primary p-2 rounded-md" onClick={() => onClick(recipe.id)} key={recipe.id}>
-                <img src={recipe.image} alt={recipe.title} className="rounded-md w-[77px] md:w-[120px]"/>
+                <img src={recipe.image} alt={recipe.title} className="rounded-md w-[5rem] h-[3.1rem] md:w-[120px] md:h-auto"/>
                 <div className="flex flex-col">
                   <div className="flex gap-2 items-center">
                     <p className="font-bold md:text-[1.2rem]">{recipe.title}</p>
