@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import Button from "../Button";
 import Input from "../Input";
 import type { Recipe } from "../../types";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +49,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           className="w-full bg-white border-0 py-3 pr-[130px]"
           onBlur={() => setQuery("")}
         />
-        <button
+        <Button
           onClick={handleSearch}
           variant="primary"
           className="absolute right-0 cursor-pointer rounded-lg py-3 md:w-[120px]"
