@@ -6,6 +6,7 @@ import { auth } from "./firebase/config";
 import { useEffect, useState } from "react";
 import type { User } from "firebase/auth";
 import { AuthContext } from "./context/AuthContext";
+import SearchBar from "./components/Search";
 
 function App() {
   // const originalFetch = window.fetch;
@@ -21,6 +22,8 @@ function App() {
   //   }
   const [user, setUser] = useState<User | null>(null);
   const [userLoading, setUserLoading] = useState(true);
+
+  const [toggleSearch, setToggleSearch] = useState(false);
 
   useEffect(() => {
     onAuthStateChanged(auth, (u) => {
@@ -41,7 +44,8 @@ function App() {
         <Footer />
       </main> */}
       <main className="min-h-screen flex flex-col w-full">
-        <Header />
+        <Header toggleSearch={() => setToggleSearch(prev => !prev)} isSearchOpen={toggleSearch}/>
+        {toggleSearch && <SearchBar/>}  
         <div className="flex-grow flex">
           <Outlet />
         </div>

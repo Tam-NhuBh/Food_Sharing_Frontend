@@ -5,8 +5,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase/config";
 import useAuth from "../../../hooks/useAuth";
 
-
-export default function Header() {
+export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: () => void, isSearchOpen: boolean}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogOutOpen, setIsLogOutOpen] = useState(false);
   const location = useLocation();
@@ -54,6 +53,14 @@ export default function Header() {
         >
           About
         </Link>
+        <div
+          className={`font-worksans cursor-pointer hover:text-primary ${
+            isSearchOpen ? "text-primary" : ""
+          }`}
+          onClick={toggleSearch}
+        >
+          Search
+        </div>
       </nav>
       
       
@@ -61,19 +68,12 @@ export default function Header() {
       {/* Desktop Auth */}
       {!user && (
         <div className="hidden md:flex items-center space-x-4 text-md lg:text-lg">
-          <Link
-            to="/login"
-            className={`font-worksans ${
-              location.pathname === "/login" ? "underline" : ""
-            } hover:underline`}
-          >
+          <Link to="/login" className="font-worksans">
             Login
           </Link>
           <Link
             to="/sign-up"
-            className={`font-worksans text-primary px-4 py-2 font-semibold ${
-              location.pathname === "/sign-up" ? "underline" : ""
-            } hover:underline`}
+            className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
           >
             Sign up
           </Link>
@@ -90,7 +90,7 @@ export default function Header() {
           </p>
           {isLogOutOpen && (
             <div
-              className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white"
+              className="absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white"
               onClick={handleLogOut}
             >
               <p className="font-bold">Log Out</p>
@@ -128,23 +128,30 @@ export default function Header() {
           >
             About
           </Link>
+          <div
+            className={`font-worksans cursor-pointer hover:text-primary ${
+              isSearchOpen ? "text-primary" : ""
+            }`}
+            onClick={() => {
+              toggleSearch();
+              setIsOpen(false);
+            }}
+          >
+            Search
+          </div>
 
           {!user && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-row gap-4">
               <Link
                 to="/login"
-                className={`font-worksans ${
-                  location.pathname === "/login" ? "underline" : ""
-                } hover:underline`}
+                className="font-worksans"
                 onClick={() => setIsOpen(false)}
               >
                 Login
               </Link>
               <Link
                 to="/sign-up"
-                className={`font-worksans text-primary font-semibold ${
-                  location.pathname === "/sign-up" ? "underline" : ""
-                } hover:underline`}
+                className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
                 onClick={() => setIsOpen(false)}
               >
                 Sign up
