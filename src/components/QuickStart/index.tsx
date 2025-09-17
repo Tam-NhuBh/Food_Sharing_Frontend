@@ -1,6 +1,5 @@
 import { CheckCircle } from "lucide-react";
 import { quickStats } from "../../constants";
-import { motion } from "framer-motion";
 
 export default function QuickStats() {
   return (
@@ -16,14 +15,7 @@ export default function QuickStats() {
 
       <div className="grid gap-3 md:grid-cols-2">
 
-        {quickStats.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.3, delay: i * 0.1 }}
-          >
+        {quickStats.map((item) => (
             <li
               key={item}
               className="flex items-center gap-2 text-sm text-black"
@@ -33,7 +25,6 @@ export default function QuickStats() {
               </span>
               {item}
             </li>
-          </motion.div>
 
         ))}
       </div>

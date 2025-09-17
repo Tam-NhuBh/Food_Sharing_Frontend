@@ -32,7 +32,7 @@ export default function RecipeList() {
       ? recipes
       : recipes.filter((r) => String((r).categoryId) === selectedCategory);
 
-  console.log("selectedchange on recipe comp:", filteredRecipes)
+  // console.log("selectedchange on recipe comp:", filteredRecipes)
 
   const multiFilteredRecipes =
     selectedFilters.length === 0

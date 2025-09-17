@@ -1,23 +1,17 @@
-import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { features } from "../../constants";
 
 export default function Hero() {
   return (
-    <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:gap-14 md:px-10 lg:px-12">
+    <div className="relative min-w-screen grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:gap-14 md:px-10 lg:px-12">
       <img
         alt="Decor"
-        src="/cooking.PNG"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-5"
+        src="/cooking3.jpg"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-100"
       />
 
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="z-10"
-      >
+      <div className="z-10">
         <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-rose-100 px-3 py-1 text-rose-700">
           <Sparkles className="h-4 w-4" />
           <span className="text-xs font-semibold">Cook • Share • Inspire</span>
@@ -43,14 +37,9 @@ export default function Hero() {
             Explore Recipes
           </Link>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="z-10"
-      >
+      <div className="z-10">
         <div className="grid grid-cols-2 gap-4 md:gap-6">
           {features.map((f, idx) => (
             <div
@@ -63,7 +52,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
