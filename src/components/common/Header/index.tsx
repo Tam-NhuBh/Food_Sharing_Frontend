@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase/config";
 import useAuth from "../../../hooks/useAuth";
 
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogOutOpen, setIsLogOutOpen] = useState(false);
@@ -54,6 +55,8 @@ export default function Header() {
           About
         </Link>
       </nav>
+      
+      
 
       {/* Desktop Auth */}
       {!user && (

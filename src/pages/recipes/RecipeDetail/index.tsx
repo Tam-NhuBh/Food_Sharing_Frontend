@@ -143,6 +143,7 @@ export default function RecipeDetail() {
         </div>
 
         <p className="flex items-center gap-2 mb-7">
+          <ChefHat className="w-6 h-6 text-primary" />
           <span className="text-base font-worksans italic text-gray-600">
            {recipe?.author}
           </span>
