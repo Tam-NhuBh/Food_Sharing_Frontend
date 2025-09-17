@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
 //import Button from "../../../components/Button";
 import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 import useAuth from "../../../hooks/useAuth";
 import { ChefHat } from "lucide-react";
+import { useFavourite } from "../../../hooks/useFavourite";
 
 // remove URLs and symbols
 const textInput = (t: string) =>
@@ -18,10 +19,11 @@ const textInput = (t: string) =>
 export default function RecipeDetail() {
   const { id } = useParams();
   const recipeId = Number(id);
+  const navigate = useNavigate();
 
   const [recipe, setRecipe] = useState<Recipe>();
   //const [ratings, setRatings] = useState<Rating[]>([]);
-  const [isFav, setIsFav] = useState(false);
+  const { isFav, toggleFav, canUse } = useFavourite(recipeId);
   // const [ratings, setRatings] = useState<Rating[]>([]);
   const [serverRatings, setServerRatings] = useState<Rating[]>([]);
   const [localRatings, setLocalRatings] = useState<Rating[]>([]);
@@ -95,26 +97,13 @@ export default function RecipeDetail() {
     cancelForm();
   };
 
-  useEffect(() => {
-    const favs = JSON.parse(localStorage.getItem("favRecipes") || "[]");
-    setIsFav(favs.includes(id));
-  }, [id]);
-
   // Toggle favorite
   const handleFavToggle = () => {
-    const favs = JSON.parse(localStorage.getItem("favRecipes") || "[]");
-    let updatedFavs;
-
-    if (isFav) {
-      // remove
-      updatedFavs = favs.filter((favId: string) => favId !== id);
-    } else {
-      // add
-      updatedFavs = [...favs, id];
+    if (!canUse) {
+      navigate('/login');
+      return;
     }
-
-    localStorage.setItem("favRecipes", JSON.stringify(updatedFavs));
-    setIsFav(!isFav);
+    toggleFav();
   };
 
   return (
@@ -124,42 +113,57 @@ export default function RecipeDetail() {
 
       {/* Recipe Part */}
       <section className="px-6 md:px-20 xl:px-32 bg-white pt-8">
-        <p className="font-playfair font-bold text-base text-black mb-2">
+        <p className="mb-2 text-sm md:text-base font-playfair font-bold text-black">
           {recipe?.category}
         </p>
-        <div className="flex flex-row justify-between items-start sm:items-center">
-          <h2 className="md:text-7xl text-xl font-bold font-playfair mb-3">
-            {recipe?.title}
-          </h2>
 
-          <button onClick={handleFavToggle}>
-            <Heart
-              className={`w-6 h-6 sm:w-10 sm:h-10 transition-colors ${
-                isFav ? "text-primary fill-current" : "text-primary"
-              }`}
-            />
-          </button>
+        <div className="flex items-center justify-between gap-3">
+          <h1
+            className="flex-1 font-playfair font-bold text-2xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight break-words hyphens-auto"
+          >
+            {recipe?.title}
+          </h1>
+
+          <Heart
+            onClick={handleFavToggle}
+
+            className={`w-7 h-7 sm:w-9 sm:h-9 shrink-0 transition duration-100 hover:text-[#732c4e] hover:scale-110 ${isFav ? "text-primary fill-current" : "text-primary"}`}
+          />
         </div>
 
-        <p className="flex items-center gap-2 mb-7">
-          <ChefHat className="w-6 h-6 text-primary" />
-          <span className="text-base font-worksans italic text-gray-600">
-           {recipe?.author}
+
+        {/* author */}
+        <p className="mt-3 mb-6 flex items-center gap-2 text-gray-700">
+          <ChefHat className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+          <span className="text-sm md:text-base font-worksans italic">
+            {recipe?.author}
           </span>
         </p>
-        <p className="text-base font-worksans text-black">
+
+        {/* description */}
+        <p className="text-sm md:text-base text-gray-800 max-w-3xl">
           {recipe?.longDescription}
         </p>
-        <p className="text-base font-worksans text-primary mb-4">
-          {recipe?.tags.map((tag, index) => (
-            <span key={index} className="text-sm mr-2">
+
+        {/* tags */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {recipe?.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="
+          inline-flex items-center
+          rounded-full bg-cream text-primary
+          px-3 py-1
+          text-xs md:text-sm font-medium
+        "
+            >
               #{tag}
             </span>
           ))}
-        </p>
+        </div>
       </section>
 
-      <section className="relative w-full mx-auto overflow-visible">
+      <section className="relative w-full mx-auto overflow-visible mt-3">
         <img
           src={recipe?.image}
           alt={recipe?.title}
@@ -282,7 +286,7 @@ export default function RecipeDetail() {
               Rating
             </p>
           </div>
-        </div>        
+        </div>
         <div className="px-0 pb-8">
           <RatingForm
             ratings={allRatings}
