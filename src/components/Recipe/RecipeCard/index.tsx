@@ -50,12 +50,12 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
         <h2 className="text-lg font-bold mb-2 font-worksans">{title}</h2>
         {description && (
           <p className="font-worksans font-medium text-black flex-1 mb-1">
-            🍽️ {description}
+          {description}
           </p>
         )}
         {cookingTime && (
           <p className="font-worksans font-medium text-black flex-1 mt-1 mb-4">
-            ⏳ Cooking Duration: {cookingTime}
+           Cooking Duration: {cookingTime}
           </p>
         )}
         {actions && (

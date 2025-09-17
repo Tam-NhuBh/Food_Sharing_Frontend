@@ -6,6 +6,7 @@ import SearchBar from "../../../components/Search";
 import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 import useAuth from "../../../hooks/useAuth";
+import { ChefHat } from "lucide-react";
 
 // remove URLs and symbols
 const textInput = (t: string) =>
@@ -141,10 +142,9 @@ export default function RecipeDetail() {
           </button>
         </div>
 
-        <p className=" mb-7">
-          <span className="text-base">👩‍🍳 </span>
+        <p className="flex items-center gap-2 mb-7">
           <span className="text-base font-worksans italic text-gray-600">
-            {recipe?.author}
+           {recipe?.author}
           </span>
         </p>
         <p className="text-base font-worksans text-black">
@@ -221,7 +221,6 @@ export default function RecipeDetail() {
 
             <div className="grid grid-cols-2 gap-4 mt-4 font-worksans">
               <div className="flex items-center gap-3 p-4 rounded-lg bg-[#A64F67]/10 shadow">
-                {/* <span className="text-2xl">🔥</span> */}
                 <Flame className="w-6 h-6 text-primary " />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">
@@ -248,7 +247,6 @@ export default function RecipeDetail() {
               </div>
 
               <div className="flex items-center gap-3 p-4 bg-[#A64F67]/10 rounded-lg shadow">
-                {/* <span className="text-2xl">🌾</span> */}
                 <Leaf className="w-6 h-6 text-primary" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">Carbs:</span>
@@ -260,7 +258,6 @@ export default function RecipeDetail() {
               </div>
 
               <div className="flex items-center gap-3 p-4 bg-[#A64F67]/10 rounded-lg shadow">
-                {/* <span className="text-2xl">🥥</span> */}
                 <Droplet className="w-6 h-6 text-primary" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">
