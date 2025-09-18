@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Filter } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Category } from "../../types";
 import Button from "../Button";
 import { useRef } from "react";
