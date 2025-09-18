@@ -6,7 +6,7 @@ import Steps from "../../components/Steps";
 
 export default function About() {
   return (
-    <div className="font-worksans text-gray-800 w-full">
+    <div className="font-worksans text-black w-full">
       {/* banner (a attention-grabbing visual element) with text and a call-to-action */}
       <section className="relative overflow-hidden shadow">
         <Hero />

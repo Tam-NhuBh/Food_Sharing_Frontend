@@ -26,19 +26,19 @@ export default function CategoryMultiSelectFilter({
   const clearAll = () => onChange([]);
 
   return (
-    <div className="relative flex justify-end">
+    <div className="text-black relative flex justify-end">
       {/* Filter Trigger */}
       <div
         className="flex items-center gap-2 cursor-pointer hover:opacity-80"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-base font-medium">Filter by</span>
+        <span className="text-black text-base font-medium">Filter by</span>
         <Filter className="w-4 h-4" />
       </div>
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute mt-2 w-64 bg-white rounded-2xl shadow-lg p-4 z-20">
+        <div className="border border-light-gray absolute mt-2 w-64 bg-white rounded-2xl shadow-lg p-4 z-20">
           <div className="flex justify-between items-center mb-2">
             <h3 className="font-semibold">Filter by Category</h3>
             <button onClick={() => setIsOpen(false)}>
@@ -46,7 +46,7 @@ export default function CategoryMultiSelectFilter({
             </button>
           </div>
 
-          <div className="flex flex-col gap-2 max-h-60 overflow-y-auto">
+          <div className=" flex flex-col gap-2 max-h-60 overflow-y-auto">
             {categories.map((cat) => {
               const isSelected = selected.includes(String(cat.id));
               return (

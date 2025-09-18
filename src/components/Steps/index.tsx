@@ -3,11 +3,11 @@ import { steps } from "../../constants";
 export default function Steps() {
   return (
     <div>
-      <div className="mb-6 text-center">
+      <div className="text-black mb-6 text-center">
         <h2 className="font-playfair font-extrabold text-primary text-3xl md:text-4xl">
           Getting Started
         </h2>
-        <p className="mt-2 text-gray-600 max-w-xl mx-auto">
+        <p className="mt-2 text-gray max-w-xl mx-auto">
           Just three simple steps to discover, create, and share your favorite recipes
           with Nom Nom
         </p>
@@ -22,8 +22,8 @@ export default function Steps() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-rose-100 text-primary group-hover:bg-primary group-hover:text-white transition">
               <s.icon className="h-7 w-7" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900">{s.title}</h3>
-            <p className="mt-3 text-sm text-gray-600 max-w-[220px] text-center">
+            <h3 className="text-lg font-semibold text-black">{s.title}</h3>
+            <p className="mt-3 text-sm text-gray max-w-[220px] text-center">
               {s.desc}
             </p>
           </div>

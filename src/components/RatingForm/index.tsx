@@ -20,7 +20,7 @@ function StarPicker({
     onChange,
 }: { value: number; onChange: (n: number) => void }) {
     return (
-        <div className="flex items-center gap-1">
+        <div className="flex flex-row justify-between items-center gap-1">
             {/* 0 -> 5 rates */}
             {rates.map((n) => (
                 <button
@@ -68,9 +68,13 @@ export default function RatingForm({
             {/* Inline form */}
             {showForm && (
                 <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm overflow-hidden">
-                    <p className="font-bold text-[1.1rem] mb-1">{user?.email ? user.email : 'Guest User'}</p>
-                    <div className="flex flex-col gap-3 min-w-0">
+                    <div className="flex flex-row justify-between mb-4">
+                        <p className="font-bold text-[1.1rem]">{user?.email ? user.email : 'Guest User'}</p>
                         <StarPicker value={stars} onChange={onStarsChange} />
+                    </div>
+                    
+                    <div className="flex flex-col gap-3 min-w-0">
+                        
                         <textarea
                             rows={3}
                             value={comment}
@@ -83,7 +87,7 @@ export default function RatingForm({
                     <div className="mt-3 flex justify-end gap-2">
                         <Button variant="secondary" onClick={onCancel}>Cancel</Button>
                         <Button className="font-bold hover:bg-[#732c4e] transition" onClick={onSubmit}>
-                            Submit
+                            Share
                         </Button>
                     </div>
                 </div>
@@ -107,7 +111,7 @@ export default function RatingForm({
                                     </span>
                                 </span>
                             </div>
-                            <p className="text-sm text-gray-700">{r.comment}</p>
+                            <p className="text-sm text-gray">{r.comment}</p>
                         </li>
                     ))}
                 </ul>

@@ -4,7 +4,7 @@ import { features } from "../../constants";
 
 export default function Hero() {
   return (
-    <div className="relative min-w-screen grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:gap-14 md:px-10 lg:px-12">
+    <div className="text-black relative min-w-screen grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:gap-14 md:px-10 lg:px-12">
       <img
         alt="Decor"
         src="/cooking3.jpg"
@@ -48,7 +48,7 @@ export default function Hero() {
             >
               <f.icon className="h-6 w-6 text-primary" />
               <h3 className="mt-3 font-semibold">{f.title}</h3>
-              <p className="mt-1 text-sm text-gray-600">{f.desc}</p>
+              <p className="mt-1 text-sm text-gray">{f.desc}</p>
             </div>
           ))}
         </div>
