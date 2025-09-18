@@ -13,12 +13,6 @@ export const steps = [
   { icon: Heart, title: "Save and Share", desc: "Favorite, rate, and tell your story." },
 ];
 
-// export const stats = [
-//   { k: "1k+", v: "Community cooks" },
-//   { k: "800+", v: "Tried and rated recipes" },
-//   { k: "95%", v: "Would cook again" },
-//   { k: "24/7", v: "Access anywhere" },
-// ];
 
 export const faqs = [
   { q: "Is Nom Nom free?", a: "Yes → browse, save, and share for free" },

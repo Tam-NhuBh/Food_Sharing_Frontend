@@ -60,9 +60,9 @@ export default function RecipeList() {
           <Link to="/recipes/add">
             <Button
               variant="primary"
-              className="cursor-pointer md:text-md text-sm mt-3"
+              className="cursor-pointer uppercase font-semibold md:text-md text-sm mt-3"
             >
-              SHARE YOUR RECIPE
+              Share Your Recipe
             </Button>
           </Link>
         </div>

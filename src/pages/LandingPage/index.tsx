@@ -39,7 +39,7 @@ export default function LandingPage() {
             Find recipes you’ll love, <br /> with the ease you need.
           </p>
           <Link to="/recipes">
-            <button className="text-md md:text-xl bg-primary font-playfair text-white px-6 py-3 rounded-full font-bold hover:bg-[#732c4e] transition">
+            <button className="text-md md:text-xl bg-primary font-worksans uppercase text-white px-6 py-3 rounded-full font-semibold hover:bg-[#732c4e] transition">
               Explore
             </button>
           </Link>
@@ -81,9 +81,9 @@ export default function LandingPage() {
         <Link to="/recipes/add">
           <Button
             variant="primary"
-            className="cursor-pointer md:text-md text-sm"
+            className="cursor-pointer font-semibold uppercase md:text-md text-sm"
           >
-            SHARE YOUR RECIPE
+            Share your recipe
           </Button>
         </Link>
       </section>
