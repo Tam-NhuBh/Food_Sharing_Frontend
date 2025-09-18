@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
 import { Pencil, Plus, X, CheckCircle } from "lucide-react";
-import TextArea from "../../../components/common/TextArea";
+import TextArea from "../../../components/TextArea";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -59,7 +59,7 @@ export default function AddRecipe() {
 
   const updateIngredient = (index: number, field: string, value: string) => {
     const updated = [...ingredients];
-    updated[index][field as keyof typeof updated[number]] = value;
+    updated[index][field as keyof (typeof updated)[number]] = value;
     setIngredients(updated);
   };
 
@@ -266,7 +266,10 @@ export default function AddRecipe() {
             <div className="flex flex-col gap-4">
               {/* Image Upload */}
               <div>
-                <label className="font-medium text-sm sm:text-md text-black">
+                <label
+                  htmlFor="image-upload"
+                  className="font-medium text-sm sm:text-md text-black"
+                >
                   Image Upload
                 </label>
                 <input
@@ -338,6 +341,7 @@ export default function AddRecipe() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input
+                  id="servings"
                   type="number"
                   label="Number of Servings"
                   value={servings}
@@ -352,6 +356,7 @@ export default function AddRecipe() {
                 />
 
                 <Input
+                  id="duration"
                   type="number"
                   label="Cook Duration (minutes)"
                   value={duration}
@@ -367,12 +372,14 @@ export default function AddRecipe() {
               </div>
 
               <TextArea
+                id="recipe-intro"
                 label="Recipe Introduction"
                 value={intro}
                 onChange={(e) => setIntro(e.target.value)}
                 error={errors.intro}
               />
               <TextArea
+                id="recipe-description"
                 label="Recipe Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -392,6 +399,7 @@ export default function AddRecipe() {
                 {ingredients.map((ing, index) => (
                   <div key={index} className="flex gap-2 items-start">
                     <Input
+                      id={`ingredient-amount-${index}`}
                       type="number"
                       placeholder="225"
                       min={1}
@@ -423,6 +431,7 @@ export default function AddRecipe() {
                       ))}
                     </select>
                     <Input
+                      id={`ingredient-name-${index}`}
                       type="text"
                       placeholder="Ingredient"
                       value={ing.name}
@@ -462,6 +471,7 @@ export default function AddRecipe() {
                       {index + 1}.
                     </span>
                     <TextArea
+                      id={`direction-step-${index}`}
                       className="flex-1"
                       placeholder={`Step ${index + 1}...`}
                       value={dir.step}
@@ -470,6 +480,7 @@ export default function AddRecipe() {
                     />
                     <button
                       type="button"
+                      aria-label={`remove direction ${index + 1}`}
                       onClick={() => removeDirection(index)}
                       className="p-2 text-red-500 hover:bg-red-100 rounded-full"
                     >
@@ -494,6 +505,7 @@ export default function AddRecipe() {
               </h2>
               <div className="flex flex-row space-x-4 mb-3">
                 <Input
+                  id="tag-input"
                   className="w-full"
                   type="text"
                   placeholder="Add a tag..."
@@ -518,6 +530,7 @@ export default function AddRecipe() {
                     {tag}
                     <button
                       type="button"
+                      aria-label={`remove tag ${tag}`}
                       onClick={() => removeTag(tag)}
                       className="text-red-500 hover:text-red-700"
                     >
