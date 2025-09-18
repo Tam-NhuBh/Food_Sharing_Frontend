@@ -107,9 +107,7 @@ export default function RecipeDetail() {
   };
 
   return (
-    <div className="font-worksans w-full">
-      {/* Search Bar */}
-      {/* <SearchBar /> */}
+    <div className="text-black font-worksans w-full">
 
       {/* Recipe Part */}
       <section className="px-6 md:px-20 xl:px-32 bg-white pt-8">
@@ -133,7 +131,7 @@ export default function RecipeDetail() {
 
 
         {/* author */}
-        <p className="mt-3 mb-6 flex items-center gap-2 text-gray-700">
+        <p className="mt-3 mb-6 flex items-center gap-2 text-gray">
           <ChefHat className="w-5 h-5 md:w-6 md:h-6 text-primary" />
           <span className="text-sm md:text-base font-worksans italic">
             {recipe?.author}
@@ -141,7 +139,7 @@ export default function RecipeDetail() {
         </p>
 
         {/* description */}
-        <p className="text-sm md:text-base text-gray-800 max-w-3xl">
+        <p className="text-sm md:text-base text-gray max-w-3xl">
           {recipe?.longDescription}
         </p>
 
@@ -184,7 +182,8 @@ export default function RecipeDetail() {
           </div>
         </div>
       </section>
-      <section className="px-6 md:px-20 xl:px-32 bg-light-gray pt-8 mt-15">
+
+      <section className="px-6 md:px-20 xl:px-32 bg-cream pt-8 mt-15">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-20 gap-0">
           <div className="bg-white p-7 mb-15">
             <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
@@ -218,13 +217,13 @@ export default function RecipeDetail() {
 
       <section className="px-6 md:px-20 xl:px-32 mt-8 pb-8">
         <div className="grid sm:grid-cols-4 grid-cols-1 gap-20">
-          <div className="sm:col-span-3 col-span-1 bg-light-gray px-4 py-7 mb-0 md:mb-16">
-            <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
+          <div className="sm:col-span-3 col-span-1 px-4 py-7 mb-0 md:mb-16">
+            <h3 className="text-black text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
               Nutritions
             </h3>
 
             <div className="grid grid-cols-2 gap-4 mt-4 font-worksans">
-              <div className="flex items-center gap-3 bg-cream p-4 rounded-lg shadow">
+              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-lg shadow">
                 {/* <span className="text-2xl">🔥</span> */}
                 <Flame className="w-6 h-6 text-orange-500" />
                 <div>
@@ -238,7 +237,7 @@ export default function RecipeDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-[#FFF0EF] p-4 rounded-lg shadow">
+              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-lg shadow">
                 <Beef className="w-6 h-6 text-red-500" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">
@@ -251,7 +250,7 @@ export default function RecipeDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-green-100 p-4 rounded-lg shadow">
+              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-lg shadow">
                 {/* <span className="text-2xl">🌾</span> */}
                 <Leaf className="w-6 h-6 text-green-600" />
                 <div>
@@ -263,7 +262,7 @@ export default function RecipeDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-purple-100 p-4 rounded-lg shadow">
+              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-lg shadow">
                 {/* <span className="text-2xl">🥥</span> */}
                 <Droplet className="w-6 h-6 text-purple-600" />
                 <div>

@@ -4,7 +4,7 @@ import { features } from "../../constants";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[420px] md:min-h-[520px] overflow-hidden">
+    <div className="text-black relative min-w-screen grid max-w-6xl grid-cols-1 gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:gap-14 md:px-10 lg:px-12">
       <img
         src="/cooking2.JPG"
         alt="Kitchen background"
@@ -51,8 +51,8 @@ export default function Hero() {
               className="rounded-2xl border border-gray-200 bg-cream/95 p-4 shadow-sm hover:shadow-md transition"
             >
               <f.icon className="h-6 w-6 text-primary" />
-              <h3 className="mt-3 font-semibold text-gray-900">{f.title}</h3>
-              <p className="mt-1 text-sm text-gray-600">{f.desc}</p>
+              <h3 className="mt-3 font-semibold">{f.title}</h3>
+              <p className="mt-1 text-sm text-gray">{f.desc}</p>
             </div>
           ))}
         </div>

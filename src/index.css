@@ -11,10 +11,27 @@
   /* Color */
   --color-primary: #A64F67;
   --color-cream: #FDFBEE;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-input: #F9FBFC;
   --color-input-border: #B3B3B3;
   --color-light-gray: #F9FBFC;
+  --color-gray: #6B7280;
   --color-dark-primary: #833f5d;
+  --color-form: #F9FBFC;
+}
+
+.dark {
+  --color-primary: #FF7FA6; 
+  --color-cream: #6B3F69;
+  /* 1E1F33 */
+  --color-white: #28293D;
+  --color-black: #FFFFFF;
+  --color-light-gray: #F2F5F8;
+  --color-input: #2A2C45;
+  --color-gray: #9CA3AF; 
+    --color-form: #9CA3AF;        
+  --color-input-border: #5C5F7F;
 }
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }

@@ -12,6 +12,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
   const { user } = useAuth();
   const navigate = useNavigate();
 
+
   const handleLogOut = async () => {
     setIsLogOutOpen(false);
     await signOut(auth);
@@ -19,7 +20,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
   };
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300 shadow relative">
+    <header className="text-black flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300 shadow relative text-black">
       {/* Logo */}
       <Link to="/">
         <h1 className="font-lobster text-primary text-lg sm:text-xl md:text-3xl">
@@ -64,21 +65,28 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
       </nav>
       
       
-
       {/* Desktop Auth */}
       {!user && (
         <div className="hidden md:flex items-center space-x-4 text-md lg:text-lg">
-          <Link to="/login" className="font-worksans">
+          <Link
+            to="/login"
+            className={`font-worksans ${
+              location.pathname === "/login" ? "underline" : ""
+            } hover:underline`}
+          >
             Login
           </Link>
           <Link
             to="/sign-up"
-            className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
+            className={`font-worksans text-primary px-4 py-2 font-semibold ${
+              location.pathname === "/sign-up" ? "underline" : ""
+            } hover:underline`}
           >
             Sign up
           </Link>
         </div>
       )}
+
 
       {user && (
         <div className="flex gap-5 relative">
@@ -90,7 +98,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
           </p>
           {isLogOutOpen && (
             <div
-              className="absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white"
+              className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white"
               onClick={handleLogOut}
             >
               <p className="font-bold">Log Out</p>
@@ -98,6 +106,8 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
           )}
         </div>
       )}
+
+      
 
       {/* Mobile Hamburger */}
       <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -141,23 +151,28 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
           </div>
 
           {!user && (
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-col gap-4">
               <Link
                 to="/login"
-                className="font-worksans"
+                className={`font-worksans ${
+                  location.pathname === "/login" ? "underline" : ""
+                } hover:underline`}
                 onClick={() => setIsOpen(false)}
               >
                 Login
               </Link>
               <Link
                 to="/sign-up"
-                className="font-worksans bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80"
+                className={`font-worksans text-primary font-semibold ${
+                  location.pathname === "/sign-up" ? "underline" : ""
+                } hover:underline`}
                 onClick={() => setIsOpen(false)}
               >
                 Sign up
               </Link>
             </div>
           )}
+
 
           {user && (
             <div className="flex flex-col gap-2">
@@ -168,7 +183,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
                 {user.email}
               </p>
               <div
-                className="text-left py-2 bg-light-gray text-black rounded-sm w-full cursor-pointer"
+                className="text-center py-2 border border-form text-black rounded-sm w-full cursor-pointer"
                 onClick={handleLogOut}
               >
                 <p className="font-worksans hover:underline">Log Out</p>

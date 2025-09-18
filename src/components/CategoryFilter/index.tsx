@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Filter } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Category } from "../../types";
 import Button from "../Button";
 import { useRef } from "react";
@@ -31,12 +31,10 @@ export default function CategoryFilter({
   return (
     <div>
       <div className="flex justify-between items-center mb-3">
-        <h2 className="md:text-2xl text-lg font-bold font-playfair">
+        <h2 className="text-black md:text-2xl text-lg font-bold font-playfair">
           Browse by <span className="text-primary">Category</span>
         </h2>
-        <Button variant="primary" className="flex items-center gap-2 bg-transparent">
-          <Filter className="w-4 h-4" /> Filter by
-        </Button>
+        
       </div>
 
       <div className="relative">
@@ -44,7 +42,7 @@ export default function CategoryFilter({
         <button
           type="button"
           onClick={() => scroll("left")}
-          className= "absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 transition duration-200 hover:scale-120"
+          className= "text-black absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 transition duration-200 hover:scale-120"
           aria-label="Scroll left"
         >
           <ChevronLeft className="w-5 h-5" />
@@ -84,7 +82,7 @@ export default function CategoryFilter({
         <button
           type="button"
           onClick={() => scroll("right")}
-          className= "absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white transition duration-200 rounded-full p-1 hover:scale-120"
+          className= "text-black absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white transition duration-200 rounded-full p-1 hover:scale-120"
           aria-label="Scroll right"
         >
           <ChevronRight className="w-5 h-5" />

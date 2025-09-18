@@ -7,13 +7,11 @@ import Button from "../../../components/Button";
 import CategoryFilter from "../../../components/CategoryFilter";
 import CategoryMultiSelectFilter from "../../../components/CategoryMultiSelectFilter";
 
-
 export default function RecipeList() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [categories, setCategroies] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedFilters, setSelectedFilters] = useState<number[]>([]);
-
 
   useEffect(() => {
     fetch("/api/recipes")
@@ -24,13 +22,13 @@ export default function RecipeList() {
       .then((res) => res.json())
       .then(setCategroies);
   }, []);
-  
+
   // console.log("selectedchange on recipe comp:", fetch("api/categories"))
 
   const filteredRecipes =
     selectedCategory === "all"
       ? recipes
-      : recipes.filter((r) => String((r).categoryId) === selectedCategory);
+      : recipes.filter((r) => String(r.categoryId) === selectedCategory);
 
   // console.log("selectedchange on recipe comp:", filteredRecipes)
 
@@ -84,19 +82,26 @@ export default function RecipeList() {
       </section>
 
       {/* Multi-Select Filter */}
-      <section className="px-6 md:px-20 xl:px-32 pt-8 space-y-4">
+      {/* <section className="px-6 md:px-20 xl:px-32 pt-8 space-y-4">
         <CategoryMultiSelectFilter
           categories={categories}
           selected={selectedFilters.map(String)} // convert number[] -> string[]
           onChange={(vals) => setSelectedFilters(vals.map(Number))}
         />
-      </section>
+      </section> */}
 
       {/* Recipe List */}
       <section className="px-6 md:px-20 xl:px-32 py-8">
-        <h2 className="md:text-2xl text-lg font-bold font-playfair mb-5">
-          Recipe List
-        </h2>
+        <div className="flex flex-row justify-between items-center mb-5">
+          <h2 className="text-black md:text-2xl text-lg font-bold font-playfair">
+            Recipe List
+          </h2>
+          <CategoryMultiSelectFilter
+            categories={categories}
+            selected={selectedFilters.map(String)} // convert number[] -> string[]
+            onChange={(vals) => setSelectedFilters(vals.map(Number))}
+          />
+        </div>
 
         {multiFilteredRecipes.length > 0 ? (
           <RecipeCardList

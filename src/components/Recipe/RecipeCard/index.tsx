@@ -59,7 +59,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
             {category}
           </span>
         )}
-        <h2 className="text-lg font-bold mb-2 font-worksans">{title}</h2>
+        <h2 className="text-black text-lg font-bold mb-2 font-worksans">{title}</h2>
         {description && (
           <p className="font-worksans font-medium text-black flex-1 mb-1">
             {description}
@@ -72,7 +72,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({
         )}
         <div className="flex justify-between items-center">
           {actions && (
-            <div className="font-worksans hover:font-bold text-sm mt-auto">
+            <div className="text-black font-worksans hover:font-bold text-sm mt-auto">
               {actions}
             </div>
           )}
