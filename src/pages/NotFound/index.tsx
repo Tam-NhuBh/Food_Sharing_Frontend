@@ -8,7 +8,7 @@ export default function NotFound() {
         <div className="rounded-full bg-rose-100 p-6 mb-6">
           <FileWarning className="h-12 w-12 text-primary" />
         </div>
-        <h1 className="font-playfair text-5xl font-extrabold select-none text-primary">
+        <h1 className="font-worksans text-5xl font-extrabold select-none text-primary">
           404
         </h1>
         <p className="mt-3 text-lg font-worksans select-none text-black">
@@ -16,9 +16,9 @@ export default function NotFound() {
         </p>
         <Link
           to="/"
-          className="mt-6 inline-block rounded-full bg-primary px-6 py-3 font-worksans font-medium text-white transition hover:bg-[#732c4e] select-none"
+          className="mt-6 uppercase font-semibold inline-block rounded-full bg-primary px-6 py-3 font-worksans font-medium text-white transition hover:bg-[#732c4e] select-none"
         >
-          Back to Home
+          Back to home
         </Link>
       </div>
     </div>
