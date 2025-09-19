@@ -216,8 +216,8 @@ export default function RecipeDetail() {
 
       <section className="px-6 md:px-20 xl:px-32 mt-8 pb-8">
         <div className="grid sm:grid-cols-4 grid-cols-1 gap-12">
-          <div className="sm:col-span-3 col-span-1 px-7 py-7 bg-light-primary rounded-3xl mb-0 md:mb-16">
-            <h3 className="text-black text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
+          <div className="sm:col-span-3 col-span-1 px-7 py-7 rounded-3xl mb-0 md:mb-16">
+            <h3 className="text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
               Nutritions
             </h3>
 
