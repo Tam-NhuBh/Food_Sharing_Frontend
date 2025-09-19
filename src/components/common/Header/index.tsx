@@ -74,7 +74,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
               location.pathname === "/login" ? "underline" : ""
             } hover:underline`}
           >
-            Login
+            Log in
           </Link>
           <Link
             to="/sign-up"
@@ -96,14 +96,12 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
           >
             {user.email}
           </p>
-          {isLogOutOpen && (
             <div
               className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white hidden group-hover:block"
               onClick={handleLogOut}
             >
-              <p className="font-bold">Log Out</p>
+              <p className="font-bold">Log out</p>
             </div>
-          )}
         </div>
       )}
 
