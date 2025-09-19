@@ -20,7 +20,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
   };
 
   return (
-    <header className="text-black flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300 shadow relative text-black">
+    <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-300 shadow relative text-black">
       {/* Logo */}
       <Link to="/">
         <h1 className="font-lobster text-primary text-lg sm:text-xl md:text-3xl">
@@ -89,7 +89,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
 
 
       {user && (
-        <div className="flex gap-5 relative">
+        <div className="flex gap-5 group relative">
           <p
             className="font-bold cursor-pointer text-primary invisible md:visible"
             onClick={() => setIsLogOutOpen((prev) => !prev)}
@@ -98,7 +98,7 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
           </p>
           {isLogOutOpen && (
             <div
-              className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white"
+              className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white hidden group-hover:block"
               onClick={handleLogOut}
             >
               <p className="font-bold">Log Out</p>
