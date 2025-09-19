@@ -2,10 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
 //import Button from "../../../components/Button";
-import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
+import { Beef, Flame, Heart, ChefHat, Sprout, Droplet } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 import useAuth from "../../../hooks/useAuth";
-import { ChefHat } from "lucide-react";
 import { useFavourite } from "../../../hooks/useFavourite";
 
 // remove URLs and symbols
@@ -155,7 +154,7 @@ export default function RecipeDetail() {
           text-xs md:text-sm font-medium
         "
             >
-              #{tag}
+              {tag}
             </span>
           ))}
         </div>
@@ -165,7 +164,7 @@ export default function RecipeDetail() {
         <img
           src={recipe?.image}
           alt={recipe?.title}
-          className="w-full sm:h-90 md:h-140 object-cover mb-4"
+          className="w-full sm:h-90 md:h-140 object-cover"
         />
         <div className="flex justify-center gap-10 md:gap-12 xl:gap-30 font-worksans font-medium md:text-lg text-sm absolute bottom-0 left-1/2 px-6 md:px-10 w-[95%] sm:w-[80%] md:w-[70%] xl:w-[50%] bg-primary text-white rounded-3xl py-5 md:py-7 -translate-x-1/2 translate-y-1/2">
           <div className="flex flex-col items-center gap-2 justify-center">
@@ -216,16 +215,15 @@ export default function RecipeDetail() {
       </section>
 
       <section className="px-6 md:px-20 xl:px-32 mt-8 pb-8">
-        <div className="grid sm:grid-cols-4 grid-cols-1 gap-20">
-          <div className="sm:col-span-3 col-span-1 px-4 py-7 mb-0 md:mb-16">
+        <div className="grid sm:grid-cols-4 grid-cols-1 gap-12">
+          <div className="sm:col-span-3 col-span-1 px-7 py-7 bg-light-primary rounded-3xl mb-0 md:mb-16">
             <h3 className="text-black text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
               Nutritions
             </h3>
 
             <div className="grid grid-cols-2 gap-4 mt-4 font-worksans">
-              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-lg shadow">
-                {/* <span className="text-2xl">🔥</span> */}
-                <Flame className="w-6 h-6 text-orange-500" />
+              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-2xl shadow-md">
+                <Flame className="w-6 h-6 text-primary" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">
                     Calories:
@@ -237,8 +235,8 @@ export default function RecipeDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-lg shadow">
-                <Beef className="w-6 h-6 text-red-500" />
+              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-2xl shadow-md">
+                <Beef className="w-6 h-6 text-primary" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">
                     Protein:
@@ -250,9 +248,8 @@ export default function RecipeDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-lg shadow">
-                {/* <span className="text-2xl">🌾</span> */}
-                <Leaf className="w-6 h-6 text-green-600" />
+              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-2xl shadow-md">
+                <Sprout className="w-6 h-6 text-primary" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">Carbs:</span>
                   <span className="text-sm md:text-base lg:text-lg font-semibold">
@@ -262,9 +259,8 @@ export default function RecipeDetail() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-lg shadow">
-                {/* <span className="text-2xl">🥥</span> */}
-                <Droplet className="w-6 h-6 text-purple-600" />
+              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-2xl shadow-md">
+                <Droplet className="w-6 h-6 text-primary" />
                 <div>
                   <span className="text-sm md:text-base lg:text-lg font-bold">
                     Fat:{" "}
