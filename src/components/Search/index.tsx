@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useDebounce } from "../../hooks/useDebounce";
 import { Search } from "lucide-react";
 
+
 interface SearchBarProps {
   placeholder?: string;
   buttonText?: string;
@@ -69,6 +70,12 @@ const SearchBar: React.FC<SearchBarProps> = () => {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+
+        {debouncedQuery.length > 0 && recipes.length === 0 && (
+          <div className="w-full bg-primary absolute top-18 rounded-md p-0 md:p-3 text-white z-100 flex flex-col text-[.7rem] md:text-[1rem] font-medium">
+            No results found
           </div>
         )}
       </div>
