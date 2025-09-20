@@ -5,13 +5,14 @@ import { Pencil, Plus, X, CheckCircle } from "lucide-react";
 import TextArea from "../../../components/TextArea";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import type { Category } from "../../../types";
 
 export default function AddRecipe() {
   const navigate = useNavigate();
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [recipeName, setRecipeName] = useState("");
   const [category, setCategory] = useState("");
-  const [categories, setCategories] = useState<any[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [servings, setServings] = useState("");
   const [duration, setDuration] = useState("");
   const [intro, setIntro] = useState("");
@@ -23,6 +24,7 @@ export default function AddRecipe() {
   const [directions, setDirections] = useState([{ step: "" }]);
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState("");
+  const [difficulty, setDifficulty] = useState("");
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [showSuccess, setShowSuccess] = useState(false);
@@ -157,6 +159,11 @@ export default function AddRecipe() {
       }
     });
 
+    // difficulty
+    if (!difficulty) {
+      newErrors.difficulty = 'Recipe difficulty is required.'
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -178,7 +185,8 @@ export default function AddRecipe() {
       longDescription: description,
       cookingTime: `${duration} minutes`,
       servings: Number(servings),
-      //category: selectedCategory?.name || "",
+      difficulty: difficulty,
+      category: selectedCategory?.name || "",
       ingredients: ingredients.map((ing) => ({
         name: ing.name,
         amount: Number(ing.amount),
@@ -543,6 +551,29 @@ export default function AddRecipe() {
                   </span>
                 ))}
               </div>
+            </div>
+            {/* Difficulty */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
+                Recipe Difficulty
+              </h2>
+              <select
+                value={difficulty}
+                onChange={(e) => setDifficulty(e.target.value)}
+                className={`w-full px-3 py-2 border rounded-lg ${
+                  errors.difficulty ? "border-red-500" : "border-[#B3B3B3]"
+                }`}
+              >
+                <option value="">Select Difficulty</option>
+                {["Easy", "Medium", "Hard"].map((dif, index) => (
+                  <option key={index} value={dif}>
+                    {dif.toUpperCase()}
+                  </option>
+                ))}
+              </select>
+              {errors.difficulty && (
+                <p className="text-xs text-red-500">{errors.difficulty}</p>
+              )}
             </div>
           </section>
 

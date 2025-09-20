@@ -119,19 +119,17 @@ export default function RecipeDetail() {
         </p>
 
         <div className="flex items-center justify-between gap-3">
-          <h1
-            className="flex-1 font-playfair font-bold text-2xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight break-words hyphens-auto"
-          >
+          <h1 className="flex-1 font-playfair font-bold text-2xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight break-words hyphens-auto">
             {recipe?.title}
           </h1>
 
           <Heart
             onClick={handleFavToggle}
-
-            className={`w-7 h-7 sm:w-9 sm:h-9 shrink-0 transition duration-100 hover:text-[#732c4e] hover:scale-110 ${isFav ? "text-primary fill-current" : "text-primary"}`}
+            className={`w-7 h-7 sm:w-9 sm:h-9 shrink-0 transition duration-100 hover:text-[#732c4e] hover:scale-110 ${
+              isFav ? "text-primary fill-current" : "text-primary"
+            }`}
           />
         </div>
-
 
         {/* author */}
         <p className="mt-3 mb-6 flex items-center gap-2 text-gray-700">
@@ -234,7 +232,7 @@ export default function RecipeDetail() {
                   </span>
                   <span className="text-sm md:text-base lg:text-lg font-semibold">
                     {" "}
-                    {recipe?.nutrition.calories} kcal
+                    {recipe?.nutrition ? recipe?.nutrition.calories : "0"} kcal
                   </span>
                 </div>
               </div>
@@ -247,7 +245,7 @@ export default function RecipeDetail() {
                   </span>
                   <span className="text-sm md:text-base lg:text-lg font-semibold">
                     {" "}
-                    {recipe?.nutrition.protein}g
+                    {recipe?.nutrition ? recipe?.nutrition.protein : "0"}g
                   </span>
                 </div>
               </div>
@@ -256,10 +254,12 @@ export default function RecipeDetail() {
                 {/* <span className="text-2xl">🌾</span> */}
                 <Leaf className="w-6 h-6 text-green-600" />
                 <div>
-                  <span className="text-sm md:text-base lg:text-lg font-bold">Carbs:</span>
+                  <span className="text-sm md:text-base lg:text-lg font-bold">
+                    Carbs:
+                  </span>
                   <span className="text-sm md:text-base lg:text-lg font-semibold">
                     {" "}
-                    {recipe?.nutrition.carbs}g
+                    {recipe?.nutrition ? recipe?.nutrition.carbs : "0"}g
                   </span>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export default function RecipeDetail() {
                   </span>
                   <span className="text-sm md:text-base lg:text-lg font-semibold">
                     {" "}
-                    {recipe?.nutrition.fat}g
+                    {recipe?.nutrition ? recipe?.nutrition.fat : "0"}g
                   </span>
                 </div>
               </div>
