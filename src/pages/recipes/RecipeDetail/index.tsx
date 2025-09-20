@@ -2,7 +2,17 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
 //import Button from "../../../components/Button";
-import { Beef, Flame, Heart, ChefHat, Sprout, Droplet } from "lucide-react";
+import {
+  Beef,
+  Flame,
+  Heart,
+  ChefHat,
+  Sprout,
+  Droplet,
+  Users,
+  Clock,
+  Zap,
+} from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 import useAuth from "../../../hooks/useAuth";
 import { useFavourite } from "../../../hooks/useFavourite";
@@ -99,7 +109,7 @@ export default function RecipeDetail() {
   // Toggle favorite
   const handleFavToggle = () => {
     if (!canUse) {
-      navigate('/login');
+      navigate("/login");
       return;
     }
     toggleFav();
@@ -107,7 +117,6 @@ export default function RecipeDetail() {
 
   return (
     <div className="text-black font-worksans w-full">
-
       {/* Recipe Part */}
       <section className="px-6 md:px-20 xl:px-32 bg-white pt-8">
         <p className="mb-2 text-sm md:text-base font-playfair font-bold text-black">
@@ -115,30 +124,28 @@ export default function RecipeDetail() {
         </p>
 
         <div className="flex items-center justify-between gap-3">
-          <h1
-            className="flex-1 font-playfair font-bold text-2xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight break-words hyphens-auto"
-          >
+          <h1 className="flex-1 font-playfair font-bold text-2xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight break-words hyphens-auto">
             {recipe?.title}
           </h1>
 
           <Heart
             onClick={handleFavToggle}
-
-            className={`w-7 h-7 sm:w-9 sm:h-9 shrink-0 transition duration-100 hover:text-[#732c4e] hover:scale-110 ${isFav ? "text-primary fill-current" : "text-primary"}`}
+            className={`w-7 h-7 sm:w-9 sm:h-9 shrink-0 transition duration-100 hover:text-[#732c4e] hover:scale-110 ${
+              isFav ? "text-primary fill-current" : "text-primary"
+            }`}
           />
         </div>
 
-
         {/* author */}
         <p className="mt-3 mb-6 flex items-center gap-2 text-gray">
-          <ChefHat className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+          <ChefHat className="text-sm md:text-base text-primary" />
           <span className="text-sm md:text-base font-worksans italic">
             {recipe?.author}
           </span>
         </p>
 
         {/* description */}
-        <p className="text-sm md:text-base text-gray max-w-3xl">
+        <p className="text-sm md:text-base text-gray">
           {recipe?.longDescription}
         </p>
 
@@ -152,6 +159,8 @@ export default function RecipeDetail() {
           rounded-full bg-cream text-primary
           px-3 py-1
           text-xs md:text-sm font-medium
+          hover:bg-dark-cream
+          shadow-md
         "
             >
               {tag}
@@ -159,32 +168,37 @@ export default function RecipeDetail() {
           ))}
         </div>
       </section>
-
-      <section className="relative w-full mx-auto overflow-visible mt-3">
+      {/* serves, prep time, difficulty */}
+      <section className="bg-cream">
+      <section className="relative w-full mx-auto overflow-visible mt-3 bg-cream">
         <img
           src={recipe?.image}
           alt={recipe?.title}
           className="w-full sm:h-90 md:h-140 object-cover"
         />
-        <div className="flex justify-center gap-10 md:gap-12 xl:gap-30 font-worksans font-medium md:text-lg text-sm absolute bottom-0 left-1/2 px-6 md:px-10 w-[95%] sm:w-[80%] md:w-[70%] xl:w-[50%] bg-primary text-white rounded-3xl py-5 md:py-7 -translate-x-1/2 translate-y-1/2">
+        <div className="flex justify-center gap-12 md:gap-15 xl:gap-35 font-worksans font-medium text-md md:text-sm lg:text-base absolute bottom-0 left-1/2 px-5 md:px-8  py-3 md:py-5 w-[95%] sm:w-[80%] md:w-[70%] xl:w-[50%] bg-primary text-white rounded-3xl mb-4 -translate-x-1/2 translate-y-1/2">
           <div className="flex flex-col items-center gap-2 justify-center">
-            <p className="font-bold">Serving</p>
-            <p>{recipe?.servings}</p>
+            <Users className="font-medium" />
+            <p className="font-medium ">Serves</p>
+            <p className="font-light">{recipe?.servings} servings</p>
           </div>
           <div className="flex flex-col items-center gap-2 justify-center">
-            <p className="font-bold">Cooking Time</p>
-            <p>{recipe?.cookingTime}</p>
+            <Clock className="font-medium" />
+            <p className="font-medium">Prep Time</p>
+            <p className="font-light">{recipe?.cookingTime}</p>
           </div>
           <div className="flex flex-col gap-2 items-center justify-center">
-            <p className="font-bold">Difficulty</p>
-            <p>{recipe?.difficulty}</p>
+            <Zap className="font-medium" />
+            <p className="font-medium">Difficulty</p>
+            <p className="font-light">{recipe?.difficulty}</p>
           </div>
         </div>
       </section>
 
-      <section className="px-6 md:px-20 xl:px-32 bg-cream pt-8 mt-15">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-20 gap-0">
-          <div className="bg-white p-7 mb-15">
+      <section className="px-6 md:px-20 xl:px-32 bg-cream shadow-md shadow-gray-100 pt-8 mt-18">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-20 gap-6">
+          {/* Ingredients Card */}
+          <div className="bg-white p-7 mb-15 rounded-2xl shadow-md transform hover:scale-110 transition duration-300">
             <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
               Ingredients
             </h3>
@@ -199,7 +213,10 @@ export default function RecipeDetail() {
               ))}
             </ul>
           </div>
-          <div className="bg-white p-7 mb-15">
+          
+
+          {/* Instructions Card */}
+          <div className="bg-white p-7 mb-15 rounded-2xl shadow-md transform hover:scale-110 transition duration-300">
             <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
               Instructions
             </h3>
@@ -213,59 +230,62 @@ export default function RecipeDetail() {
           </div>
         </div>
       </section>
+      </section>
 
       <section className="px-6 md:px-20 xl:px-32 mt-8 pb-8">
         <div className="grid sm:grid-cols-4 grid-cols-1 gap-12">
-          <div className="sm:col-span-3 col-span-1 px-7 py-7 rounded-3xl mb-0 md:mb-16">
+          <div className="col-span-1 sm:col-span-3 px-7 py-7 rounded-3xl mb-0 md:mb-16">
             <h3 className="text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
               Nutritions
             </h3>
 
             <div className="grid grid-cols-2 gap-4 mt-4 font-worksans">
-              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-2xl shadow-md">
-                <Flame className="w-6 h-6 text-primary" />
+              <div className="group flex items-center gap-3 text-md md:text-sm lg:text-base bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                <Flame className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 <div>
-                  <span className="text-sm md:text-base lg:text-lg font-bold">
+                  <span className="font-medium">
                     Calories:
                   </span>
-                  <span className="text-sm md:text-base lg:text-lg font-semibold">
+                  <span>
                     {" "}
                     {recipe?.nutrition.calories} kcal
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white border border-light-gray p-4 rounded-2xl shadow-md">
-                <Beef className="w-6 h-6 text-primary" />
+              <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                <Beef className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 <div>
-                  <span className="text-sm md:text-base lg:text-lg font-bold">
+                  <span className="font-medium">
                     Protein:
                   </span>
-                  <span className="text-sm md:text-base lg:text-lg font-semibold">
+                  <span>
                     {" "}
                     {recipe?.nutrition.protein}g
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-2xl shadow-md">
-                <Sprout className="w-6 h-6 text-primary" />
+              <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                <Sprout className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 <div>
-                  <span className="text-sm md:text-base lg:text-lg font-bold">Carbs:</span>
-                  <span className="text-sm md:text-base lg:text-lg font-semibold">
+                  <span className="font-medium">
+                    Carbs:
+                  </span>
+                  <span>
                     {" "}
                     {recipe?.nutrition.carbs}g
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white p-4 border border-light-gray rounded-2xl shadow-md">
-                <Droplet className="w-6 h-6 text-primary" />
+              <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                <Droplet className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 <div>
-                  <span className="text-sm md:text-base lg:text-lg font-bold">
+                  <span className="font-medium">
                     Fat:{" "}
                   </span>
-                  <span className="text-sm md:text-base lg:text-lg font-semibold">
+                  <span>
                     {" "}
                     {recipe?.nutrition.fat}g
                   </span>
@@ -273,7 +293,10 @@ export default function RecipeDetail() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row sm:flex-col items-center justify-center col-span-1 bg-primary rounded-xl sm:rounded-4xl mb-16">
+          <div
+            className="group flex flex-row sm:flex-col items-center justify-center col-span-1 
+                bg-primary rounded-xl sm:rounded-4xl mb-16"
+          >
             <p className="text-2xl sm:text-8xl text-white font-playfair">
               {recipe?.rating}
             </p>

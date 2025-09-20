@@ -7,14 +7,12 @@ import useAuth from "../../../hooks/useAuth";
 
 export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: () => void, isSearchOpen: boolean}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLogOutOpen, setIsLogOutOpen] = useState(false);
   const location = useLocation();
   const { user } = useAuth();
   const navigate = useNavigate();
 
 
   const handleLogOut = async () => {
-    setIsLogOutOpen(false);
     await signOut(auth);
     navigate("/login");
   };
@@ -92,20 +90,17 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
         <div className="flex gap-5 group relative">
           <p
             className="font-bold cursor-pointer text-primary invisible md:visible"
-            onClick={() => setIsLogOutOpen((prev) => !prev)}
           >
             {user.email}
           </p>
             <div
-              className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-white hidden group-hover:block"
+              className="z-1000 absolute text-center py-2 bg-primary text-white rounded-[6px] w-full top-[100%] cursor-pointer hover:text-primary hover:bg-gray-100 hidden group-hover:block"
               onClick={handleLogOut}
             >
               <p className="font-bold">Log out</p>
             </div>
         </div>
       )}
-
-      
 
       {/* Mobile Hamburger */}
       <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
@@ -176,7 +171,6 @@ export default function Header({ toggleSearch, isSearchOpen }: { toggleSearch: (
             <div className="flex flex-col gap-2">
               <p
                 className="font-bold cursor-pointer text-primary"
-                onClick={() => setIsLogOutOpen((prev) => !prev)}
               >
                 {user.email}
               </p>

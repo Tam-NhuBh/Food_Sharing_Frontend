@@ -59,7 +59,7 @@ export default function RatingForm({
                 </h2>
                 {/* it checks if the form is open or not */}
                 {!showForm && (
-                    <Button className="ml-auto shrink-0 text-sm font-playfair rounded-lg py-3 font-bold hover:bg-[#732c4e] transition" onClick={onOpenForm}>
+                    <Button className="ml-auto shrink-0 text-sm font-playfair rounded-lg py-3 font-bold hover:bg-[#732c4e] hover:shadow-lg transition" onClick={onOpenForm}>
                         Write your review
                     </Button>
                 )}
@@ -100,9 +100,9 @@ export default function RatingForm({
                     {ratings.map((r) => (
                         <li
                             key={r.id}
-                            className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm"
+                            className="rounded-xl border border-gray-200 bg-gray-50 p-4 shadow-sm group transition duration-300 hover:bg-gray-100 hover:shadow-lg"
                         >
-                            <div className="mb-1 flex items-center justify-between">
+                            <div className="mb-1 flex items-center justify-between ">
                                 <span className="font-semibold">{r.user}</span>
                                 <span className="text-primary text-lg leading-none">
                                     {"★".repeat(r.rating)}
