@@ -54,18 +54,19 @@ export default function LandingPage() {
         {recipes && (
           <RecipeCardList
             recipes={
-              recipes.slice(0, 3).map((recipe) => {
-                return {
+              [...recipes] // copy array
+                .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0)) // sort by rating (handle null with ??0)
+                .slice(0, 3) // take top 3
+                .map((recipe) => ({
                   id: recipe.id,
                   image: recipe.image,
                   title: recipe.title,
                   description: recipe.description,
                   category: recipe.category,
                   actions: "Read Recipe",
-                };
-              }) as unknown as RecipeCardProps[]
+                })) as unknown as RecipeCardProps[]
             }
-          ></RecipeCardList>
+          />
         )}
       </section>
 

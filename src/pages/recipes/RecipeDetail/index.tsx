@@ -12,6 +12,7 @@ import {
   Users,
   Clock,
   Zap,
+  Star,
 } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 import useAuth from "../../../hooks/useAuth";
@@ -93,7 +94,7 @@ export default function RecipeDetail() {
     const newItem: Rating = {
       id: Date.now(),
       recipeId,
-      userId: 0, // demo for gueest typing
+      userId: 0, 
       user: user?.email ? user.email : "Guest User",
       rating: stars,
       comment: clean,
@@ -138,7 +139,7 @@ export default function RecipeDetail() {
         </div>
 
         {/* author */}
-        <p className="mt-3 mb-6 flex items-center gap-2 text-gray">
+        <p className="mt-3 mb-3 flex items-center gap-2 text-gray">
           <ChefHat className="text-sm md:text-base text-primary" />
           <span className="text-sm md:text-base font-worksans italic">
             {recipe?.author}
@@ -184,144 +185,138 @@ export default function RecipeDetail() {
       </section>
       {/* serves, prep time, difficulty */}
       <section className="bg-cream">
-      <section className="relative w-full mx-auto overflow-visible mt-3 bg-cream">
-        <img
-          src={recipe?.image}
-          alt={recipe?.title}
-          className="w-full sm:h-90 md:h-140 object-cover"
-        />
-        <div className="flex justify-center gap-12 md:gap-15 xl:gap-35 font-worksans font-medium text-md md:text-sm lg:text-base absolute bottom-0 left-1/2 px-5 md:px-8  py-3 md:py-5 w-[95%] sm:w-[80%] md:w-[70%] xl:w-[50%] bg-primary text-white rounded-3xl mb-4 -translate-x-1/2 translate-y-1/2">
-          <div className="flex flex-col items-center gap-2 justify-center">
-            <Users className="font-medium" />
-            <p className="font-medium ">Serves</p>
-            <p className="font-light">{recipe?.servings} servings</p>
+        <section className="relative w-full mx-auto overflow-visible mt-3 bg-cream">
+          <img
+            src={recipe?.image}
+            alt={recipe?.title}
+            className="w-full sm:h-90 md:h-140 object-cover"
+          />
+          <div className="flex justify-center gap-12 md:gap-15 xl:gap-35 font-worksans font-medium text-md md:text-sm lg:text-base absolute bottom-0 left-1/2 px-5 md:px-8  py-3 md:py-5 w-[95%] sm:w-[80%] md:w-[70%] xl:w-[50%] bg-primary text-white rounded-3xl mb-4 -translate-x-1/2 translate-y-1/2">
+            <div className="flex flex-col items-center gap-2 justify-center">
+              <Users className="font-medium" />
+              <p className="font-medium ">Serves</p>
+              <p className="font-light">{recipe?.servings} servings</p>
+            </div>
+            <div className="flex flex-col items-center gap-2 justify-center">
+              <Clock className="font-medium" />
+              <p className="font-medium">Prep Time</p>
+              <p className="font-light">{recipe?.cookingTime}</p>
+            </div>
+            <div className="flex flex-col gap-2 items-center justify-center">
+              <Zap className="font-medium" />
+              <p className="font-medium">Difficulty</p>
+              <p className="font-light">{recipe?.difficulty}</p>
+            </div>
           </div>
-          <div className="flex flex-col items-center gap-2 justify-center">
-            <Clock className="font-medium" />
-            <p className="font-medium">Prep Time</p>
-            <p className="font-light">{recipe?.cookingTime}</p>
+        </section>
+
+        <section className="px-6 md:px-20 xl:px-32 bg-cream shadow-md shadow-gray-100 pt-8 mt-18">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-20 gap-6">
+            {/* Ingredients Card */}
+            <div className="bg-white p-7 mb-15 rounded-2xl shadow-md transform hover:scale-110 transition duration-300">
+              <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
+                Ingredients
+              </h3>
+              <ul className="list-disc list-inside mt-2">
+                {recipe?.ingredients.map((ingredient, index) => (
+                  <li key={index} className="font-worksans text-black">
+                    <span className="font-semibold text-primary">
+                      {ingredient.amount} {ingredient.unit.toLowerCase()}{" "}
+                    </span>
+                    {ingredient.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Instructions Card */}
+            <div className="bg-white p-7 mb-15 rounded-2xl shadow-md transform hover:scale-110 transition duration-300">
+              <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
+                Instructions
+              </h3>
+              <ul className="list-decimal list-inside mt-2">
+                {recipe?.steps.map((step, index) => (
+                  <li key={index} className="font-worksans text-black">
+                    {step}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <Zap className="font-medium" />
-            <p className="font-medium">Difficulty</p>
-            <p className="font-light">{recipe?.difficulty}</p>
-          </div>
-        </div>
+        </section>
       </section>
 
-      <section className="px-6 md:px-20 xl:px-32 bg-cream shadow-md shadow-gray-100 pt-8 mt-18">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-20 gap-6">
-          {/* Ingredients Card */}
-          <div className="bg-white p-7 mb-15 rounded-2xl shadow-md transform hover:scale-110 transition duration-300">
-            <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
-              Ingredients
-            </h3>
-            <ul className="list-disc list-inside mt-2">
-              {recipe?.ingredients.map((ingredient, index) => (
-                <li key={index} className="font-worksans text-black">
-                  <span className="font-semibold text-primary">
-                    {ingredient.amount} {ingredient.unit.toLowerCase()}{" "}
-                  </span>
-                  {ingredient.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-          
+      {recipe?.nutrition &&
+        (recipe.nutrition.calories !== null ||
+          recipe.nutrition.protein !== null ||
+          recipe.nutrition.carbs !== null ||
+          recipe.nutrition.fat !== null) && (
+          <section className="px-6 md:px-20 xl:px-32 mt-8">
+            <div className="w-full gap-20 mb-6">
+              <div className="sm:col-span-3 col-span-1 mb-0 md:mb-16">
+                <h3 className="text-2xl md:text-xl font-playfair font-bold text-black mb-4">
+                  Nutritions
+                </h3>
 
-          {/* Instructions Card */}
-          <div className="bg-white p-7 mb-15 rounded-2xl shadow-md transform hover:scale-110 transition duration-300">
-            <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
-              Instructions
-            </h3>
-            <ul className="list-decimal list-inside mt-2">
-              {recipe?.steps.map((step, index) => (
-                <li key={index} className="font-worksans text-black">
-                  {step}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-      </section>
+                <div className="grid grid-cols-2 gap-4 mt-4 font-worksans">
+                  {recipe.nutrition.calories !== null && (
+                    <div className="group flex items-center gap-3 text-md md:text-sm lg:text-base bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                      <Flame className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                      <div>
+                        <span className="font-medium">Calories:</span>
+                        <span> {recipe.nutrition.calories} kcal</span>
+                      </div>
+                    </div>
+                  )}
 
-      <section className="px-6 md:px-20 xl:px-32 mt-8 pb-8">
-        <div className="w-full gap-20">
-          <div className="sm:col-span-3 col-span-1 bg-light-gray px-4 py-7 mb-0 md:mb-16">
-            <h3 className="text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
-              Nutritions
-            </h3>
+                  {recipe.nutrition.protein !== null && (
+                    <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                      <Beef className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                      <div>
+                        <span className="font-medium">Protein:</span>
+                        <span> {recipe.nutrition.protein} g</span>
+                      </div>
+                    </div>
+                  )}
 
-            <div className="grid grid-cols-2 gap-4 mt-4 font-worksans">
-              <div className="group flex items-center gap-3 text-md md:text-sm lg:text-base bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
-                <Flame className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
-                <div>
-                  <span className="font-medium">
-                    Calories:
-                  </span>
-                  <span>
-                    {" "}
-                    {recipe?.nutrition ? recipe?.nutrition.calories : "0"} kcal
-                  </span>
-                </div>
-              </div>
+                  {recipe.nutrition.carbs !== null && (
+                    <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                      <Sprout className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                      <div>
+                        <span className="font-medium">Carbs:</span>
+                        <span> {recipe.nutrition.carbs} g</span>
+                      </div>
+                    </div>
+                  )}
 
-              <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
-                <Beef className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
-                <div>
-                  <span className="font-medium">
-                    Protein:
-                  </span>
-                  <span>
-                    {" "}
-                    {recipe?.nutrition ? recipe?.nutrition.protein : "0"}g
-                  </span>
-                </div>
-              </div>
-
-              <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
-                <Sprout className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
-                <div>
-                  <span className="font-medium">
-                    Carbs:
-                  </span>
-                  <span>
-                    {" "}
-                    {recipe?.nutrition ? recipe?.nutrition.carbs : "0"}g
-                  </span>
-                </div>
-              </div>
-
-              <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
-                <Droplet className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
-                <div>
-                  <span className="font-medium">
-                    Fat:{" "}
-                  </span>
-                  <span>
-                    {" "}
-                    {recipe?.nutrition ? recipe?.nutrition.fat : "0"}g
-                  </span>
+                  {recipe.nutrition.fat !== null && (
+                    <div className="group flex items-center gap-3 bg-light-primary p-4 rounded-2xl shadow-md hover:shadow-xl hover:bg-primary hover:text-white transition-all duration-300">
+                      <Droplet className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                      <div>
+                        <span className="font-medium">Fat:</span>
+                        <span> {recipe.nutrition.fat} g</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="px-0 pb-8">
-          <RatingForm
-            ratings={allRatings}
-            showForm={showForm}
-            stars={stars}
-            comment={comment}
-            onOpenForm={openForm}
-            onCancel={cancelForm}
-            onStarsChange={setStars}
-            onCommentChange={setComment}
-            onSubmit={handleSubmit}
-          />
-        </div>
-      </section>
+
+            <div className="px-0 pb-8">
+              <RatingForm
+                ratings={allRatings}
+                showForm={showForm}
+                stars={stars}
+                comment={comment}
+                onOpenForm={openForm}
+                onCancel={cancelForm}
+                onStarsChange={setStars}
+                onCommentChange={setComment}
+                onSubmit={handleSubmit}
+              />
+            </div>
+          </section>
+        )}
     </div>
   );
 }

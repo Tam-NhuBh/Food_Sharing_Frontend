@@ -6,9 +6,11 @@ import TextArea from "../../../components/TextArea";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Category } from "../../../types";
+import useAuth from "../../../hooks/useAuth";
 
 export default function AddRecipe() {
   const navigate = useNavigate();
+  const user = useAuth();
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [recipeName, setRecipeName] = useState("");
   const [category, setCategory] = useState("");
@@ -21,6 +23,13 @@ export default function AddRecipe() {
   const [ingredients, setIngredients] = useState([
     { amount: "", unit: "", name: "" },
   ]);
+  const [nutrition, setNutrition] = useState({
+    calories: "",
+    protein: "",
+    carbs: "",
+    fat: "",
+  });
+
   const [directions, setDirections] = useState([{ step: "" }]);
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState("");
@@ -161,11 +170,18 @@ export default function AddRecipe() {
 
     // difficulty
     if (!difficulty) {
-      newErrors.difficulty = 'Recipe difficulty is required.'
+      newErrors.difficulty = "Recipe difficulty is required.";
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+  };
+
+  const updateNutrition = (field: keyof typeof nutrition, value: string) => {
+    if (/^\d*$/.test(value)) {
+      // allow only numbers
+      setNutrition({ ...nutrition, [field]: value });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -181,6 +197,7 @@ export default function AddRecipe() {
       image: imagePreview,
       title: recipeName,
       authorId: 1,
+      author: user.user?.email || "N/A",
       description: intro,
       longDescription: description,
       cookingTime: `${duration} minutes`,
@@ -194,6 +211,12 @@ export default function AddRecipe() {
       })),
       steps: directions.map((dir) => dir.step),
       tags: tags,
+      nutrition: {
+        calories: nutrition.calories ? Number(nutrition.calories) : null,
+        protein: nutrition.protein ? Number(nutrition.protein) : null,
+        carbs: nutrition.carbs ? Number(nutrition.carbs) : null,
+        fat: nutrition.fat ? Number(nutrition.fat) : null,
+      },
       rating: 0,
       totalRatings: 0,
       viewCount: 0,
@@ -209,7 +232,7 @@ export default function AddRecipe() {
     await fetch("/api/recipes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newRecipe)
+      body: JSON.stringify(newRecipe),
     });
     setShowSuccess(true);
     setTimeout(() => {
@@ -383,6 +406,29 @@ export default function AddRecipe() {
                 />
               </div>
 
+              <div>
+                <label className="font-medium text-sm sm:text-md text-black">
+                  Recipe Difficulty
+                </label>
+                <select
+                  value={difficulty}
+                  onChange={(e) => setDifficulty(e.target.value)}
+                  className={`w-full px-3 py-2 border rounded-lg ${
+                    errors.difficulty ? "border-red-500" : "border-[#B3B3B3]"
+                  }`}
+                >
+                  <option value="">Select Difficulty</option>
+                  {["Easy", "Medium", "Hard"].map((dif, index) => (
+                    <option key={index} value={dif}>
+                      {dif.toUpperCase()}
+                    </option>
+                  ))}
+                </select>
+                {errors.difficulty && (
+                  <p className="text-xs text-red-500">{errors.difficulty}</p>
+                )}
+              </div>
+
               <TextArea
                 id="recipe-intro"
                 label="Recipe Introduction"
@@ -510,6 +556,43 @@ export default function AddRecipe() {
               </div>
             </div>
 
+            {/* Nutritions */}
+            <div className="bg-form p-6 rounded-lg shadow-sm">
+              <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
+                Nutritions
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Input
+                  id="calories"
+                  type="number"
+                  label="Calories (kcal)"
+                  value={nutrition.calories}
+                  onChange={(e) => updateNutrition("calories", e.target.value)}
+                />
+                <Input
+                  id="protein"
+                  type="number"
+                  label="Protein (g)"
+                  value={nutrition.protein}
+                  onChange={(e) => updateNutrition("protein", e.target.value)}
+                />
+                <Input
+                  id="carbs"
+                  type="number"
+                  label="Carbs (g)"
+                  value={nutrition.carbs}
+                  onChange={(e) => updateNutrition("carbs", e.target.value)}
+                />
+                <Input
+                  id="fat"
+                  type="number"
+                  label="Fat (g)"
+                  value={nutrition.fat}
+                  onChange={(e) => updateNutrition("fat", e.target.value)}
+                />
+              </div>
+            </div>
+
             {/* Tags */}
             <div className="bg-form p-6 rounded-lg shadow-sm">
               <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
@@ -551,29 +634,6 @@ export default function AddRecipe() {
                   </span>
                 ))}
               </div>
-            </div>
-            {/* Difficulty */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
-                Recipe Difficulty
-              </h2>
-              <select
-                value={difficulty}
-                onChange={(e) => setDifficulty(e.target.value)}
-                className={`w-full px-3 py-2 border rounded-lg ${
-                  errors.difficulty ? "border-red-500" : "border-[#B3B3B3]"
-                }`}
-              >
-                <option value="">Select Difficulty</option>
-                {["Easy", "Medium", "Hard"].map((dif, index) => (
-                  <option key={index} value={dif}>
-                    {dif.toUpperCase()}
-                  </option>
-                ))}
-              </select>
-              {errors.difficulty && (
-                <p className="text-xs text-red-500">{errors.difficulty}</p>
-              )}
             </div>
           </section>
 
