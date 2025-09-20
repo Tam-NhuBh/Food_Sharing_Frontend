@@ -219,7 +219,7 @@ export default function AddRecipe() {
   };
 
   return (
-    <div className="font-worksans flex flex-col gap-8 bg-light-gray min-h-screen">
+    <div className="font-worksans flex flex-col gap-8 bg-white text-black min-h-screen">
       {/* Hero */}
       <section className="relative flex items-center justify-start px-10 md:px-20 py-16 min-h-[20px] sm:min-h-[200px] w-[100dvw]">
         <img
@@ -255,7 +255,7 @@ export default function AddRecipe() {
               <h3 className="text-lg font-playfair font-semibold">
                 Your Recipe Successfully Created!
               </h3>
-              <p className="font-worksans text-gray-600 text-sm">
+              <p className="font-worksans text-gray text-sm">
                 Redirecting to recipes...
               </p>
             </div>
@@ -264,13 +264,13 @@ export default function AddRecipe() {
       </AnimatePresence>
 
       {/* Form */}
-      <section className="px-6 md:px-20 xl:px-32">
+      <section className="px-6 md:px-20 xl:px-3">
         <form
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 rounded-lg"
         >
           {/* General Info */}
-          <section className="bg-white p-6 rounded-lg shadow-sm">
+          <section className="bg-form p-6 rounded-lg shadow-sm">
             <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
               Recipe General Information
             </h2>
@@ -403,7 +403,7 @@ export default function AddRecipe() {
           {/* Right side: Recipe Detail */}
           <section className="flex flex-col gap-6">
             {/* Ingredients */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="bg-form p-6 rounded-lg shadow-sm">
               <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
                 Ingredients
               </h2>
@@ -472,7 +472,7 @@ export default function AddRecipe() {
             </div>
 
             {/* Directions */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="bg-form p-6 rounded-lg shadow-sm">
               <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
                 Directions
               </h2>
@@ -511,7 +511,7 @@ export default function AddRecipe() {
             </div>
 
             {/* Tags */}
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="bg-form p-6 rounded-lg shadow-sm">
               <h2 className="md:text-2xl text-lg font-semibold font-playfair mb-5">
                 Tags
               </h2>
