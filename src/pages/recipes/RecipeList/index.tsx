@@ -6,12 +6,15 @@ import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import CategoryFilter from "../../../components/CategoryFilter";
 import CategoryMultiSelectFilter from "../../../components/CategoryMultiSelectFilter";
+import { useFavouriteList } from "../../../hooks/useFavourite";
 
 export default function RecipeList() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [categories, setCategroies] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedFilters, setSelectedFilters] = useState<number[]>([]);
+  const { favId } = useFavouriteList();
+
 
   useEffect(() => {
     fetch("/api/recipes")
@@ -25,17 +28,33 @@ export default function RecipeList() {
 
   // console.log("selectedchange on recipe comp:", fetch("api/categories"))
 
-  const filteredRecipes =
-    selectedCategory === "all"
-      ? recipes
-      : recipes.filter((r) => String(r.categoryId) === selectedCategory);
+  const filteredRecipes = (() => {
+    if (selectedCategory === "all") {
+      return recipes;
+    } else if (selectedCategory === "fav") {
+      return recipes.filter((r) => favId.includes(String(r.id)));
+    } else {
+      return recipes.filter((r) => String(r.categoryId) === selectedCategory);
+    }
+  })();
 
   // console.log("selectedchange on recipe comp:", filteredRecipes)
 
   const multiFilteredRecipes =
     selectedFilters.length === 0
-      ? filteredRecipes // ✅ apply multi-select AFTER tab filtering
+      ? filteredRecipes
       : filteredRecipes.filter((r) => selectedFilters.includes(r.categoryId));
+
+  const getDisplayTitle = () => {
+    if (selectedCategory === "fav") {
+      return "My Favourite Recipes";
+    } else if (selectedCategory === "all") {
+      return "Recipe List";
+    } else {
+      const category = categories.find(cat => String(cat.id) === selectedCategory);
+      return category ? `${category.name} Recipes` : "Recipe List";
+    }
+  };
 
   return (
     <div className="font-worksans flex flex-col min-h-screen w-full">
@@ -94,16 +113,31 @@ export default function RecipeList() {
       <section className="px-6 md:px-20 xl:px-32 py-8">
         <div className="flex flex-row justify-between items-center mb-5">
           <h2 className="text-black md:text-2xl text-lg font-bold font-playfair">
-            Recipe List
+            {/* Recipe List */}
+            {getDisplayTitle()}
           </h2>
-          <CategoryMultiSelectFilter
-            categories={categories}
-            selected={selectedFilters.map(String)} // convert number[] -> string[]
-            onChange={(vals) => setSelectedFilters(vals.map(Number))}
-          />
-        </div>
+          {selectedCategory !== "fav" && (
 
-        {multiFilteredRecipes.length > 0 ? (
+            <CategoryMultiSelectFilter
+              categories={categories}
+              selected={selectedFilters.map(String)} // convert number[] -> string[]
+              onChange={(vals) => setSelectedFilters(vals.map(Number))}
+            />
+          )}
+        </div>
+        {selectedCategory === "fav" && multiFilteredRecipes.length === 0 ? (
+          <div className="text-center py-3 flex flex-col items-center gap-4">
+            <p className="text-center text-black font-medium"> No favourite recipes yet.</p>
+            <p className="text-gray-500 text-sm">
+              Click the heart icon on any recipe to save it here.
+            </p>
+            <Link to="/">
+              <button className="text-sm md:text-md bg-primary font-worksans uppercase text-white px-6 py-2 rounded-full font-semibold hover:bg-[#732c4e] transition">
+                Back to home
+              </button>
+            </Link>
+          </div>
+        ) : multiFilteredRecipes.length > 0 ? (
           <RecipeCardList
             recipes={
               multiFilteredRecipes.map((recipe) => {
@@ -118,9 +152,9 @@ export default function RecipeList() {
                 };
               }) as unknown as RecipeCardProps[]
             }
-          ></RecipeCardList>
+          />
         ) : (
-          <p className="text-black font-medium">No recipes found.</p>
+          <p className="text-center py-10 text-black font-medium">No recipes found.</p>
         )}
       </section>
     </div>
