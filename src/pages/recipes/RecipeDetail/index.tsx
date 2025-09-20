@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import type { Rating, Recipe } from "../../../types";
 //import Button from "../../../components/Button";
-import { Beef, Droplet, Flame, Heart, Leaf } from "lucide-react";
+import { Beef, Droplet, Flame, Heart, Leaf, Star } from "lucide-react";
 import RatingForm from "../../../components/RatingForm";
 import useAuth from "../../../hooks/useAuth";
 import { ChefHat } from "lucide-react";
@@ -39,7 +39,7 @@ export default function RecipeDetail() {
       .then((res) => res.json())
       .then((res) => {
         setRecipe(res as Recipe);
-        console.log(res)
+        console.log(res);
       });
   }, [id]);
 
@@ -101,7 +101,7 @@ export default function RecipeDetail() {
   // Toggle favorite
   const handleFavToggle = () => {
     if (!canUse) {
-      navigate('/login');
+      navigate("/login");
       return;
     }
     toggleFav();
@@ -109,9 +109,6 @@ export default function RecipeDetail() {
 
   return (
     <div className="font-worksans w-full">
-      {/* Search Bar */}
-      {/* <SearchBar /> */}
-
       {/* Recipe Part */}
       <section className="px-6 md:px-20 xl:px-32 bg-white pt-8">
         <p className="mb-2 text-sm md:text-base font-playfair font-bold text-black">
@@ -132,12 +129,25 @@ export default function RecipeDetail() {
         </div>
 
         {/* author */}
-        <p className="mt-3 mb-6 flex items-center gap-2 text-gray-700">
+        <p className="mt-3 mb-3 flex items-center gap-2 text-gray-700">
           <ChefHat className="w-5 h-5 md:w-6 md:h-6 text-primary" />
           <span className="text-sm md:text-base font-worksans italic">
             {recipe?.author}
           </span>
         </p>
+
+        <div className="mb-3 flex flex-row space-x-1">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <Star
+              key={index}
+              className={`w-5 h-5 sm:w-7 sm:h-7 ${
+                index < Math.round(recipe?.rating ?? 0)
+                  ? "text-amber-300 fill-current"
+                  : "text-gray-300"
+              }`}
+            />
+          ))}
+        </div>
 
         {/* description */}
         <p className="text-sm md:text-base text-gray-800 max-w-3xl">
@@ -216,9 +226,9 @@ export default function RecipeDetail() {
       </section>
 
       <section className="px-6 md:px-20 xl:px-32 mt-8 pb-8">
-        <div className="grid sm:grid-cols-4 grid-cols-1 gap-20">
+        <div className="w-full gap-20">
           <div className="sm:col-span-3 col-span-1 bg-light-gray px-4 py-7 mb-0 md:mb-16">
-            <h3 className="text-center font-playfair font-semibold md:text-2xl text-lg mb-4">
+            <h3 className="text-left font-playfair font-semibold md:text-2xl text-lg mb-4">
               Nutritions
             </h3>
 
@@ -279,14 +289,14 @@ export default function RecipeDetail() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row sm:flex-col items-center justify-center col-span-1 bg-primary rounded-xl sm:rounded-4xl mb-16">
+          {/* <div className="flex flex-row sm:flex-col items-center justify-center col-span-1 bg-primary rounded-xl sm:rounded-4xl mb-16">
             <p className="text-2xl sm:text-8xl text-white font-playfair">
               {recipe?.rating}
             </p>
             <p className="ml-2 sm:ml-0 text-2xl text-white py-6 font-playfair">
               Rating
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="px-0 pb-8">
           <RatingForm
