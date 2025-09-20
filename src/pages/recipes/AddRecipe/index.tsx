@@ -161,7 +161,7 @@ export default function AddRecipe() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
 
@@ -198,7 +198,11 @@ export default function AddRecipe() {
     localStorage.setItem("recipes", JSON.stringify(storedRecipes));
 
     console.log("✅ Recipe Created:", newRecipe);
-
+    await fetch("/api/recipes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newRecipe)
+    });
     setShowSuccess(true);
     setTimeout(() => {
       setShowSuccess(false);

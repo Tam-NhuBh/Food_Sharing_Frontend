@@ -39,6 +39,7 @@ export default function RecipeDetail() {
       .then((res) => res.json())
       .then((res) => {
         setRecipe(res as Recipe);
+        console.log(res)
       });
   }, [id]);
 
