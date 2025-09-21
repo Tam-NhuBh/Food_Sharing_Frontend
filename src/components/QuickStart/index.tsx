@@ -4,11 +4,11 @@ import { quickStats } from "../../constants";
 export default function QuickStats() {
   return (
     <div className="text-black  max-w-4xl mx-auto">
-      <div className="mb-6 text-center">
+      <div className="text-center">
         <h2 className="font-playfair font-extrabold text-primary text-3xl md:text-4xl">
           Quick starts
         </h2>
-        <p className="mt-2 text-light-gray max-w-xl mx-auto">
+        <p className="mt-2 mb-4 text-gray max-w-xl mx-auto">
           Follow these essentials and begin your cooking journey today.
         </p>
       </div>
