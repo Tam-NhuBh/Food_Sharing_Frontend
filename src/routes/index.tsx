@@ -14,7 +14,7 @@ import { useRoutes, type RouteObject } from "react-router-dom";
 import App from "../App";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import RecipeLayout from "../pages/recipes/RecipeLayout";
+//import RecipeLayout from "../pages/recipes/RecipeLayout";
 
 const routes: RouteObject[] = [
   {
@@ -29,37 +29,24 @@ const routes: RouteObject[] = [
         path: "about",
         element: <About />,
       },
-      // {
-      //   path: 'recipes',
-      //   element: <RecipeLayout />,
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <RecipeList />,
-      //     },
-      //     {
-      //       path: 'add',
-      //       element: <AddRecipe />,
-      //     },
-      //     {
-      //       path: ':id',
-      //       element: <RecipeDetail/>,
-      //     },
-      //   ]
-      // },
       {
-        path: "recipes",
-        element: <RecipeList />,
+        path: 'recipes',
+        //element: <RecipeLayout />,
+        children: [
+          {
+            index: true,
+            element: <RecipeList />,
+          },
+          {
+            path: 'add',
+            element: <AddRecipe />,
+          },
+          {
+            path: ':id',
+            element: <RecipeDetail/>,
+          },
+        ]
       },
-      {
-        path: "recipes/add",
-        element: <AddRecipe />,
-      },
-      {
-        path: "recipes/:id",
-        element: <RecipeDetail />,
-      },
-
       {
         path: "sign-up",
         element: <SignUp />,
