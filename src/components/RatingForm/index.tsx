@@ -30,9 +30,8 @@ function StarPicker({
           key={n}
           type="button"
           onClick={() => onChange(n)}
-          className={`text-2xl leading-none ${
-            n <= value ? "text-primary" : "text-gray-300"
-          }`}
+          className={`text-2xl leading-none ${n <= value ? "text-primary" : "text-gray-300"
+            }`}
           aria-label={`rate ${n}`}
         >
           ★
@@ -62,7 +61,7 @@ export default function RatingForm({
           Review <span className="text-primary">Rating</span>
         </h2>
         {/* it checks if the form is open or not */}
-        {!showForm && (
+        {user && !showForm && (
           <Button
             className="ml-auto shrink-0 text-sm font-playfair rounded-lg py-3 font-bold hover:bg-[#732c4e] hover:shadow-lg transition"
             onClick={onOpenForm}
@@ -73,7 +72,7 @@ export default function RatingForm({
       </div>
 
       {/* Inline form */}
-      {showForm && (
+      {user && showForm && (
         <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm overflow-hidden">
           <div className="flex flex-row justify-between mb-4">
             <p className="font-bold text-[1.1rem]">
