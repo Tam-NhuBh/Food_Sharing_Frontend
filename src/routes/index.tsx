@@ -10,10 +10,10 @@ const RecipeDetail = lazy(() => import("../pages/recipes/RecipeDetail"));
 // const Login = lazy(() => import('../pages/Login'));
 const NotFound = lazy(() => import("../pages/NotFound"));
 import { useRoutes, type RouteObject } from "react-router-dom";
-//import ProtectedRoute from './protected-route';
 import App from "../App";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
+import ProtectedRoute from "./protected-route";
 //import RecipeLayout from "../pages/recipes/RecipeLayout";
 
 const routes: RouteObject[] = [
@@ -39,7 +39,11 @@ const routes: RouteObject[] = [
           },
           {
             path: 'add',
-            element: <AddRecipe />,
+            element: (
+              <ProtectedRoute>
+                <AddRecipe />
+              </ProtectedRoute>
+            ),
           },
           {
             path: ':id',
