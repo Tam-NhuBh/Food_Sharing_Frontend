@@ -31,17 +31,18 @@ export default function LandingPage() {
 
         <div className="absolute inset-0 bg-white/10 z-12"></div>
         {/* Content (aligned right) */}
-        <div className="sm:pl-40 font-worksans w-full md:w-1/2 text-right sm:text-left relative z-10">
+        <div className="sm:pl-40 font-worksans w-full md:w-1/2 text-right sm:text-left relative z-15">
           <h2 className="text-2xl md:text-4xl font-lobster text-primary mb-4">
             Nom Nom
           </h2>
           <p className="text-lg md:text-2xl text-black sm:text-white font-semibold mb-6">
             Find recipes you’ll love, <br /> with the ease you need.
           </p>
-          <Link to="/recipes">
-            <button className="text-md md:text-xl bg-primary font-worksans uppercase text-white px-6 py-3 rounded-full font-semibold hover:bg-[#732c4e] transition">
-              Explore
-            </button>
+          <Link
+            to="/recipes"
+            className="text-md md:text-xl bg-primary font-worksans uppercase text-white px-6 py-3 rounded-full font-semibold hover:bg-[#732c4e] transition inline-block text-center"
+          >
+            Explore
           </Link>
         </div>
       </section>
