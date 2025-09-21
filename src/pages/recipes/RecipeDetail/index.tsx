@@ -180,7 +180,7 @@ export default function RecipeDetail() {
           <div className="flex flex-col items-center gap-2 justify-center">
             <Users className="font-medium" />
             <p className="font-medium ">Serves</p>
-            <p className="font-light">{recipe?.servings} servings</p>
+            <p className="font-light">{recipe?.servings} serving(s)</p>
           </div>
           <div className="flex flex-col items-center gap-2 justify-center">
             <Clock className="font-medium" />
