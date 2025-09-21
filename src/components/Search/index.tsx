@@ -5,6 +5,7 @@ import type { Recipe } from "../../types";
 import { useNavigate } from "react-router-dom";
 import { useDebounce } from "../../hooks/useDebounce";
 import { Search } from "lucide-react";
+import { useTheme } from "../../contexts/ThemeContext";
 
 
 interface SearchBarProps {
@@ -18,6 +19,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const navigate = useNavigate();
   
+  const theme = useTheme();
   useEffect(() => {
     if (debouncedQuery.length > 0) {
       fetch(
@@ -42,7 +44,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search recipes..."
-          className="w-full placeholder-gray-400 bg-white border-0 py-3 pl-13 pr-[130px]"
+          className={`w-full placeholder-gray-400 bg-white border-0 py-3 pl-13 pr-[130px] ${theme.theme === 'dark' ? 'text-[white]' : ''}`}
           onBlur={() => setQuery("")}
         />
         <Search
