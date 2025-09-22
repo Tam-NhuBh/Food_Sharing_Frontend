@@ -74,7 +74,7 @@ export default function RatingForm({
                 onOpenForm();
               }
             }}
-          loading>
+          >
             Write your review
           </Button>
         )}
