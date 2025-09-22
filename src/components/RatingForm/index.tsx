@@ -1,6 +1,7 @@
 import Button from "../Button";
 import type { Rating } from "../../types";
 import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   ratings: Rating[];
@@ -30,8 +31,9 @@ function StarPicker({
           key={n}
           type="button"
           onClick={() => onChange(n)}
-          className={`text-2xl leading-none ${n <= value ? "text-primary" : "text-gray-300"
-            }`}
+          className={`text-2xl leading-none ${
+            n <= value ? "text-primary" : "text-gray-300"
+          }`}
           aria-label={`rate ${n}`}
         >
           ★
@@ -54,6 +56,7 @@ export default function RatingForm({
   onSubmit,
 }: Props) {
   const { user } = useAuth();
+  const navigate = useNavigate();
   return (
     <div>
       <div className="mb-4 flex items-center p-0">
@@ -61,10 +64,16 @@ export default function RatingForm({
           Review <span className="text-primary">Rating</span>
         </h2>
         {/* it checks if the form is open or not */}
-        {user && !showForm && (
+        {!showForm && (
           <Button
             className="ml-auto shrink-0 text-sm font-playfair rounded-lg py-3 font-bold hover:bg-[#732c4e] hover:shadow-lg transition"
-            onClick={onOpenForm}
+            onClick={() => {
+              if (!user) {
+                navigate("/login");
+              } else {
+                onOpenForm();
+              }
+            }}
           >
             Write your review
           </Button>
@@ -75,9 +84,7 @@ export default function RatingForm({
       {user && showForm && (
         <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm overflow-hidden">
           <div className="flex flex-row justify-between mb-4">
-            <p className="font-bold text-[1.1rem]">
-              {user?.email ? user.email : "Guest User"}
-            </p>
+            <p className="font-bold text-[1.1rem]">{user.email}</p>
             <StarPicker value={stars} onChange={onStarsChange} />
           </div>
 
