@@ -32,8 +32,10 @@ A modern web application for browsing, searching, and rating recipes. Built with
 
 ## Project setup
 
+```
 git clone https://github.com/NomNomNAB/NomNom_frontend.git
 cd NomNom_frontend
+```
 
 ### Install dependencies
 
@@ -48,15 +50,18 @@ cd NomNom_frontend
 - Add a new Web App and copy the Firebase config.
 - Create a .env file in the root project:
 
+```
 VITE_FIREBASE_API_KEY=your_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
+```
 
 - Initialize Firebase in your project (e.g. src/firebase.ts):
 
+```
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
@@ -71,6 +76,7 @@ appId: import.meta.env.VITE_FIREBASE_APP_ID,
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+```
 
 ### Deployment on Vercel
 
@@ -95,19 +101,21 @@ Run unit tests with Jest + React Testing Library:
 
 ## Project Structure
 
+```
 src/
-├── components/ # Reusable UI components (Button, Card, etc.)
-├── pages/ # Main app pages (LandingPage, RecipeList, RecipeDetail)
-├── context/ # Global contexts (AuthContext)
-├── contexts/ # Theme contexts
-├── firebase/ # Firebase config & auth setup
-├── hooks/ # Custom React hooks
-├── mirage/ # Mock data
-├── App.tsx # Root component
-├── app.css # Global app-level styles
-├── index.css # Tailwind base styles and resets
-├── main.tsx # Entry point, renders <App /> to the DOM
-├── types.ts # TypeScript type definitions
+├── components/   # Reusable UI components (Button, Card, etc.)
+├── pages/        # Main app pages (LandingPage, RecipeList, RecipeDetail)
+├── context/      # Global contexts (AuthContext)
+├── contexts/     # Theme contexts
+├── firebase/     # Firebase config & auth setup
+├── hooks/        # Custom React hooks
+├── mirage/       # Mock data
+├── App.tsx       # Root component
+├── app.css       # Global app-level styles
+├── index.css     # Tailwind base styles and resets
+├── main.tsx      # Entry point, renders <App /> to the DOM
+├── types.ts      # TypeScript type definitions
+```
 
 ## Authentication Flow
 
@@ -118,20 +126,24 @@ src/
 ## Contributing
 
 1. **Fork the repository**
+- Click the **Fork** button in the top right corner of this repository.
+- This will create a copy of the repository under your GitHub account.
 
-   - Click the **Fork** button in the top right corner of this repository.
-   - This will create a copy of the repository under your GitHub account.
+3. **Clone your fork locally**  
+```
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+```
+   
+5. **Set up the upstream remote (to keep your fork updated with the original repo)**
 
-2. **Clone your fork locally**  
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
-3. **Set up the upstream remote (to keep your fork updated with the original repo)**
-
+```
 git remote add upstream https://github.com/<original-owner>/<repo-name>.git
 git fetch upstream
+```
 
 4. **Create a new branch (always work on a feature branch, not main)**
-   git checkout -b feature/amazing-feature
+`git checkout -b feature/amazing-feature`
 
 5. **Make your changes**
 
@@ -141,12 +153,14 @@ git fetch upstream
 
 6. **Commit your changes**
 
+```
 git add .
 git commit -m "Add amazing feature: short but descriptive message"
+```
 
 7. **Push to your fork**
 
-git push origin feature/amazing-feature
+`git push origin feature/amazing-feature`
 
 8. **Open a Pull Request (PR)**
 
