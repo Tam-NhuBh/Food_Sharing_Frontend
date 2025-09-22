@@ -1,4 +1,4 @@
-# NomNom_Frontend
+# Food_Sharing_Frontend
 
 A modern web application for browsing, searching, and rating recipes. Built with **React**, **TypeScript**, and **Tailwind CSS**.
 
