@@ -636,7 +636,7 @@
       "id": 7,
       "categoryId": 1,
       "categoryType": "BEVERAGES",
-      "image": "iced-tea.png",
+      "image": "/iced-tea.png",
       "title": "Vietnamese Iced Tea",
       "author": "Khanh Nguyen",
       "authorId": 1,
@@ -1402,7 +1402,7 @@
       "updatedAt": "2025-01-22T09:30:00Z"
     },
     {
-      "id": 22,
+      "id": 21,
       "categoryId": 5,
       "categoryType": "SIDE_DISHES",
       "image": "/honey-roasted-carrots.jpg",

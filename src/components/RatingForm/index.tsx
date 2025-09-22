@@ -1,6 +1,7 @@
 import Button from "../Button";
 import type { Rating } from "../../types";
 import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   ratings: Rating[];
@@ -23,7 +24,7 @@ function StarPicker({
   onChange: (n: number) => void;
 }) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex flex-row justify-between items-center gap-1">
       {/* 0 -> 5 rates */}
       {rates.map((n) => (
         <button
@@ -55,17 +56,24 @@ export default function RatingForm({
   onSubmit,
 }: Props) {
   const { user } = useAuth();
+  const navigate = useNavigate();
   return (
     <div>
       <div className="mb-4 flex items-center p-0">
-        <h2 className="text-2xl md:text-xl font-playfair font-bold text-black mb-4">
+        <h2 className="text-2xl md:text-xl font-playfair font-bold text-black">
           Review <span className="text-primary">Rating</span>
         </h2>
         {/* it checks if the form is open or not */}
-        {!user || !showForm && (
+        {!showForm && (
           <Button
-            className="ml-auto shrink-0 text-sm font-playfair rounded-lg py-3 font-bold hover:bg-[#732c4e] transition"
-            onClick={onOpenForm}
+            className="ml-auto shrink-0 text-sm font-playfair rounded-lg py-3 font-bold hover:bg-[#732c4e] hover:shadow-lg transition"
+            onClick={() => {
+              if (!user) {
+                navigate("/login");
+              } else {
+                onOpenForm();
+              }
+            }}
           >
             Write your review
           </Button>
@@ -73,17 +81,14 @@ export default function RatingForm({
       </div>
 
       {/* Inline form */}
-      {showForm && (
+      {user && showForm && (
         <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm overflow-hidden">
-          <div className="flex flex-row justify-between items-center mb-4">
-            <p className="font-bold text-[1.1rem] mb-1">
-            {user?.email ? user.email : "Guest User"}
-          </p>
+          <div className="flex flex-row justify-between mb-4">
+            <p className="font-bold text-[1.1rem]">{user.email}</p>
             <StarPicker value={stars} onChange={onStarsChange} />
           </div>
-          
+
           <div className="flex flex-col gap-3 min-w-0">
-            
             <textarea
               rows={3}
               value={comment}
@@ -113,10 +118,10 @@ export default function RatingForm({
           {ratings.map((r) => (
             <li
               key={r.id}
-              className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm"
+              className="rounded-xl border border-gray-200 bg-gray-50 p-4 shadow-sm group transition duration-300 hover:bg-gray-100 hover:shadow-lg"
             >
-              <div className="mb-1 flex items-center justify-between">
-                <span className="font-semibold">{r.user}</span>
+              <div className="mb-1 flex items-center justify-between ">
+                <span className="text-input font-semibold">{r.user}</span>
                 <span className="text-primary text-lg leading-none">
                   {"★".repeat(r.rating)}
                   <span className="text-gray-300">
@@ -124,7 +129,7 @@ export default function RatingForm({
                   </span>
                 </span>
               </div>
-              <p className="text-sm text-gray-700">{r.comment}</p>
+              <p className="text-sm text-gray">{r.comment}</p>
             </li>
           ))}
         </ul>

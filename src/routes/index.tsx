@@ -10,11 +10,11 @@ const RecipeDetail = lazy(() => import("../pages/recipes/RecipeDetail"));
 // const Login = lazy(() => import('../pages/Login'));
 const NotFound = lazy(() => import("../pages/NotFound"));
 import { useRoutes, type RouteObject } from "react-router-dom";
-
 import App from "../App";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import ProtectedRoute from "./protected-route";
+//import RecipeLayout from "../pages/recipes/RecipeLayout";
 
 const routes: RouteObject[] = [
   {
@@ -30,7 +30,7 @@ const routes: RouteObject[] = [
         element: <About />,
       },
       {
-        path: "recipes",
+        path: 'recipes',
         //element: <RecipeLayout />,
         children: [
           {
@@ -38,7 +38,7 @@ const routes: RouteObject[] = [
             element: <RecipeList />,
           },
           {
-            path: "add",
+            path: 'add',
             element: (
               <ProtectedRoute>
                 <AddRecipe />
@@ -46,10 +46,10 @@ const routes: RouteObject[] = [
             ),
           },
           {
-            path: ":id",
-            element: <RecipeDetail />,
+            path: ':id',
+            element: <RecipeDetail/>,
           },
-        ],
+        ]
       },
       {
         path: "sign-up",

@@ -6,6 +6,8 @@ import { auth } from "./firebase/config";
 import { useEffect, useState } from "react";
 import type { User } from "firebase/auth";
 import { AuthContext } from "./context/AuthContext";
+import SearchBar from "./components/Search";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   // const originalFetch = window.fetch;
@@ -22,6 +24,8 @@ function App() {
   const [user, setUser] = useState<User | null>(null);
   const [userLoading, setUserLoading] = useState(true);
 
+  const [toggleSearch, setToggleSearch] = useState(false);
+
   useEffect(() => {
     onAuthStateChanged(auth, (u) => {
       setUserLoading(true);
@@ -33,19 +37,21 @@ function App() {
 
   return (
     <AuthContext value={{ user: user, loading: userLoading }}>
-      {/* <main className="min-h-screen w-full">
-        <Header />
-        <div className="min-h-screen">
-          <Outlet />
-        </div>
-        <Footer />
-      </main> */}
-      <main className="min-h-screen flex flex-col w-full">
-        <Header />
+      <main className="min-h-screen flex flex-col w-full bg-white">
+        <Header
+          toggleSearch={() => setToggleSearch((prev) => !prev)}
+          isSearchOpen={toggleSearch}
+        />
+        {toggleSearch && <SearchBar />}
+
         <div className="flex-grow flex">
           <Outlet />
         </div>
+        
+        <ThemeToggle />
         <Footer />
+
+        
       </main>
     </AuthContext>
   );

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import LoginModal from "../components/Modal/LoginModal";
 import useAuth from "../hooks/useAuth";
+import LoginModal from "../components/Modal/LoginModal";
 
 interface ProtectedRouteProps {
   children?: ReactNode;
