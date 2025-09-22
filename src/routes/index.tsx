@@ -1,24 +1,24 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from "react";
 
-const LandingPage = lazy(() => import('../pages/LandingPage'));
-const About = lazy(() => import('../pages/About'));
+const LandingPage = lazy(() => import("../pages/LandingPage"));
+const About = lazy(() => import("../pages/About"));
 //const RecipeLayout = lazy(() => import('../pages/recipes/RecipeLayout'));
-const AddRecipe = lazy(() => import('../pages/recipes/AddRecipe'));
-const RecipeList = lazy(() => import('../pages/recipes/RecipeList'));
-const RecipeDetail = lazy(() => import('../pages/recipes/RecipeDetail'));
+const AddRecipe = lazy(() => import("../pages/recipes/AddRecipe"));
+const RecipeList = lazy(() => import("../pages/recipes/RecipeList"));
+const RecipeDetail = lazy(() => import("../pages/recipes/RecipeDetail"));
 // const Dashboard = lazy(() => import('../pages/Dashboard'));
 // const Login = lazy(() => import('../pages/Login'));
-const NotFound = lazy(() => import('../pages/NotFound'));
-import { useRoutes, type RouteObject } from 'react-router-dom';
-//import ProtectedRoute from './protected-route';
-import App from '../App';
-import Login from '../pages/Login';
-import SignUp from '../pages/SignUp';
-
+const NotFound = lazy(() => import("../pages/NotFound"));
+import { useRoutes, type RouteObject } from "react-router-dom";
+import App from "../App";
+import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
+import ProtectedRoute from "./protected-route";
+//import RecipeLayout from "../pages/recipes/RecipeLayout";
 
 const routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
@@ -26,7 +26,7 @@ const routes: RouteObject[] = [
         element: <LandingPage />,
       },
       {
-        path: 'about',
+        path: "about",
         element: <About />,
       },
       {
@@ -39,7 +39,11 @@ const routes: RouteObject[] = [
           },
           {
             path: 'add',
-            element: <AddRecipe />,
+            element: (
+              <ProtectedRoute>
+                <AddRecipe />
+              </ProtectedRoute>
+            ),
           },
           {
             path: ':id',
@@ -48,8 +52,8 @@ const routes: RouteObject[] = [
         ]
       },
       {
-        path: 'sign-up',
-        element: <SignUp/>
+        path: "sign-up",
+        element: <SignUp />,
       },
       // {
       //   path: 'stories',
@@ -74,11 +78,11 @@ const routes: RouteObject[] = [
       //   ),
       // },
       {
-        path: 'login',
+        path: "login",
         element: <Login />,
       },
       {
-        path: '*',
+        path: "*",
         element: <NotFound />,
       },
     ],
